@@ -16,7 +16,8 @@ class AdministratorsController < ApplicationController
 
   def create
   	@administrator = Administrator.new(params[:administrator])
-  	if @administrator.save
+  	
+    if @administrator.save
       flash[:success] = "The administrator has been created!"
   		redirect_to @administrator
   	else
@@ -30,6 +31,7 @@ class AdministratorsController < ApplicationController
 
   def update
     @administrator = Administrator.find(params[:id])
+    
     if @administrator.update_attributes(params[:administrator])
       flash[:success] = "Administrator updated";
       sign_in @administrator
@@ -41,6 +43,7 @@ class AdministratorsController < ApplicationController
 
   def destroy
     Administrator.find(params[:id]).destroy
+
     flash[:success] = "Administrator destroyed"
     redirect_to administrators_path
   end

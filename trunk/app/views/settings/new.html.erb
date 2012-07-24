@@ -1,0 +1,17 @@
+<% provide(:title, 'New setting') %>
+<h1>New setting</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@setting) do |f| %>
+
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.text_field :name, placeholder: 'Name...' %>
+
+      <%= f.text_field :value, placeholder: 'Value...' %>
+
+      <%= f.submit "Add", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

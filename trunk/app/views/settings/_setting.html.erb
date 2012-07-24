@@ -1,0 +1,9 @@
+<li>
+  <span class="content"><%= setting.name %>: 
+  	<%= setting.value %></span>
+  <%= link_to "edit", edit_setting_path(setting) %>
+   |                                   
+  <%= link_to "delete", setting, method: :delete,
+                                     data: { confirm: "Are you sure?" },
+                                     title: setting.name %>
+</li>

@@ -1,0 +1,21 @@
+<% provide(:title, "Edit setting") %> 
+<h1>Update setting</h1>
+
+<div class="row">
+
+  <div class="span6 offset3">
+    <%= form_for(@setting) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :value %>
+      <%= f.text_field :value %>
+
+      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+    <% end %>
+    
+  </div>
+  
+</div>
