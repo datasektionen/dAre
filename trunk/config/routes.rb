@@ -1,15 +1,15 @@
 DAre::Application.routes.draw  do
   resources :administrators
-  resources :sessions,      only: [:new, :create, :destroy]
-  resources :posts
+  resources :sessions
+  resources :posts, except: [:index]
 
   root to: 'static_pages#home'
 
-  match '/sessions',           to: 'sessions#new'
-  match '/signin',             to: 'sessions#new'
-  match '/signout',            to: 'sessions#destroy', via: :delete
-  match '/administrators/new', to: 'administrators#new'
-  match '/help',               to: 'static_pages#help'
+  match '/signin',                  to: 'sessions#new'
+  match '/auth/:provider/callback', to: 'sessions#create'
+  match '/signout',                 to: 'sessions#destroy', via: :delete
+  match '/administrators/new',      to: 'administrators#new'
+  match '/help',                    to: 'static_pages#help'
 
   get "static_pages/home"
   get "static_pages/help"

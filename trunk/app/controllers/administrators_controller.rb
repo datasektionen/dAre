@@ -49,7 +49,7 @@ class AdministratorsController < ApplicationController
 
     def correct_administrator
       @administrator = Administrator.find(params[:id])
-      redirect_to(root_path) unless current_administrator?(administrator)      
+      redirect_to(root_path) unless current_administrator?(@administrator)      
     end
 
 end
