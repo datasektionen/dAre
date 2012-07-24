@@ -1,0 +1,17 @@
+<% provide(:title, 'New post') %>
+<h1>New post</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@post) do |f| %>
+
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.text_field :headline, placeholder: 'Headline...' %>
+
+      <%= f.text_area :content, placeholder: 'Content...' %>
+
+      <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

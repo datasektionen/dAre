@@ -20,11 +20,15 @@ module SessionsHelper
 	def current_administrator?(administrator)
 		administrator == current_administrator
 	end
-
+	
+	def signed_in_administrator?
+	  !current_administrator.nil?
+    end
+	
 	def signed_in_administrator
-	  unless signed_in?
+	  unless signed_in_administrator?
         store_location
-        redirect_to signin_path, notice: "Please sign in."
+        redirect_to signin_path, notice: "Please sign in as administrator."
       end
     end
 
