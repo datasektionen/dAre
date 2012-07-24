@@ -2,6 +2,8 @@ DAre::Application.routes.draw  do
   resources :administrators
   resources :sessions
   resources :posts, except: [:index]
+  resources :projects
+  resources :registrations
 
   root to: 'static_pages#home'
 

@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  kth_id: MyString
+  firstname: MyString
+  surname: MyString
+  email: MyString
+  mobilephone: MyString
+  address: MyString
+  postalCode: MyString
+  postArea: MyString
+  grade: MyString
+  allergies: MyString
+  comment: MyString
+  hasPayedRegistration: false
+  hasPayedTotal: false
+  partey: false
+  reserve: false
+
+two:
+  kth_id: MyString
+  firstname: MyString
+  surname: MyString
+  email: MyString
+  mobilephone: MyString
+  address: MyString
+  postalCode: MyString
+  postArea: MyString
+  grade: MyString
+  allergies: MyString
+  comment: MyString
+  hasPayedRegistration: false
+  hasPayedTotal: false
+  partey: false
+  reserve: false

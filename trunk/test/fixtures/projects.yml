@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  year: 1
+  spots: 1
+  email: MyString
+  totalCost: 1
+  registrationCost: 1
+  lastPaymentDate: 2012-07-24
+  openRegistration: false
+
+two:
+  year: 1
+  spots: 1
+  email: MyString
+  totalCost: 1
+  registrationCost: 1
+  lastPaymentDate: 2012-07-24
+  openRegistration: false
