@@ -1,0 +1,51 @@
+<h1>Listing registrations</h1>
+
+<table>
+  <tr>
+    <th>Kth</th>
+    <th>Firstname</th>
+    <th>Surname</th>
+    <th>Email</th>
+    <th>Mobilephone</th>
+    <th>Address</th>
+    <th>Postalcode</th>
+    <th>Postarea</th>
+    <th>Grade</th>
+    <th>Allergies</th>
+    <th>Comment</th>
+    <th>Haspayedregistration</th>
+    <th>Haspayedtotal</th>
+    <th>Partey</th>
+    <th>Reserve</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @registrations.each do |registration| %>
+  <tr>
+    <td><%= registration.kth_id %></td>
+    <td><%= registration.firstname %></td>
+    <td><%= registration.surname %></td>
+    <td><%= registration.email %></td>
+    <td><%= registration.mobilephone %></td>
+    <td><%= registration.address %></td>
+    <td><%= registration.postalCode %></td>
+    <td><%= registration.postArea %></td>
+    <td><%= registration.grade %></td>
+    <td><%= registration.allergies %></td>
+    <td><%= registration.comment %></td>
+    <td><%= registration.hasPayedRegistration %></td>
+    <td><%= registration.hasPayedTotal %></td>
+    <td><%= registration.partey %></td>
+    <td><%= registration.reserve %></td>
+    <td><%= link_to 'Show', registration %></td>
+    <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
+    <td><%= link_to 'Destroy', registration, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Registration', new_registration_path %>

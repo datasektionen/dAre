@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>År:</b>
+  <%= @project.year %>
+</p>
+
+<p>
+  <b>Antal platser:</b>
+  <%= @project.spots %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @project.email %>
+</p>
+
+<p>
+  <b>Totalkostnad:</b>
+  <%= @project.totalCost %>
+</p>
+
+<p>
+  <b>Anmälningsavgift:</b>
+  <%= @project.registrationCost %>
+</p>
+
+<p>
+  <b>Sista betalningsdatum:</b>
+  <%= @project.lastPaymentDate %>
+</p>
+
+<p>
+  <b>Anmälan öppen:</b>
+  <%= @project.openRegistration %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
+
+<p>
+  <% if @project.registrations.any? %>
+    <h3>Registrations (<%= @project.registrations.count %>)</h3>
+    <ol class="registrations">
+      <%= render @registrations %>
+    </ol>
+  <% end %>
+</p>
