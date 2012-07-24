@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  headline: MyString
+  content: MyString
+  administrator_id: 1
+
+two:
+  headline: MyString
+  content: MyString
+  administrator_id: 1

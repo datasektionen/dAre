@@ -1,0 +1,11 @@
+<% provide(:title, 'News') %>
+
+<div class="span8">
+    <% if @posts.any? %>
+      <h3>News posts (<%= @posts.count %>)</h3>
+      <ol class="posts">
+        <%= render @posts %>
+      </ol>
+      <%= will_paginate @posts %>
+    <% end %>
+  </div>
