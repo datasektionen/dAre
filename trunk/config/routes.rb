@@ -12,6 +12,7 @@ DAre::Application.routes.draw  do
   match '/auth/:provider/callback', to: 'sessions#create'
   match '/signout',                 to: 'sessions#destroy', via: :delete
   match '/administrators/new',      to: 'administrators#new'
+  match '/registrations/new',       to: 'registrations#new'
   match '/help',                    to: 'static_pages#help'
 
   get "static_pages/home"

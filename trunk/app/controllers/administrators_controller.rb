@@ -1,5 +1,5 @@
 class AdministratorsController < ApplicationController
-  before_filter :signed_in_administrator
+  before_filter :is_administrator
   before_filter :correct_administrator,   only: [:edit, :update]
 
   def index

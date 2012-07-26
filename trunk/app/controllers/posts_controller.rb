@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-	before_filter :signed_in_administrator
+	before_filter :is_administrator
 
 	def new
   		@post = Post.new
