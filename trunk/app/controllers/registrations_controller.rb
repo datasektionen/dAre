@@ -24,6 +24,11 @@ class RegistrationsController < ApplicationController
   # GET /registrations/new
   # GET /registrations/new.json
   def new
+    if current_registration != nil
+      flash[:error] = "You are already registered."
+      redirect_to current_registration
+    end
+
     @registration = Registration.new
 
     respond_to do |format|

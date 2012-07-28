@@ -1,12 +1,14 @@
 module SessionsHelper
 
-	def sign_in(user)
-		session[:remember_token] = user.kth_id
+	def sign_in(kth_id)
+		session[:remember_token] = kth_id
 
-		if user.instance_of? Administrator
-    		self.current_administrator = user
+		administrator = Administrator.find_by_kth_id(kth_id)
+
+		if administrator
+    		self.current_administrator = administrator
     	else
-    		self.current_attendee = user
+    		self.current_attendee = Registration.find_by_kth_id(kth_id)
     	end
 	end
 
