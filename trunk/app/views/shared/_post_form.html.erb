@@ -1,0 +1,16 @@
+<h3><%= link_to 'New post', '#', :id => 'new_post_link' %></h3>
+
+<div class="row" style="display: none;" id="new_post_block">
+  <div class="span6 offset3">
+    <%= form_for(@post, :remote => true) do |f| %>
+
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.text_field :headline, placeholder: 'Headline...' %>
+
+      <%= f.text_area :content, placeholder: 'Content...' %>
+
+      <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

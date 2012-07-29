@@ -7,11 +7,17 @@ class PostsController < ApplicationController
 
 	def create
 		@post = current_administrator.posts.build(params[:post])
-		if @post.save
-			flash[:success] = "Post created!"
-			redirect_to root_path
-		else
-			render 'static_pages/home'
+
+		respond_to do |format|
+			if @post.save
+				format.html { redirect_to root_path, notice: 'Post was successfully created.' }
+	  			format.json { render json: @post, status: :created, location: @post }
+	  			format.js
+			else
+				format.html { render 'static_pages/home'}
+      			format.json { render json: @post.errors, status: :unprocessable_entity }
+	            format.js {}
+			end
 		end
 	end
 
@@ -32,8 +38,12 @@ class PostsController < ApplicationController
 
 	def destroy
 		Post.find(params[:id]).destroy
-   		flash[:success] = "Post destroyed"
-    	redirect_to root_path
+
+    	respond_to do |format|
+	    	format.html { redirect_to root_path, success: "Post destroyed" }
+	  		format.json { head :no_content }
+	  		format.js
+  		end
 	end
 
 end

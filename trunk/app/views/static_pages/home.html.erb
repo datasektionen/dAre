@@ -11,6 +11,11 @@
 </div>
 
 <div class="row">
+  <% if signed_in_administrator? %>
+    <div class="span8">
+      <%= render 'shared/post_form' %>
+    </div>
+  <% end %>
     <div class="span8">
       <%= render 'shared/posts' %>
     </div>

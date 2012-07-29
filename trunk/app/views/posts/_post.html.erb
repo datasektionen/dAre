@@ -1,4 +1,4 @@
-<li>
+<%= content_tag_for(:li, post) do %>
   <span class="content"><%= post.headline %></span>
   <span class="content"><%= post.content %></span>
   <span class="timestamp">
@@ -8,7 +8,8 @@
   <%= link_to 'edit', edit_post_path(post) %>
    |                                   
   <%= link_to "delete", post, method: :delete,
-                                     data: { confirm: "Are you sure?" },
-                                     title: post.headline %>
-                                     <% end %>
-</li>
+                              remote: true,
+                              data: { confirm: "Are you sure?" },
+                              title: post.headline %>
+  <% end %>
+<% end %>
