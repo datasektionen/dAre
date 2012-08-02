@@ -12,11 +12,12 @@ class SessionsController < ApplicationController
 			sign_in kth_id
 			
 			if current_administrator
-				redirect_back_or administrator
+				redirect_back_or current_administrator
 			elsif current_attendee
-				redirect_back_or attendee
+				redirect_back_or current_attendee
 			else
 				redirect_to registrations_new_path
+			end
 		else
 			flash.now[:error] = "You do not have permission to proceed."
 			render 'new'

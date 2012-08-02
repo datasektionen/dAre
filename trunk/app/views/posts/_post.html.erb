@@ -1,15 +1,14 @@
 <%= content_tag_for(:li, post) do %>
-  <span class="content"><%= post.headline %></span>
-  <span class="content"><%= post.content %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(post.created_at) %> ago.
-  </span>
-  <% if signed_in_administrator? %>
-  <%= link_to 'edit', edit_post_path(post) %>
-   |                                   
-  <%= link_to "delete", post, method: :delete,
-                              remote: true,
-                              data: { confirm: "Are you sure?" },
-                              title: post.headline %>
-  <% end %>
+    <h3><%= post.headline %></h3>
+    <span class="content"><%= post.content %></span>
+    <span class="timestamp">Posted <%= time_ago_in_words(post.created_at) %> ago.</span>
+    <% if signed_in_administrator? %>
+    <%= link_to 'edit', edit_post_path(post), class: 'btn btn-warning' %>                          
+    <%= link_to 'delete', post, method: :delete,
+                                remote: true,
+                                data: { confirm: 'Are you sure?' },
+                                class: 'btn btn-danger',
+                                format: :json,
+                                title: post.headline %>
+    <% end %>
 <% end %>

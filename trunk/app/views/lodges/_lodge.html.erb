@@ -1,0 +1,10 @@
+<ul class="lodge">
+	<li><%= link_to project_lodge_path(@project, lodge) do %><h3><%= lodge.address %></h3><% end %></li>
+	<li>
+	    <ul id="<%= lodge.id %>" class="attendee-container">
+		<% if lodge.registrations.any? %>
+			<%= render lodge.registrations %>
+   		<% end %>
+    	</ul>
+    </li>
+</ul>

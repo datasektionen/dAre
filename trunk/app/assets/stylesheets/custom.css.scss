@@ -84,6 +84,7 @@ p {
 /* footer */
 
 footer {
+  clear: both;
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
@@ -181,5 +182,57 @@ aside {
   textarea {
     height: 100px;
     margin-bottom: 5px;
+  }
+}
+
+/* lodges */
+.lodge-container {
+  float: left;
+  width: 660px;
+  margin-right: 20px;
+}
+
+.lodgeless-registrations {
+  width: 250px;
+  float: right;
+}
+
+.lodges {
+  list-style: none;
+  margin-bottom: 10px;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
+}
+
+.lodge {
+  list-style: none;
+  margin-bottom: 10px;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
+}
+
+.attendee-container {
+  list-style: none;
+  min-height: 25px;
+  margin-bottom: 10px;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
   }
 }

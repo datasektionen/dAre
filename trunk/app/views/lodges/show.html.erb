@@ -1,0 +1,13 @@
+<% provide(:title, @lodge.address) %>
+<%= @lodge.address %>, <%= @lodge.max_accommodates %> 
+| <%= link_to "edit", edit_project_lodge_path(@project) %>
+| <%= link_to "delete", project_lodge_path(@project), method: :delete, data: { confirm: "Are you sure?" } %>
+
+
+<h3>Accommodates</h3>
+<ul id="lodgeless-attendees" class="attendee-container">
+	<%= render @lodge.registrations %>
+</ul>
+
+<br />
+<%= link_to 'Back', project_lodges_path(@project) %>

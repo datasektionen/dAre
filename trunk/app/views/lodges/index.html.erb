@@ -1,0 +1,23 @@
+<% provide(:title, 'All lodges') %>
+
+<h1>All lodges</h1>
+
+<div class="lodge-container">
+	<h2>Lodges</h2>
+	<ul id="lodges" class="lodges">
+	    <%= render @lodges %>
+	</ul>
+</div>
+
+<% if @lodgeless_registrations.any? %>
+<div class="lodgeless-registrations">
+	<h2>Attendees</h2>
+	<ul id="lodgeless-attendees" class="attendee-container">
+		<%= render @lodgeless_registrations %>
+	</ul>
+</div>
+<% end %>
+
+<div style="clear: both;">
+	<%= link_to 'Back', project_path(@project) %>
+</div>

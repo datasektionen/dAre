@@ -39,13 +39,13 @@
     <td><%= registration.hasPayedTotal %></td>
     <td><%= registration.partey %></td>
     <td><%= registration.reserve %></td>
-    <td><%= link_to 'Show', registration %></td>
-    <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
-    <td><%= link_to 'Destroy', registration, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', project_registration_path(@project, registration) %></td>
+    <td><%= link_to 'Edit', edit_project_registration_path(@project, registration) %></td>
+    <td><%= link_to 'Destroy', project_registration_path(@project, registration), confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Registration', new_registration_path %>
+<%= link_to 'New Registration', new_project_registration_path(@project) %>

@@ -12,11 +12,11 @@ class PostsController < ApplicationController
 			if @post.save
 				format.html { redirect_to root_path, notice: 'Post was successfully created.' }
 	  			format.json { render json: @post, status: :created, location: @post }
-	  			format.js
+	  			format.js { }
 			else
 				format.html { render 'static_pages/home'}
       			format.json { render json: @post.errors, status: :unprocessable_entity }
-	            format.js {}
+	            format.js { }
 			end
 		end
 	end
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
     	respond_to do |format|
 	    	format.html { redirect_to root_path, success: "Post destroyed" }
 	  		format.json { head :no_content }
-	  		format.js
+	  		format.js { }
   		end
 	end
 

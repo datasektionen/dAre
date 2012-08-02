@@ -39,10 +39,9 @@
 <%= link_to 'Back', projects_path %>
 
 <p>
-  <% if @project.registrations.any? %>
-    <h3>Registrations (<%= @project.registrations.count %>)</h3>
-    <ol class="registrations">
-      <%= render @registrations %>
-    </ol>
-  <% end %>
+    <%= link_to project_registrations_path(@project) do %><h3>View registrations (<%= @project.registrations.count %>)</h3> <% end %>
+</p>
+
+<p>
+    <%= link_to project_lodges_path(@project) do %><h3>Lodges (<%= @project.lodges.count %>)</h3><% end %>
 </p>

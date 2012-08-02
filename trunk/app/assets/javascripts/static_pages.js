@@ -4,13 +4,25 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 
-	$('#new_post').bind('ajax:success', function() {
+	var toggleLoading = function() {  };
+
+	$('#new_post')
+    .bind('ajax:loading',  toggleLoading)
+    .bind('ajax:complete', toggleLoading)
+    .bind('ajax:success', function(status, data, xhr) {
+    	alert('success. post: ' +  data);
 		$('#posts').prepend('<%= escape_javascript(render(@post)) %>');
 		$('#posts > li').first().effect('highlight', {color: 'cyan', mode: 'show'}, 2000);
 		$('#new_post > form')[0].reset();
-	});
-
-	$('#new_post').bind('ajax:error', function() {
+    })
+    .bind('ajax:error', function(xhr, status, error) {
+    	alert(status.responseText);
+     	alert(error);
 		$('#<%= dom_id(@post) %>').effect('highlight', {color: 'green', mode: 'hide'}, 1200);
-	});
+    });
+
+    $('.btn, .btn-danger').bind('ajax:error', function(status, data, xhr) {
+    	alert('ha');
+    	$(this).effect('highlight', {color: 'green', mode: 'hide'}, 1200);
+    });
 });

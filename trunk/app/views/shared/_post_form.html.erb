@@ -2,7 +2,7 @@
 
 <div class="row" style="display: none;" id="new_post_block">
   <div class="span6 offset3">
-    <%= form_for(@post, :remote => true) do |f| %>
+    <%= form_for(@post, :remote => true, format: :json) do |f| %>
 
       <%= render 'shared/error_messages', object: f.object %>
 

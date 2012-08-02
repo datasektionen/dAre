@@ -1,8 +1,10 @@
 class RegistrationsController < ApplicationController
+  before_filter :get_project
+
   # GET /registrations
   # GET /registrations.json
   def index
-    @registrations = Registration.all
+    @registrations = @project.registrations
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +15,7 @@ class RegistrationsController < ApplicationController
   # GET /registrations/1
   # GET /registrations/1.json
   def show
-    @registration = Registration.find(params[:id])
+    @registration = @project.registrations.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -45,14 +47,14 @@ class RegistrationsController < ApplicationController
   # POST /registrations
   # POST /registrations.json
   def create
-    @registration = Registration.new(params[:registration])
+    @registration = @project.registrations.build(params[:registration])
 
     respond_to do |format|
       if @registration.save
-        format.html { redirect_to @registration, notice: 'Registration was successfully created.' }
+        format.html { redirect_to [@project, @registration], notice: 'Registration was successfully created.' }
         format.json { render json: @registration, status: :created, location: @registration }
       else
-        format.html { render action: "new" }
+        format.html { render action: new_project_registration_path(@project) }
         format.json { render json: @registration.errors, status: :unprocessable_entity }
       end
     end
@@ -65,10 +67,10 @@ class RegistrationsController < ApplicationController
 
     respond_to do |format|
       if @registration.update_attributes(params[:registration])
-        format.html { redirect_to @registration, notice: 'Registration was successfully updated.' }
+        format.html { redirect_to [@project, @registration], notice: 'Registration was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
+        format.html { render action: edit_project_registration_path(@project) }
         format.json { render json: @registration.errors, status: :unprocessable_entity }
       end
     end
@@ -81,8 +83,15 @@ class RegistrationsController < ApplicationController
     @registration.destroy
 
     respond_to do |format|
-      format.html { redirect_to registrations_url }
+      format.html { redirect_to project_registrations_path(@project), notice: 'Registration destroyed.' }
       format.json { head :ok }
     end
   end
+
+  private
+
+  def get_project
+    @project = Project.find(params[:project_id])
+  end
+
 end
