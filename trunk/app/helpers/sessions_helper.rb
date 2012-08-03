@@ -7,9 +7,9 @@ module SessionsHelper
 
 		if administrator
     		self.current_administrator = administrator
-    	else
-    		self.current_attendee = Registration.find_by_kth_id(kth_id)
     	end
+    	
+    	self.current_attendee = Registration.find_by_kth_id(kth_id)
 	end
 
 	def current_attendee=(attendee)
@@ -44,8 +44,8 @@ module SessionsHelper
 		administrator == current_administrator
 	end
 	
-	def signed_in?
-		!current_attendee.nil?
+	def signed_in_attendee?
+		!session[:remember_token].nil?
 	end
 
 	def signed_in_administrator?
@@ -55,14 +55,14 @@ module SessionsHelper
 	def signed_in
 	 	unless signed_in_attendee? || signed_in_administrator?
         	store_location
-        	redirect_to signin_path, notice: "Please sign in."
+        	redirect_to signin_path, notice: "Please sign in to continue."
     	end
     end
 
 	def is_administrator
 	 	unless signed_in_administrator?
         	store_location
-        	redirect_to signin_path, notice: "Please sign in."
+        	redirect_to signin_path, notice: "Please sign in to continue."
     	end
     end
 

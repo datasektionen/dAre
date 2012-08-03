@@ -1,5 +1,6 @@
 class RegistrationsController < ApplicationController
   before_filter :get_project
+  before_filter :signed_in
 
   # GET /registrations
   # GET /registrations.json

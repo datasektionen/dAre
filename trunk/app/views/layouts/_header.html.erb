@@ -1,32 +1,28 @@
 <header class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "dÅre", root_path, id: "logo" %>
-      <nav>
-        <ul class="nav pull-right">
-          <li><%= link_to "Home",    root_path %></li>
-          <li><%= link_to "Help",    help_path %></li>
-            <% if signed_in? %>
-            <li><%= link_to "Registrations", registrations_path %></li>
-            <%if is_administrator? %><li><%= link_to "Administrators", administrators_path %></li><% end %>
-            <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Account <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <%if is_administrator? %><li><%= link_to "Profile", current_administrator %></li><% end %>
-                <li><%= link_to "My registration", current_attendee %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
-                </li>
-              </ul>
-            </li>
-          <% else %>
-            <li><%= link_to "Sign in", signin_path %></li>
-          <% end %>
-        </ul>
-      </nav>
+    <div class="navbar-inner">
+        <div class="container">
+            <%= link_to "dÅre", root_path, id: "logo" %>
+            <nav>
+                <ul class="nav pull-right">
+                    <li><%= link_to "Home",    root_path %></li>
+                    <li><%= link_to "Help",    help_path %></li>
+                    <% if signed_in_attendee? || signed_in_administrator? %>
+                    <li><%= link_to "Registrations", project_registrations_path(@project) %></li>
+                    <%if signed_in_administrator? %><li><%= link_to "Administrators", administrators_path %></li><% end %>
+                    <li id="fat-menu" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <%if signed_in_administrator? %><li><%= link_to "Profile", current_administrator %></li><% end %>
+                        <li><%= link_to "My registration", current_attendee %></li>
+                        <li class="divider"></li>
+                        <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+                        </ul>
+                    </li>
+                    <% else %>
+                        <li><%= link_to "Sign in", signin_path %></li>
+                    <% end %>
+                </ul>
+            </nav>
+        </div>
     </div>
-  </div>
 </header>
