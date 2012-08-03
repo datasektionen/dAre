@@ -10,19 +10,19 @@ $(document).ready(function() {
     .bind('ajax:loading',  toggleLoading)
     .bind('ajax:complete', toggleLoading)
     .bind('ajax:success', function(status, data, xhr) {
-    	alert('success. post: ' +  data);
-		$('#posts').prepend('<%= escape_javascript(render(@post)) %>');
+		$('#posts').prepend(data);
 		$('#posts > li').first().effect('highlight', {color: 'cyan', mode: 'show'}, 2000);
-		$('#new_post > form')[0].reset();
+		$('#new_post').each(function(){
+            this.reset();
+        });
+        $('#new_post_block').slideToggle();
     })
     .bind('ajax:error', function(xhr, status, error) {
     	alert(status.responseText);
      	alert(error);
-		$('#<%= dom_id(@post) %>').effect('highlight', {color: 'green', mode: 'hide'}, 1200);
     });
 
     $('.btn, .btn-danger').bind('ajax:error', function(status, data, xhr) {
-    	alert('ha');
-    	$(this).effect('highlight', {color: 'green', mode: 'hide'}, 1200);
+    	$(this).parent('.post').effect('highlight', {color: 'green', mode: 'hide'}, 1200);
     });
 });

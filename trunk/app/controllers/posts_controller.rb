@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
 		respond_to do |format|
 			if @post.save
-				format.html { redirect_to root_path, notice: 'Post was successfully created.' }
+	  			format.html { render @post }
 	  			format.json { render json: @post, status: :created, location: @post }
 	  			format.js { }
 			else
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
 		@post = Post.find(params[:id])
 
     	if @post.update_attributes(params[:post])
-    		flash[:success] = "Post updated";
+    		flash[:success] = "Post updated.";
     		redirect_to root_path
     	else
     		render 'edit'      
@@ -40,7 +40,7 @@ class PostsController < ApplicationController
 		Post.find(params[:id]).destroy
 
     	respond_to do |format|
-	    	format.html { redirect_to root_path, success: "Post destroyed" }
+	    	format.html { redirect_to root_path, success: "Post destroyed." }
 	  		format.json { head :no_content }
 	  		format.js { }
   		end
