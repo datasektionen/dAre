@@ -19,6 +19,15 @@ $(document).ready(function() {
 
         function move($targetId, $item)
         {
+            if($targetId == 'lodgeless-attendees')
+            {
+                //move to a the "lodgeless" category
+            }
+            else
+            {
+                //to an actuall lodge
+            }
+
             $item.fadeOut(function() {
                 $item.appendTo("#" + $targetId).fadeIn();
             });

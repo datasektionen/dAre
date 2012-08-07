@@ -47,6 +47,14 @@ class LodgesController < ApplicationController
     	redirect_to project_lodges_path(@project)
 	end
 
+	def add_user
+		@lodge = Lodge.find(params[:id])
+		@attende = Registration.find(params[:registration_id])
+
+		@lodge << @attende
+		@lodge.save
+	end
+
 	private
 
 	def get_project
