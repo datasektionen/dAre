@@ -33,7 +33,7 @@ class LodgesController < ApplicationController
 		@lodge = Lodge.find(params[:id])
     
 	    if @lodge.update_attributes(params[:lodge])
-	      flash[:success] = "Lodge updated";
+	      flash[:success] = "Lodge updated.";
 	      redirect_to project_lodge_path(@project)
 	    else
 	      render 'edit'      
@@ -43,16 +43,35 @@ class LodgesController < ApplicationController
 	def destroy
 		Lodge.find(params[:id]).destroy
 
-    	flash[:success] = "Lodge destroyed"
+    	flash[:success] = "Lodge destroyed."
     	redirect_to project_lodges_path(@project)
 	end
 
-	def add_user
+	def add_attendee
 		@lodge = Lodge.find(params[:id])
-		@attende = Registration.find(params[:registration_id])
+		@attendee = Registration.find(params[:registration_id])
 
-		@lodge << @attende
+		@lodge.registrations << @attendee
 		@lodge.save
+
+		respond_to do |format|
+	    	format.html { redirect_to root_path, success: "Attendee has been added to the lodge." }
+	  		format.json { head :no_content }
+	  		format.js { }
+  		end
+	end
+
+	def remove_attendee
+		@attendee = Registration.find(params[:registration_id])
+
+		@attendee.lodge = nil
+		@attendee.save
+
+		respond_to do |format|
+	    	format.html { redirect_to root_path, success: "Attendee has been removed from the lodge." }
+	  		format.json { head :no_content }
+	  		format.js { }
+  		end
 	end
 
 	private

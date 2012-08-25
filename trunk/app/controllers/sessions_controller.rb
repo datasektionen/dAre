@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+	include ApplicationHelper
 	def new
 		
 	end
@@ -16,7 +16,8 @@ class SessionsController < ApplicationController
 			elsif current_attendee
 				redirect_back_or current_attendee
 			else
-				redirect_to registrations_new_path
+				@project = get_project
+				redirect_to new_project_registration_path(@project)
 			end
 		else
 			flash.now[:error] = "You do not have permission to proceed."

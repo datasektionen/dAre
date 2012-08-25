@@ -5,15 +5,15 @@
             <nav>
                 <ul class="nav pull-right">
                     <li><%= link_to "Home",    root_path %></li>
-                    <li><%= link_to "Help",    help_path %></li>
+                    <li><%= link_to "Attendees", project_registrations_path(get_project) %></li>
                     <% if signed_in_attendee? || signed_in_administrator? %>
-                    <%if signed_in_administrator? %><li><%= link_to "Administrators", administrators_path %></li><% end %>
+                    <% if signed_in_administrator? %><li><%= link_to "Administrators", administrators_path %></li><% end %>
                     <li id="fat-menu" class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <%if signed_in_administrator? %><li><%= link_to "Profile", current_administrator %></li><% end %>
-                        <%= link_to_if(@current_attendee.nil?, "Register", '#') do
-                            link_to 'My registration', current_attendee end %>
+                        <%if signed_in_administrator? %><li><%= link_to "My Account", current_administrator %></li><% end %>
+                        <%= link_to_if(current_attendee.nil?, "Register", '#') do
+                            link_to 'My registration', project_registration_path(get_project, current_attendee) end %>
                         <li class="divider"></li>
                         <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
                         </ul>

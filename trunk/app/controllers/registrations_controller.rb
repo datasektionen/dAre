@@ -1,98 +1,105 @@
 class RegistrationsController < ApplicationController
-  before_filter :get_project
-  before_filter :signed_in
+    before_filter :get_project
+    before_filter :signed_in, except: :index
 
-  # GET /registrations
-  # GET /registrations.json
-  def index
-    @registrations = @project.registrations
+    # GET /registrations
+    # GET /registrations.json
+    def index
+        @registrations = @project.registrations
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @registrations }
-    end
-  end
-
-  # GET /registrations/1
-  # GET /registrations/1.json
-  def show
-    @registration = @project.registrations.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @registration }
-    end
-  end
-
-  # GET /registrations/new
-  # GET /registrations/new.json
-  def new
-    if current_attendee != nil
-      flash[:error] = "You are already registered."
-      redirect_to current_attendee
+        respond_to do |format|
+            format.html # index.html.erb
+            format.json { render json: @registrations }
+        end
     end
 
-    @registration = Registration.new
+    # GET /registrations/1
+    # GET /registrations/1.json
+    def show
+        @registration = @project.registrations.find(params[:id])
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @registration }
+        respond_to do |format|
+            format.html # show.html.erb
+            format.json { render json: @registration }
+        end
     end
-  end
 
-  # GET /registrations/1/edit
-  def edit
-    @registration = Registration.find(params[:id])
-  end
+    # GET /registrations/new
+    # GET /registrations/new.json
+    def new
+        if current_attendee != nil
+            flash[:error] = 'You are already registered.'
+            redirect_to project_registration_path(@project, current_attendee) and return
+        end
 
-  # POST /registrations
-  # POST /registrations.json
-  def create
-    @registration = @project.registrations.build(params[:registration])
+        @registration = Registration.new
 
-    respond_to do |format|
-      if @registration.save
-        format.html { redirect_to [@project, @registration], notice: 'Registration was successfully created.' }
-        format.json { render json: @registration, status: :created, location: @registration }
-      else
-        format.html { render action: new_project_registration_path(@project) }
-        format.json { render json: @registration.errors, status: :unprocessable_entity }
-      end
+        respond_to do |format|
+            format.html # new.html.erb
+            format.json { render json: @registration }
+        end
     end
-  end
 
-  # PUT /registrations/1
-  # PUT /registrations/1.json
-  def update
-    @registration = Registration.find(params[:id])
-
-    respond_to do |format|
-      if @registration.update_attributes(params[:registration])
-        format.html { redirect_to [@project, @registration], notice: 'Registration was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: edit_project_registration_path(@project) }
-        format.json { render json: @registration.errors, status: :unprocessable_entity }
-      end
+    # GET /registrations/1/edit
+    def edit
+        @registration = Registration.find(params[:id])
     end
-  end
 
-  # DELETE /registrations/1
-  # DELETE /registrations/1.json
-  def destroy
-    @registration = Registration.find(params[:id])
-    @registration.destroy
+    # POST /registrations
+    # POST /registrations.json
+    def create
+        @registration = @project.registrations.build(params[:registration])
+        @registration.kth_id = session[:remember_token]
 
-    respond_to do |format|
-      format.html { redirect_to project_registrations_path(@project), notice: 'Registration destroyed.' }
-      format.json { head :ok }
+        if @project.registrations.count == @project.spots
+            @registration.reserve = true
+        end
+
+        respond_to do |format|
+            if @registration.save
+                current_attendee = @registration
+
+                format.html { redirect_to project_registration_path(@project, @registration), notice: 'Registration was successfully created.' }
+                format.json { render json: @registration, status: :created, location: @registration }
+            else
+                format.html { render action: 'new' }
+                format.json { render json: @registration.errors, status: :unprocessable_entity }
+            end
+        end
     end
-  end
 
-  private
+    # PUT /registrations/1
+    # PUT /registrations/1.json
+    def update
+        @registration = Registration.find(params[:id])
 
-  def get_project
-    @project = Project.find(params[:project_id])
-  end
+        respond_to do |format|
+            if @registration.update_attributes(params[:registration])
+                format.html { redirect_to project_registration_path(@project, @registration), notice: 'Registration was successfully updated.' }
+                format.json { head :ok }
+            else
+                format.html { render action: 'edit' }
+                format.json { render json: @registration.errors, status: :unprocessable_entity }
+            end
+        end
+    end
 
-end
+    # DELETE /registrations/1
+    # DELETE /registrations/1.json
+    def destroy
+        @registration = Registration.find(params[:id])
+        @registration.destroy
+
+        respond_to do |format|
+            format.html { redirect_to project_registrations_path(@project), notice: 'Registration destroyed.' }
+            format.json { head :ok }
+        end
+    end
+
+    private
+
+    def get_project
+        @project = Project.find(params[:project_id])
+    end
+
+end 

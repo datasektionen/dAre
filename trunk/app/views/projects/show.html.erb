@@ -1,47 +1,57 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>År:</b>
-  <%= @project.year %>
+    <b>År:</b>
+    <%= @project.year %>
 </p>
 
 <p>
-  <b>Antal platser:</b>
-  <%= @project.spots %>
+    <b>Antal platser:</b>
+    <%= @project.spots %>
 </p>
 
 <p>
-  <b>Email:</b>
-  <%= @project.email %>
+    <b>Email:</b>
+    <%= @project.email %>
 </p>
 
 <p>
-  <b>Totalkostnad:</b>
-  <%= @project.totalCost %>
+    <b>Totalkostnad:</b>
+    <%= @project.totalCost %>
 </p>
 
 <p>
-  <b>Anmälningsavgift:</b>
-  <%= @project.registrationCost %>
+    <b>Anmälningsavgift:</b>
+    <%= @project.registrationCost %>
 </p>
 
 <p>
-  <b>Sista betalningsdatum:</b>
-  <%= @project.lastPaymentDate %>
+    <b>Sista betalningsdatum:</b>
+    <%= @project.lastPaymentDate %>
 </p>
 
 <p>
-  <b>Anmälan öppen:</b>
-  <%= @project.openRegistration %>
+    <b>Obetalda resenärer</b>
+    <%= link_to '#' do %> 56 st<% end %>
+</p>  
+
+<p>
+    <b>Anmälan öppen:</b>
+    <%= @project.openRegistration %>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
 
 <p>
-    <%= link_to project_registrations_path(@project) do %><h3>View registrations (<%= @project.registrations.count %>)</h3> <% end %>
+    <%= link_to project_registrations_path(@project) do %><h3>View registrations (<%= @project.registrations.count %>)</h3><% end %>
 </p>
 
 <p>
     <%= link_to project_lodges_path(@project) do %><h3>Lodges (<%= @project.lodges.count %>)</h3><% end %>
+</p>
+
+<p>
+    <b>Könsfördelning</b>
+    En fin graf!
 </p>

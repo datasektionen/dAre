@@ -3,10 +3,6 @@
   <%= render 'shared/error_messages', object: f.object %>
 
   <div class="field">
-    <%= f.label :kth_id %><br />
-    <%= f.text_field :kth_id %>
-  </div>
-  <div class="field">
     <%= f.label :firstname %><br />
     <%= f.text_field :firstname %>
   </div>
@@ -47,20 +43,8 @@
     <%= f.text_field :comment %>
   </div>
   <div class="field">
-    <%= f.label :hasPayedRegistration %><br />
-    <%= f.check_box :hasPayedRegistration %>
-  </div>
-  <div class="field">
-    <%= f.label :hasPayedTotal %><br />
-    <%= f.check_box :hasPayedTotal %>
-  </div>
-  <div class="field">
     <%= f.label :partey %><br />
     <%= f.check_box :partey %>
-  </div>
-  <div class="field">
-    <%= f.label :reserve %><br />
-    <%= f.check_box :reserve %>
   </div>
   <div class="actions">
     <%= f.submit %>
