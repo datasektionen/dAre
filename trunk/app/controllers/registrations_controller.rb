@@ -27,7 +27,7 @@ class RegistrationsController < ApplicationController
     # GET /registrations/new
     # GET /registrations/new.json
     def new
-        if current_attendee != nil
+        if current_attendee != nil && current_administrator == nil
             flash[:error] = 'You are already registered.'
             redirect_to project_registration_path(@project, current_attendee) and return
         end
@@ -53,6 +53,10 @@ class RegistrationsController < ApplicationController
 
         if @project.registrations.count == @project.spots
             @registration.reserve = true
+        end
+
+        if current_attendee != nil && current_administrator != nil
+            @registration.kth_id = 'outsider'
         end
 
         respond_to do |format|

@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_filter :is_administrator
 
   # GET /projects
   # GET /projects.json
