@@ -63,6 +63,8 @@ class RegistrationsController < ApplicationController
             if @registration.save
                 current_attendee = @registration
 
+                #AttendeeMailer.registration_mail(@registration).deliver
+
                 format.html { redirect_to project_registration_path(@project, @registration), notice: 'Registration was successfully created.' }
                 format.json { render json: @registration, status: :created, location: @registration }
             else

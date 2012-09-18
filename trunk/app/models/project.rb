@@ -1,6 +1,7 @@
 class Project < ActiveRecord::Base
 	has_many :registrations
 	has_many :lodges
+	has_and_belongs_to_many :staff
 
 	validates :year,	presence: true, uniqueness: { case_sensative: false },
 						numericality: { only_integer: true }
