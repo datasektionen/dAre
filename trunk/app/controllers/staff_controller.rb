@@ -5,12 +5,12 @@ class StaffController < ApplicationController
 		current_project = get_project
 
 		@staff_current = current_project.staff
-		@staff_emeriti = Staff.where("id NOT IN (?)", @staff_current.select("id"))
-
+		@staff_emeriti = Staff.where('id NOT IN (?)', @staff_current.select('id'))
 	end
 
 	def new
-
+		@staff = Staff.new
+		@projects = Project.all
 	end
 
 	def edit
@@ -18,7 +18,10 @@ class StaffController < ApplicationController
 	end
 
 	def create
+		params[:staff][:project_ids] ||= []
+
 		@staff = Staff.new(params[:staff])
+		@staff.projects << Project.find(params[:staff][:project_ids])	
 
 		respond_to do |format|
 			if @staff.save

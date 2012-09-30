@@ -1,5 +1,5 @@
 class Staff < ActiveRecord::Base
-	attr_accessible :name, :mobilephone, :email
+	attr_accessible :name, :mobilephone, :email, :projects
 
 	has_and_belongs_to_many :projects
 

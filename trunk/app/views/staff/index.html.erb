@@ -1,0 +1,32 @@
+<% provide(:title, 'Staff') %>
+
+<h1>Staff</h1>
+
+<ul class="users">
+
+    <%= render :partial => 'staff/staff', :collection => @staff_current %>
+
+</ul>
+
+<br>
+
+<h3>Staff Emeriti</h3>
+
+<ul class="users">
+
+    <%= render :partial => 'staff/staff', :collection => @staff_emeriti %>
+
+</ul>
+
+<br />
+
+<% #if signed_in_administrator? %>
+	<b><%= link_to 'Add staff member', new_staff_path, :data => { :remote => true, 'controls-modal' => 'modal-window', :backdrop => true } %></b>
+<% #end %>
+
+<div id="myModal" class="modal hide fade" >
+    <button type="button" class="close" data-dismiss="modal">×</button></h1>
+    <div class="page-header">
+        <h1>New staff member</h1>
+    </div>
+</div>

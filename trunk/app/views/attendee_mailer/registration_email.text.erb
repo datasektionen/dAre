@@ -1,18 +1,29 @@
-Anmälan till dÅre <%= @project.year %>
-===============================================
+Tack för din anmälan till dÅre <%= @project.year %>!
 
-Du har anmält dig för dÅre <%= @project.year %> - skitkul!
+För att slutföra anmälan måste du inom 7 dagar betala in anmälningsavgiften på 1000 kr. Gör du inte detta kommer din plats att överlåtas till nästa person i reservlistan. Se därför till att betala så fort som möjligt för att behålla din plats. Resterande belopp ska betalas in senast <%= @project lastPaymentDate %>. 
 
-För att slutföra anmälan måste du inom 10 dagar betala in anmälningsavgiften på *** kr.
-Gör du inte detta kommer din plats att överlåtas till nästa person i reservlistan, så se till att betala så fort som möjligt för att behålla din plats.
+Observera att vid avhopp återbetalas anmälningsavgiften ej. Resterande summa återbetalas om platsen kan ersättas med en annan resenär.
 
 Betalningsinformation <%= @attendee.name %>
-**
-**
-**
-**
+Bankgironummer: 380-7559
+Meddelande: dare_2012_<%= @attendee.id %>
+Belopp: 2900
+Sista betalningsdag: <%= @project.lastPaymentDate %>
+
+Om du istället vill dela upp betalningen använder du istället följande meddelanden:
+Anmälningsavgiften
+Meddelande: 1dare_2012_<%= @attendee.id %>
+Belopp: 1000
+Sista betalningsdag: Om 7 dagar
+---
+Resterande summa
+Meddelande: dare2_2012_<%= @attendee.id %>
+Belopp: 1900
+Sista betalningsdag: <%= @project.lastPaymentDate %>
+
+Mer information om själva resan kommer att publiceras på hemsidan och mailas till dig när resan närmar sig. Titta gärna på vår hemsida www.dåre.se för att få den senaste informationen.
 
 Frågor? Hör av dig till dare@d.kth.se!
 
-Hälsningar
+Med vänliga hälsningar
 dÅrestaben 2013
