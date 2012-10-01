@@ -1,23 +1,55 @@
-<table class="table table-hover">
-    <caption>Anmälda deltagare</caption>
+<div style="float: right; color: #EEEEEE;margin-bottom: -1px; font-size: 18pt; font-weight: bold;">
+    ANMÄLDA DELTAGARE
+</div>
+<table class="table table-bordered">
     <thead class="head">
         <tr>
-            <th>Firstname</th>
-            <th>Surname</th>
-            <th>Email</th>
-            <th>Grade</th>
-            <th>Comment</th>
+            <th>Förnamn</th>
+            <th>Efternamn</th>
+            <th>E-mail</th>
+            <th>Årskurs</th>
+            <th>Kommentar</th>
         </tr>
     </thead>
     <tbody class="registrations">
 
         <% @registrations.each do |registration| %>
-        <tr class="<%= registration.hasPayedRegistration ? 'success' : 'error'  %>">
+        <tr class="<%= registration.hasPayedRegistration ? (registration.hasPayedTotal ? 'success' : 'info') : 'error'  %>">
             <td><%= registration.firstname %></td>
             <td><%= registration.surname %></td>
             <td><%= registration.email %></td>
             <td><%= registration.grade %></td>
-            <td><%= registration.comment %></td>
+            <td><a href="#" rel="tooltip" data-placement: "right" title="<%= registration.comment %>"><%= truncate(registration.comment, :length => 19, :omission => "...") %></a></td>
+        </tr>
+        <% end %>
+
+    </tbody>
+</table>
+
+<br />
+
+<div style="float: right; color: #EEEEEE; font-size: 18pt; font-weight: bold;">
+    RESERVER
+</div>
+<table class="table table-bordered">
+    <thead class="head">
+        <tr>
+            <th>Förnamn</th>
+            <th>Efternamn</th>
+            <th>E-mail</th>
+            <th>Årskurs</th>
+            <th>Kommentar</th>
+        </tr>
+    </thead>
+    <tbody class="registrations">
+
+        <% @reserves.each do |registration| %>
+        <tr class="<%= registration.hasPayedRegistration ? (registration.hasPayedTotal ? 'success' : 'info') : 'error'  %>">
+            <td><%= registration.firstname %></td>
+            <td><%= registration.surname %></td>
+            <td><%= registration.email %></td>
+            <td><%= registration.grade %></td>
+            <td><a href="#" rel="tooltip" data-placement: "right" title="<%= registration.comment %>"><%= truncate(registration.comment, :length => 19, :omission => "...") %></a></td>
         </tr>
         <% end %>
 
@@ -27,3 +59,7 @@
 <br />
 
 <%= link_to 'New Registration', new_project_registration_path(@project) %>
+
+<script type="text/javascript">
+    $("[rel=tooltip]").tooltip({placement: 'right'});
+</script>

@@ -1,5 +1,13 @@
-<div>
-	<%= staff.name %>
+<div class="staff-container">
+	<h3><%= staff.name %></h3>
+	<% if staff.mobilephone != nil %>
+		<%= staff.mobilephone %>
+		<br>
+	<% end %>
+	<% if staff.mobilephone != nil %>
+		<%= staff.email %>
+		<br>
+	<% end %>
 	<br>
 	<%= staff.projects.map { |p| p.year }.join(', ') %>
 </div>

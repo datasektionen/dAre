@@ -3,9 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 
+/* index */
 table {
 	table-layout: fixed;
 	overflow: auto;
+	background: #EEEEEE;
 	thead {
 		tr {
 			th {
@@ -18,5 +20,16 @@ table {
 				overflow: hidden;
 				white-space: nowrap;
 			}
+	}
+}
+
+/* new registration */
+.registration-form-container {
+	background: #EEEEEE;
+	width: 600px;
+	padding: 10px;
+
+	input {
+	height: 35px;
 	}
 }

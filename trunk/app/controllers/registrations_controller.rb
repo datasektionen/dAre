@@ -5,7 +5,8 @@ class RegistrationsController < ApplicationController
     # GET /registrations
     # GET /registrations.json
     def index
-        @registrations = @project.registrations
+        @registrations = @project.registrations.find(:all, :conditions => { :reserve => false })
+        @reserves = @project.registrations.find(:all, :conditions => { :reserve => true })
 
         respond_to do |format|
             format.html # index.html.erb

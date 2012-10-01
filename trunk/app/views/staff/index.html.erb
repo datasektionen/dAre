@@ -1,28 +1,36 @@
 <% provide(:title, 'Staff') %>
+<div style="float: left; width: 500px;">
+	<div style="float: right; margin-top: -17px; color: #FFF; font-size: 18pt; font-weight: bold;">
+	    DÅRE-STABEN 2013
+	</div>
+	<ul class="users" style="margin-bottom: 60px;">
 
-<h1>Staff</h1>
+	    <%= render :partial => 'staff/staff', :collection => @staff_current %>
 
-<ul class="users">
+	</ul>
 
-    <%= render :partial => 'staff/staff', :collection => @staff_current %>
+	<div style="float: right; margin-top: -17px; color: #FFF; font-size: 18pt; font-weight: bold;">
+	    DÅRE-STABARE EMERITI
+	</div>
+	<ul class="users">
 
-</ul>
+	    <%= render :partial => 'staff/staff', :collection => @staff_emeriti %>
 
-<br>
+	</ul>
+	<% if signed_in_administrator? %>
+		<b><%= link_to 'Add staff member', new_staff_path, :data => { :remote => true, 'controls-modal' => 'modal-window', :backdrop => true } %></b>
+	<% end %>
+</div>
 
-<h3>Staff Emeriti</h3>
+<div style="float: right; width: 300px; padding: 10px; background: #FFF;">
+	<div style="float: right; margin-top: -27px; color: #FFF; font-size: 18pt; font-weight: bold;">
+	    KONTAKT
+	</div>
 
-<ul class="users">
-
-    <%= render :partial => 'staff/staff', :collection => @staff_emeriti %>
-
-</ul>
+	Om du behöver komma i kontakt med oss som arrangerar dÅre, är välkommen att maila eller ringa någon i staben, alternativt maila till dare@d.kth.se.
+</div>
 
 <br />
-
-<% #if signed_in_administrator? %>
-	<b><%= link_to 'Add staff member', new_staff_path, :data => { :remote => true, 'controls-modal' => 'modal-window', :backdrop => true } %></b>
-<% #end %>
 
 <div id="myModal" class="modal hide fade" >
     <button type="button" class="close" data-dismiss="modal">×</button></h1>

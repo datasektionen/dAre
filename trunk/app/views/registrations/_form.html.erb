@@ -3,50 +3,39 @@
   <%= render 'shared/error_messages', object: f.object %>
 
   <div class="field">
-    <%= f.label :firstname %><br />
-    <%= f.text_field :firstname %>
+    <%= f.text_field :firstname, :class => "input-large", :placeholder => "Förnamn" %>
   </div>
   <div class="field">
-    <%= f.label :surname %><br />
-    <%= f.text_field :surname %>
+    <%= f.text_field :surname, :class => "input-large", :placeholder => "Efternamn" %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :class => "input-large", :placeholder => "E-mail" %>
   </div>
   <div class="field">
-    <%= f.label :mobilephone %><br />
-    <%= f.text_field :mobilephone %>
+    <%= f.text_field :mobilephone, :class => "input-large", :placeholder => "Mobiltelefon" %>
   </div>
   <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
+    <%= f.text_field :grade, :class => "input-mini", :placeholder => "Årskurs" %>
   </div>
   <div class="field">
-    <%= f.label :postalCode %><br />
-    <%= f.text_field :postalCode %>
+    <%= f.text_field :address, :class => "input-large", :placeholder => "Adress" %>
   </div>
   <div class="field">
-    <%= f.label :postArea %><br />
-    <%= f.text_field :postArea %>
+    <%= f.text_field :postalCode, :class => "input-small", :placeholder => "Postnummer" %>
   </div>
   <div class="field">
-    <%= f.label :grade %><br />
-    <%= f.text_field :grade %>
+    <%= f.text_field :postArea, :class => "input-large", :placeholder => "Ort" %>
   </div>
   <div class="field">
-    <%= f.label :allergies %><br />
-    <%= f.text_field :allergies %>
+    <%= f.text_field :allergies , :class => "input-large", :placeholder => "Allergier" %>
   </div>
   <div class="field">
-    <%= f.label :comment %><br />
-    <%= f.text_field :comment %>
+    <%= f.text_field :comment, :class => "input-large", :placeholder => "Kommentar" %>
   </div>
   <div class="field">
-    <%= f.label :partey %><br />
-    <%= f.check_box :partey %>
+    <%= f.check_box :partey %> Afterskii?
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Anmäl!", :class => "btn" %>
   </div>
 <% end %>
