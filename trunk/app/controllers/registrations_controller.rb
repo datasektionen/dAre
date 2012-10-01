@@ -6,6 +6,7 @@ class RegistrationsController < ApplicationController
     # GET /registrations.json
     def index
         @registrations = @project.registrations.find(:all, :conditions => { :reserve => false })
+        @registrations = @project.registrations.paginate(page: params[:page], :conditions => { :reserve => false }, :order => :firstname, :per_page => 20)
         @reserves = @project.registrations.find(:all, :conditions => { :reserve => true })
 
         respond_to do |format|
