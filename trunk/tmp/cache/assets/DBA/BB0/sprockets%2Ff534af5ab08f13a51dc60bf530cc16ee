@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349122491.909364:@value{	I"length:EFi¹I"digest;
-F"%8f56edee35cd03cbe6a1ea4779ca4951I"source;
-FI"¹/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349126949.657296:@value{	I"length:EFi/ºI"digest;
+F"%baddc0b2773c53904f6da97e2150635eI"source;
+FI"/º/*
  * Bootstrap 2.0.0
  *
  * Copyright 2012 Twitter, Inc
@@ -4490,9 +4490,18 @@ p {
   margin-top: 130px;
   margin-left: -30px;
 }
+/* line 99, ../../app/assets/stylesheets/custom.css.scss */
+.content-top .buttons .menu-btn a:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+/* line 100, ../../app/assets/stylesheets/custom.css.scss */
+.content-top .buttons .menu-btn a img {
+  border: 0;
+}
 
 /* container */
-/* line 105, ../../app/assets/stylesheets/custom.css.scss */
+/* line 108, ../../app/assets/stylesheets/custom.css.scss */
 #container {
   background-image: url(bg.png);
   width: 360px;
@@ -4521,7 +4530,7 @@ p {
 }
 
 /* footer */
-/* line 138, ../../app/assets/stylesheets/custom.css.scss */
+/* line 141, ../../app/assets/stylesheets/custom.css.scss */
 footer {
   align: center;
   background: url(footer.png) no-repeat;
@@ -4533,31 +4542,31 @@ footer {
   margin-top: -125px;
   color: #999999;
 }
-/* line 148, ../../app/assets/stylesheets/custom.css.scss */
+/* line 151, ../../app/assets/stylesheets/custom.css.scss */
 footer a {
   color: #555555;
 }
-/* line 150, ../../app/assets/stylesheets/custom.css.scss */
+/* line 153, ../../app/assets/stylesheets/custom.css.scss */
 footer a:hover {
   color: #222222;
 }
-/* line 154, ../../app/assets/stylesheets/custom.css.scss */
+/* line 157, ../../app/assets/stylesheets/custom.css.scss */
 footer small {
   float: left;
 }
-/* line 157, ../../app/assets/stylesheets/custom.css.scss */
+/* line 160, ../../app/assets/stylesheets/custom.css.scss */
 footer ul {
   float: right;
   list-style: none;
 }
-/* line 160, ../../app/assets/stylesheets/custom.css.scss */
+/* line 163, ../../app/assets/stylesheets/custom.css.scss */
 footer ul li {
   float: left;
   margin-left: 10px;
 }
 
 /* miscellaneous */
-/* line 169, ../../app/assets/stylesheets/custom.css.scss */
+/* line 172, ../../app/assets/stylesheets/custom.css.scss */
 .debug_dump {
   clear: both;
   float: left;
@@ -4569,7 +4578,7 @@ footer ul li {
 }
 
 /* forms */
-/* line 179, ../../app/assets/stylesheets/custom.css.scss */
+/* line 182, ../../app/assets/stylesheets/custom.css.scss */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -4581,32 +4590,32 @@ input, textarea, select, .uneditable-input {
   box-sizing: border-box;
 }
 
-/* line 188, ../../app/assets/stylesheets/custom.css.scss */
+/* line 191, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation {
   color: #f00;
 }
-/* line 190, ../../app/assets/stylesheets/custom.css.scss */
+/* line 193, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation ul {
   list-style: none;
   margin: 0 0 18px 0;
 }
 
 /* users index */
-/* line 203, ../../app/assets/stylesheets/custom.css.scss */
+/* line 206, ../../app/assets/stylesheets/custom.css.scss */
 .users {
   list-style: none;
   margin: 0;
 }
-/* line 206, ../../app/assets/stylesheets/custom.css.scss */
+/* line 209, ../../app/assets/stylesheets/custom.css.scss */
 .users li {
   overflow: auto;
   padding: 10px 0;
   border-top: 1px solid #eeeeee;
 }
-/* line 210, ../../app/assets/stylesheets/custom.css.scss */
+/* line 213, ../../app/assets/stylesheets/custom.css.scss */
 .users li:last-child {
   border-bottom: 1px solid #eeeeee;
 }
 ;
 FI"_version;
-F"%7c5d24b83803f7bd45f03789142b2abf
+F"%281104d43e5bc34d64375e47dc20794b
