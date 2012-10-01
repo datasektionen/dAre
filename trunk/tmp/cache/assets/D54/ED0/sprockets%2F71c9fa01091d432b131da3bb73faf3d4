@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349126949.6267881:@value{	I"length:EFiú÷I"digest;
-F"%c7a079aa7f981defba835fb5b2550db6I"source;
-FI"ú÷/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349127027.548386:@value{	I"length:EFiÜ’I"digest;
+F"%2ec982dde7c1e76d15e236932e05ac6eI"source;
+FI"Ü’/*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
@@ -4495,18 +4495,9 @@ p {
   margin-top: 130px;
   margin-left: -30px;
 }
-/* line 99, ../../app/assets/stylesheets/custom.css.scss */
-.content-top .buttons .menu-btn a:hover {
-  text-decoration: none;
-  background-color: transparent;
-}
-/* line 100, ../../app/assets/stylesheets/custom.css.scss */
-.content-top .buttons .menu-btn a img {
-  border: 0;
-}
 
 /* container */
-/* line 108, ../../app/assets/stylesheets/custom.css.scss */
+/* line 106, ../../app/assets/stylesheets/custom.css.scss */
 #container {
   background-image: url(bg.png);
   width: 360px;
@@ -4535,7 +4526,7 @@ p {
 }
 
 /* footer */
-/* line 141, ../../app/assets/stylesheets/custom.css.scss */
+/* line 139, ../../app/assets/stylesheets/custom.css.scss */
 footer {
   align: center;
   background: url(footer.png) no-repeat;
@@ -4547,31 +4538,31 @@ footer {
   margin-top: -125px;
   color: #999999;
 }
-/* line 151, ../../app/assets/stylesheets/custom.css.scss */
+/* line 149, ../../app/assets/stylesheets/custom.css.scss */
 footer a {
   color: #555555;
 }
-/* line 153, ../../app/assets/stylesheets/custom.css.scss */
+/* line 151, ../../app/assets/stylesheets/custom.css.scss */
 footer a:hover {
   color: #222222;
 }
-/* line 157, ../../app/assets/stylesheets/custom.css.scss */
+/* line 155, ../../app/assets/stylesheets/custom.css.scss */
 footer small {
   float: left;
 }
-/* line 160, ../../app/assets/stylesheets/custom.css.scss */
+/* line 158, ../../app/assets/stylesheets/custom.css.scss */
 footer ul {
   float: right;
   list-style: none;
 }
-/* line 163, ../../app/assets/stylesheets/custom.css.scss */
+/* line 161, ../../app/assets/stylesheets/custom.css.scss */
 footer ul li {
   float: left;
   margin-left: 10px;
 }
 
 /* miscellaneous */
-/* line 172, ../../app/assets/stylesheets/custom.css.scss */
+/* line 170, ../../app/assets/stylesheets/custom.css.scss */
 .debug_dump {
   clear: both;
   float: left;
@@ -4583,7 +4574,7 @@ footer ul li {
 }
 
 /* forms */
-/* line 182, ../../app/assets/stylesheets/custom.css.scss */
+/* line 180, ../../app/assets/stylesheets/custom.css.scss */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -4595,29 +4586,29 @@ input, textarea, select, .uneditable-input {
   box-sizing: border-box;
 }
 
-/* line 191, ../../app/assets/stylesheets/custom.css.scss */
+/* line 189, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation {
   color: #f00;
 }
-/* line 193, ../../app/assets/stylesheets/custom.css.scss */
+/* line 191, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation ul {
   list-style: none;
   margin: 0 0 18px 0;
 }
 
 /* users index */
-/* line 206, ../../app/assets/stylesheets/custom.css.scss */
+/* line 204, ../../app/assets/stylesheets/custom.css.scss */
 .users {
   list-style: none;
   margin: 0;
 }
-/* line 209, ../../app/assets/stylesheets/custom.css.scss */
+/* line 207, ../../app/assets/stylesheets/custom.css.scss */
 .users li {
   overflow: auto;
   padding: 10px 0;
   border-top: 1px solid #eeeeee;
 }
-/* line 213, ../../app/assets/stylesheets/custom.css.scss */
+/* line 211, ../../app/assets/stylesheets/custom.css.scss */
 .users li:last-child {
   border-bottom: 1px solid #eeeeee;
 }
@@ -23060,4 +23051,4 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 
 ;
 FI"_version;
-F"%2340193d3b881a73cefc0966ecb60e2b
+F"%b23a31224c2fe52c90be0940eb118f4b
