@@ -1,6 +1,7 @@
 <div style="float: right; color: #EEEEEE;margin-bottom: -1px; font-size: 18pt; font-weight: bold;">
     ANMÄLDA DELTAGARE
 </div>
+<div class="tableclass">
 <table class="table table-bordered">
     <thead class="head">
         <tr>
@@ -19,12 +20,13 @@
             <td><%= registration.surname %></td>
             <td><%= registration.email %></td>
             <td><%= registration.grade %></td>
-            <td><a href="#" rel="tooltip" data-placement: "right" title="<%= registration.comment %>"><%= truncate(registration.comment, :length => 19, :omission => "...") %></a></td>
+            <td><a href="#" rel="tooltip" data-placement: "right" title="<%= registration.comment %>"><%= truncate(registration.comment, :length => 19, :omission => "...", :style =>"a:link{color: #000") %></a></td>
         </tr>
         <% end %>
 
     </tbody>
 </table>
+</div>
 <%= will_paginate @registrations %>
 <br />
 

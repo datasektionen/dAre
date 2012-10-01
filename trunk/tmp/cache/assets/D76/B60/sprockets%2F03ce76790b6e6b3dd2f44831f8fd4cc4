@@ -1,7 +1,7 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349127540.8651571:@value{I"
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349132845.014049:@value{I"
 class:EFI"BundledAsset;
 FI"id;
-F"%643b70512259e96c5c9bac45bdcb019fI"logical_path;
+F"%90b35ba8049d533b1ca348440eca212eI"logical_path;
 FI"registrations.css;
 FI"pathname;
 FI"8$root/app/assets/stylesheets/registrations.css.scss;
@@ -9,7 +9,7 @@ FI"content_type;
 FI"text/css;
 FI"
 mtime;
-FI"2012-10-01T23:38:32+02:00;
+FI"2012-10-02T01:06:39+02:00;
 FI"	body;
 FI"|¢/*
  * Bootstrap 2.0.0
@@ -4442,7 +4442,7 @@ F[({I"	path;
 FI"8$root/app/assets/stylesheets/registrations.css.scss;
 FI"
 mtime;
-FIu:	Time5$€   š:@_zoneI"	CEST;
+FIu:	Time7$€  p:@_zoneI"	CEST;
 T:offseti I"hexdigest;
 F"%b90c1c2adbe15035bf6174df34356ac1{I"	path;
 FI"o/Users/Ludde/.rvm/gems/ruby-1.9.3-p194/gems/bootstrap-sass-2.0.0/vendor/assets/stylesheets/_bootstrap.scss;

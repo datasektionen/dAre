@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349127540.9317892:@value{	I"length:EFiÖI"digest;
-F"%1cb62ddc3740ea8eca85553dfe26f1b6I"source;
-FI"Ö/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349133026.673821:@value{	I"length:EFi ×I"digest;
+F"%74daee4c40d1320a09869787c1c23ebbI"source;
+FI" ×/*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
@@ -4415,33 +4415,51 @@ body {
 body a:hover {
   background-color: transparent;
 }
+/* line 26, ../../app/assets/stylesheets/custom.css.scss */
+body a:link {
+  color: #FFF;
+}
+/* line 27, ../../app/assets/stylesheets/custom.css.scss */
+body a:visited {
+  color: #FFF;
+}
 
-/* line 28, ../../app/assets/stylesheets/custom.css.scss */
+/* line 29, ../../app/assets/stylesheets/custom.css.scss */
+.tableclass a:link {
+  color: #000;
+}
+
+/* line 32, ../../app/assets/stylesheets/custom.css.scss */
+.tableclass a:visited {
+  color: #000;
+}
+
+/* line 35, ../../app/assets/stylesheets/custom.css.scss */
 section {
   overflow: auto;
 }
 
-/* line 32, ../../app/assets/stylesheets/custom.css.scss */
+/* line 39, ../../app/assets/stylesheets/custom.css.scss */
 textarea {
   resize: vertical;
 }
 
-/* line 36, ../../app/assets/stylesheets/custom.css.scss */
+/* line 43, ../../app/assets/stylesheets/custom.css.scss */
 .center {
   text-align: center;
 }
-/* line 38, ../../app/assets/stylesheets/custom.css.scss */
+/* line 45, ../../app/assets/stylesheets/custom.css.scss */
 .center h1 {
   margin-bottom: 10px;
 }
 
 /* typography */
-/* line 45, ../../app/assets/stylesheets/custom.css.scss */
+/* line 52, ../../app/assets/stylesheets/custom.css.scss */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-/* line 49, ../../app/assets/stylesheets/custom.css.scss */
+/* line 56, ../../app/assets/stylesheets/custom.css.scss */
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -4449,7 +4467,7 @@ h1 {
   text-align: center;
 }
 
-/* line 56, ../../app/assets/stylesheets/custom.css.scss */
+/* line 63, ../../app/assets/stylesheets/custom.css.scss */
 h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
@@ -4459,14 +4477,14 @@ h2 {
   color: #999999;
 }
 
-/* line 65, ../../app/assets/stylesheets/custom.css.scss */
+/* line 72, ../../app/assets/stylesheets/custom.css.scss */
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
 
 /* header */
-/* line 73, ../../app/assets/stylesheets/custom.css.scss */
+/* line 80, ../../app/assets/stylesheets/custom.css.scss */
 #logo {
   float: left;
   margin-right: 10px;
@@ -4478,13 +4496,13 @@ p {
   font-weight: bold;
   line-height: 1;
 }
-/* line 83, ../../app/assets/stylesheets/custom.css.scss */
+/* line 90, ../../app/assets/stylesheets/custom.css.scss */
 #logo:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 89, ../../app/assets/stylesheets/custom.css.scss */
+/* line 96, ../../app/assets/stylesheets/custom.css.scss */
 .content-top {
   background: url(header.png) no-repeat;
   width: 938px;
@@ -4494,14 +4512,14 @@ p {
   position: relative;
   z-index: 1;
 }
-/* line 99, ../../app/assets/stylesheets/custom.css.scss */
+/* line 106, ../../app/assets/stylesheets/custom.css.scss */
 .content-top .buttons .menu-btn {
   margin-top: 130px;
   margin-left: -30px;
 }
 
 /* container */
-/* line 109, ../../app/assets/stylesheets/custom.css.scss */
+/* line 116, ../../app/assets/stylesheets/custom.css.scss */
 #container {
   background-image: url(bg.png);
   width: 360px;
@@ -4529,7 +4547,7 @@ p {
 }
 
 /* footer */
-/* line 141, ../../app/assets/stylesheets/custom.css.scss */
+/* line 148, ../../app/assets/stylesheets/custom.css.scss */
 footer {
   align: center;
   background: url(footer.png) no-repeat;
@@ -4543,31 +4561,31 @@ footer {
   position: relative;
   z-index: 1;
 }
-/* line 153, ../../app/assets/stylesheets/custom.css.scss */
+/* line 160, ../../app/assets/stylesheets/custom.css.scss */
 footer a {
   color: #555555;
 }
-/* line 155, ../../app/assets/stylesheets/custom.css.scss */
+/* line 162, ../../app/assets/stylesheets/custom.css.scss */
 footer a:hover {
   color: #222222;
 }
-/* line 159, ../../app/assets/stylesheets/custom.css.scss */
+/* line 166, ../../app/assets/stylesheets/custom.css.scss */
 footer small {
   float: left;
 }
-/* line 162, ../../app/assets/stylesheets/custom.css.scss */
+/* line 169, ../../app/assets/stylesheets/custom.css.scss */
 footer ul {
   float: right;
   list-style: none;
 }
-/* line 165, ../../app/assets/stylesheets/custom.css.scss */
+/* line 172, ../../app/assets/stylesheets/custom.css.scss */
 footer ul li {
   float: left;
   margin-left: 10px;
 }
 
 /* miscellaneous */
-/* line 174, ../../app/assets/stylesheets/custom.css.scss */
+/* line 181, ../../app/assets/stylesheets/custom.css.scss */
 .debug_dump {
   clear: both;
   float: left;
@@ -4579,7 +4597,7 @@ footer ul li {
 }
 
 /* forms */
-/* line 184, ../../app/assets/stylesheets/custom.css.scss */
+/* line 191, ../../app/assets/stylesheets/custom.css.scss */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -4591,29 +4609,29 @@ input, textarea, select, .uneditable-input {
   box-sizing: border-box;
 }
 
-/* line 193, ../../app/assets/stylesheets/custom.css.scss */
+/* line 200, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation {
   color: #f00;
 }
-/* line 195, ../../app/assets/stylesheets/custom.css.scss */
+/* line 202, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation ul {
   list-style: none;
   margin: 0 0 18px 0;
 }
 
 /* users index */
-/* line 208, ../../app/assets/stylesheets/custom.css.scss */
+/* line 215, ../../app/assets/stylesheets/custom.css.scss */
 .users {
   list-style: none;
   margin: 0;
 }
-/* line 211, ../../app/assets/stylesheets/custom.css.scss */
+/* line 218, ../../app/assets/stylesheets/custom.css.scss */
 .users li {
   overflow: auto;
   padding: 10px 0;
   border-top: 1px solid #eeeeee;
 }
-/* line 215, ../../app/assets/stylesheets/custom.css.scss */
+/* line 222, ../../app/assets/stylesheets/custom.css.scss */
 .users li:last-child {
   border-bottom: 1px solid #eeeeee;
 }
@@ -23057,4 +23075,4 @@ button.ui-button::-moz-focus-inner { border: 0; padding: 0; } /* reset extra pad
 
 ;
 FI"_version;
-F"%8703dc82bab224ae49598152d7aa51e2
+F"%6310975e6cee5f39dcd0f5e90bc7d06c
