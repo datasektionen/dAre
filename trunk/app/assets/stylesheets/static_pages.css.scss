@@ -1,3 +1,50 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+.news_container {
+  float: left;
+  padding: 10px;
+  width: 500px;
+
+  .post {
+  background: #FFF;
+  margin-bottom: 10px;
+  padding: 10px;
+
+    .headline {
+      float: left;
+      color: #e42081;
+      font-size: 14pt;
+      font-weight: bold;
+      width: 300px;
+    }
+
+    .content {
+      margin-top: 10px;
+    }
+
+    .timestamp {
+      float: right;
+      color: #e42081;
+      font-size: 11px;
+      font-weight: bold;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  } 
+}
+
+.info_box {
+  
+}

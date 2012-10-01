@@ -1,22 +1,15 @@
 <% provide(:title, 'Home') %>
-<div class="center hero-unit">
-  <h1>dÅre</h1>
-
-  <h2>
-    Det här är en hemsida som innehåller bilder på hästar.
-  </h2>
-
-  <%= link_to "Register now!", new_project_registration_path(@project), class: "btn btn-large btn-primary" %>
-
+<div class="news_container" style="float: left;">
+	<div style="float: right; margin-top: -16px; color: #FFF; font-size: 16pt; font-weight: bold;">
+		NYHETER
+	</div>
+    <%= render 'shared/posts' %>
 </div>
 
-<div class="row">
-  <% if signed_in_administrator? %>
-    <div class="span8">
-      <%= render 'shared/post_form' %>
-    </div>
-  <% end %>
-    <div class="span8">
-      <%= render 'shared/posts' %>
-    </div>
+<div>
+
+</div>	
+
+<div>
+
 </div>

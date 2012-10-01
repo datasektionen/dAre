@@ -1,5 +1,5 @@
-<header class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
+<header>
+    <div class="navbar navbar-fixed-top navbar-inner">
         <div class="container">
             <%= link_to "dÅre", root_path, id: "logo" %>
             <nav>
@@ -23,6 +23,15 @@
                     <% end %>
                 </ul>
             </nav>
+        </div>
+    </div>
+
+    <div class="content-top">
+        <div class="buttons">
+            <%= image_tag "Button-1.png", :class => "menu-btn" %>
+            <%= image_tag "Button-2.png", :class => "menu-btn" %>
+            <%= image_tag "Button-3.png", :class => "menu-btn" %>
+            <%= image_tag "Button-4.png", :class => "menu-btn" %>
         </div>
     </div>
 </header>

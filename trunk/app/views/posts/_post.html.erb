@@ -1,14 +1,23 @@
-<%= content_tag_for(:li, post) do %>
-    <h3><%= post.headline %></h3>
-    <span class="content"><%= post.content %></span>
-    <span class="timestamp">Posted <%= time_ago_in_words(post.created_at) %> ago.</span>
+<div class="post">
+    <div style="height: 20px; border-bottom: 2px solid #e42081;">
+        <div class="headline">
+            <%= post.headline.upcase %>
+        </div> 
+
+        <div class="timestamp">
+            <%= time_ago_in_words(post.created_at) %> ago.
+        </div>
+    </div>
+    <div class="content">
+        <%= post.content %>
+    </div> 
     <% if signed_in_administrator? %>
-    <%= link_to 'edit', edit_post_path(post), class: 'btn btn-warning' %>                          
-    <%= link_to 'delete', post, method: :delete,
+    <%#= link_to 'edit', edit_post_path(post), class: 'btn btn-warning' %>                          
+    <%#= link_to 'delete', post, method: :delete,
                                 remote: true,
                                 data: { confirm: 'Are you sure?' },
                                 class: 'btn btn-danger',
                                 format: :json,
                                 title: post.headline %>
     <% end %>
-<% end %>
+</div>

@@ -1,49 +1,27 @@
-<h1>Listing registrations</h1>
+<table class="table table-hover">
+    <caption>Anmälda deltagare</caption>
+    <thead class="head">
+        <tr>
+            <th>Firstname</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Grade</th>
+            <th>Comment</th>
+        </tr>
+    </thead>
+    <tbody class="registrations">
 
-<table>
-  <tr>
-    <th>Kth</th>
-    <th>Firstname</th>
-    <th>Surname</th>
-    <th>Email</th>
-    <th>Mobilephone</th>
-    <th>Address</th>
-    <th>Postalcode</th>
-    <th>Postarea</th>
-    <th>Grade</th>
-    <th>Allergies</th>
-    <th>Comment</th>
-    <th>Haspayedregistration</th>
-    <th>Haspayedtotal</th>
-    <th>Partey</th>
-    <th>Reserve</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+        <% @registrations.each do |registration| %>
+        <tr class="<%= registration.hasPayedRegistration ? 'success' : 'error'  %>">
+            <td><%= registration.firstname %></td>
+            <td><%= registration.surname %></td>
+            <td><%= registration.email %></td>
+            <td><%= registration.grade %></td>
+            <td><%= registration.comment %></td>
+        </tr>
+        <% end %>
 
-<% @registrations.each do |registration| %>
-  <tr>
-    <td><%= registration.kth_id %></td>
-    <td><%= registration.firstname %></td>
-    <td><%= registration.surname %></td>
-    <td><%= registration.email %></td>
-    <td><%= registration.mobilephone %></td>
-    <td><%= registration.address %></td>
-    <td><%= registration.postalCode %></td>
-    <td><%= registration.postArea %></td>
-    <td><%= registration.grade %></td>
-    <td><%= registration.allergies %></td>
-    <td><%= registration.comment %></td>
-    <td><%= registration.hasPayedRegistration %></td>
-    <td><%= registration.hasPayedTotal %></td>
-    <td><%= registration.partey %></td>
-    <td><%= registration.reserve %></td>
-    <td><%= link_to 'Show', project_registration_path(@project, registration) %></td>
-    <td><%= link_to 'Edit', edit_project_registration_path(@project, registration) %></td>
-    <td><%= link_to 'Destroy', project_registration_path(@project, registration), confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+    </tbody>
 </table>
 
 <br />

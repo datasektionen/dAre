@@ -1,6 +1,6 @@
 <h3><%= link_to 'New post', '#', :id => 'new_post_link' %></h3>
 
-<div class="row" style="display: none;" id="new_post_block">
+<div style="display: none;" id="new_post_block">
   <div class="span6 offset3">
     <%= form_for(@post, :remote => true, format: :html) do |f| %>
 
