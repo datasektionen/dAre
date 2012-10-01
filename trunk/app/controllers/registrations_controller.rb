@@ -29,8 +29,12 @@ class RegistrationsController < ApplicationController
     # GET /registrations/new.json
     def new
         if current_attendee != nil && current_administrator == nil
-            flash[:error] = 'You are already registered.'
+            flash[:error] = 'Du ar redan registrerad.'
             redirect_to project_registration_path(@project, current_attendee) and return
+        end
+
+        if !@project.openRegistration
+            redirect_to root_path, :flash => { :error => 'Anmalan ar inte oppen.' } and return;
         end
 
         @registration = Registration.new
@@ -66,7 +70,7 @@ class RegistrationsController < ApplicationController
 
                 #AttendeeMailer.registration_mail(@registration).deliver
 
-                format.html { redirect_to project_registration_path(@project, @registration), notice: 'Registration was successfully created.' }
+                format.html { redirect_to project_registration_path(@project, @registration), notice: 'Din anmalan har sparats.' }
                 format.json { render json: @registration, status: :created, location: @registration }
             else
                 format.html { render action: 'new' }
@@ -82,7 +86,7 @@ class RegistrationsController < ApplicationController
 
         respond_to do |format|
             if @registration.update_attributes(params[:registration])
-                format.html { redirect_to project_registration_path(@project, @registration), notice: 'Registration was successfully updated.' }
+                format.html { redirect_to project_registration_path(@project, @registration), notice: 'Din anmalan har sparats.' }
                 format.json { head :ok }
             else
                 format.html { render action: 'edit' }
@@ -98,7 +102,7 @@ class RegistrationsController < ApplicationController
         @registration.destroy
 
         respond_to do |format|
-            format.html { redirect_to project_registrations_path(@project), notice: 'Registration destroyed.' }
+            format.html { redirect_to project_registrations_path(@project), notice: 'Anmalan har tagits bort.' }
             format.json { head :ok }
         end
     end
