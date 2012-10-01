@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349118987.393207:@value{	I"length:EFiÁ»I"digest;
-F"%863726b87616534052e809117a01908eI"source;
-FI"Á»/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349121863.27207:@value{	I"length:EFi¹I"digest;
+F"%8f56edee35cd03cbe6a1ea4779ca4951I"source;
+FI"¹/*
  * Bootstrap 2.0.0
  *
  * Copyright 2012 Twitter, Inc
@@ -4404,34 +4404,35 @@ html {
 body {
   padding-top: 60px;
   background: url(BG.jpg);
+  margin-bottom: 0px;
 }
 
-/* line 24, ../../app/assets/stylesheets/custom.css.scss */
+/* line 25, ../../app/assets/stylesheets/custom.css.scss */
 section {
   overflow: auto;
 }
 
-/* line 28, ../../app/assets/stylesheets/custom.css.scss */
+/* line 29, ../../app/assets/stylesheets/custom.css.scss */
 textarea {
   resize: vertical;
 }
 
-/* line 32, ../../app/assets/stylesheets/custom.css.scss */
+/* line 33, ../../app/assets/stylesheets/custom.css.scss */
 .center {
   text-align: center;
 }
-/* line 34, ../../app/assets/stylesheets/custom.css.scss */
+/* line 35, ../../app/assets/stylesheets/custom.css.scss */
 .center h1 {
   margin-bottom: 10px;
 }
 
 /* typography */
-/* line 41, ../../app/assets/stylesheets/custom.css.scss */
+/* line 42, ../../app/assets/stylesheets/custom.css.scss */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-/* line 45, ../../app/assets/stylesheets/custom.css.scss */
+/* line 46, ../../app/assets/stylesheets/custom.css.scss */
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -4439,7 +4440,7 @@ h1 {
   text-align: center;
 }
 
-/* line 52, ../../app/assets/stylesheets/custom.css.scss */
+/* line 53, ../../app/assets/stylesheets/custom.css.scss */
 h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
@@ -4449,14 +4450,14 @@ h2 {
   color: #999999;
 }
 
-/* line 61, ../../app/assets/stylesheets/custom.css.scss */
+/* line 62, ../../app/assets/stylesheets/custom.css.scss */
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
 
 /* header */
-/* line 69, ../../app/assets/stylesheets/custom.css.scss */
+/* line 70, ../../app/assets/stylesheets/custom.css.scss */
 #logo {
   float: left;
   margin-right: 10px;
@@ -4468,13 +4469,13 @@ p {
   font-weight: bold;
   line-height: 1;
 }
-/* line 79, ../../app/assets/stylesheets/custom.css.scss */
+/* line 80, ../../app/assets/stylesheets/custom.css.scss */
 #logo:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 85, ../../app/assets/stylesheets/custom.css.scss */
+/* line 86, ../../app/assets/stylesheets/custom.css.scss */
 .content-top {
   background: url(header.png) no-repeat;
   width: 938px;
@@ -4484,26 +4485,16 @@ p {
   position: relative;
   z-index: 1;
 }
-/* line 95, ../../app/assets/stylesheets/custom.css.scss */
+/* line 96, ../../app/assets/stylesheets/custom.css.scss */
 .content-top .buttons .menu-btn {
   margin-top: 130px;
-  margin-left: -4px;
+  margin-left: -30px;
 }
 
 /* container */
-/* line 104, ../../app/assets/stylesheets/custom.css.scss */
+/* line 105, ../../app/assets/stylesheets/custom.css.scss */
 #container {
-  /* Firefox v3.6+ */
-  background-image: -moz-linear-gradient(50% 0% -90deg, #ff49ff 0%, #ff2cff 74%, #ff22ff 100%);
-  /* safari v4.0+ and by Chrome v3.0+ */
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0, #ff49ff), color-stop(0.74, #ff2cff), color-stop(1, #ff22ff));
-  /* Chrome v10.0+ and by safari nightly build*/
-  background-image: -webkit-linear-gradient(-90deg, #ff49ff 0%, #ff2cff 74%, #ff22ff 100%);
-  /* Opera v11.10+ */
-  background-image: -o-linear-gradient(-90deg, #ff49ff 0%, #ff2cff 74%, #ff22ff 100%);
-  /* IE v10+ */
-  background-image: -ms-linear-gradient(-90deg, #ff49ff 0%, #ff2cff 74%, #ff22ff 100%);
-  background-image: linear-gradient(-90deg, #ff49ff 0%, #ff2cff 74%, #ff22ff 100%);
+  background-image: url(bg.png);
   width: 360px;
   height: 650px;
   border-color: rgba(255, 255, 255, 0.5);
@@ -4521,7 +4512,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   margin-top: -210px;
-  padding-top: 120px;
+  padding-top: 105px;
   padding-bottom: 200px;
   padding-left: 10px;
   padding-right: 10px;
@@ -4530,7 +4521,7 @@ p {
 }
 
 /* footer */
-/* line 152, ../../app/assets/stylesheets/custom.css.scss */
+/* line 138, ../../app/assets/stylesheets/custom.css.scss */
 footer {
   align: center;
   background: url(footer.png) no-repeat;
@@ -4539,34 +4530,34 @@ footer {
   clear: both;
   margin-right: auto;
   margin-left: auto;
-  margin-top: -100px;
+  margin-top: -125px;
   color: #999999;
 }
-/* line 162, ../../app/assets/stylesheets/custom.css.scss */
+/* line 148, ../../app/assets/stylesheets/custom.css.scss */
 footer a {
   color: #555555;
 }
-/* line 164, ../../app/assets/stylesheets/custom.css.scss */
+/* line 150, ../../app/assets/stylesheets/custom.css.scss */
 footer a:hover {
   color: #222222;
 }
-/* line 168, ../../app/assets/stylesheets/custom.css.scss */
+/* line 154, ../../app/assets/stylesheets/custom.css.scss */
 footer small {
   float: left;
 }
-/* line 171, ../../app/assets/stylesheets/custom.css.scss */
+/* line 157, ../../app/assets/stylesheets/custom.css.scss */
 footer ul {
   float: right;
   list-style: none;
 }
-/* line 174, ../../app/assets/stylesheets/custom.css.scss */
+/* line 160, ../../app/assets/stylesheets/custom.css.scss */
 footer ul li {
   float: left;
   margin-left: 10px;
 }
 
 /* miscellaneous */
-/* line 183, ../../app/assets/stylesheets/custom.css.scss */
+/* line 169, ../../app/assets/stylesheets/custom.css.scss */
 .debug_dump {
   clear: both;
   float: left;
@@ -4578,7 +4569,7 @@ footer ul li {
 }
 
 /* forms */
-/* line 193, ../../app/assets/stylesheets/custom.css.scss */
+/* line 179, ../../app/assets/stylesheets/custom.css.scss */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -4590,32 +4581,32 @@ input, textarea, select, .uneditable-input {
   box-sizing: border-box;
 }
 
-/* line 202, ../../app/assets/stylesheets/custom.css.scss */
+/* line 188, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation {
   color: #f00;
 }
-/* line 204, ../../app/assets/stylesheets/custom.css.scss */
+/* line 190, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation ul {
   list-style: none;
   margin: 0 0 18px 0;
 }
 
 /* users index */
-/* line 217, ../../app/assets/stylesheets/custom.css.scss */
+/* line 203, ../../app/assets/stylesheets/custom.css.scss */
 .users {
   list-style: none;
   margin: 0;
 }
-/* line 220, ../../app/assets/stylesheets/custom.css.scss */
+/* line 206, ../../app/assets/stylesheets/custom.css.scss */
 .users li {
   overflow: auto;
   padding: 10px 0;
   border-top: 1px solid #eeeeee;
 }
-/* line 224, ../../app/assets/stylesheets/custom.css.scss */
+/* line 210, ../../app/assets/stylesheets/custom.css.scss */
 .users li:last-child {
   border-bottom: 1px solid #eeeeee;
 }
 ;
 FI"_version;
-F"%7e3f0423d21ad51bfb0ade491fd65c30
+F"%438858f900bfd152bb0b05125c0caadf
