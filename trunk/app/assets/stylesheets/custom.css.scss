@@ -148,6 +148,8 @@ footer {
   margin-left: auto;
   margin-top: -125px;
   color: $grayLight;
+  position: relative;
+  z-index: 1;
   a {
     color: $gray;
     &:hover { 
