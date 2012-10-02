@@ -3,11 +3,24 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 
-.staff-container {
-	background: #FFF;
-	padding: 10px;
-	border-radius: 3px;
-	margin-bottom: 10px;
-	float: left;
-	margin-left: 10px;
+.container-staff {
+	width: 600px !important;
+	float:left;
+}
+
+.container-emeriti {
+	width: 600px !important;
+	float:left;
+	margin-top: 40px;
+}
+
+.container-contact {
+	width: 200px !important;
+	float: right;
+}
+
+.box-staff {
+	width: 270px;
+	height: 100px;
+	margin-right: 10px;
 }

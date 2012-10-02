@@ -1,23 +1,31 @@
 <% provide(:title, 'Home') %>
-<div class="news_container" style="float: left;">
-	<div style="float: right; margin-top: -17px; color: #EEEEEE; font-size: 18pt; font-weight: bold;">
-		NYHETER
+<div class="container container-posts">
+	<div class="headline">
+	    NYHETER
 	</div>
-    <%= render 'shared/posts' %>
+	<div class="content">
+	    <%= render 'shared/posts' %>
+	</div>
 </div>
 
-<div class="info_box">
-	<div style="float: right; margin-top: -27px; color: #EEEEEE; font-size: 18pt; font-weight: bold;">
-		INFO
+<div class="container container-info">
+	<div class="headline">
+	    INFO
 	</div>
-
-	ageageageg
-</div>	
-
-<div class="faq_box">
-	<div style="float: right; margin-top: -27px; color: #EEEEEE; font-size: 18pt; font-weight: bold;">
-		SNABBFAKTA
+	<div class="content">
+	    <div class="box box-info-faq">
+	    	agegage
+		</div>
 	</div>
+</div>
 
-	ageageageg
+<div class="container container-faq">
+	<div class="headline">
+	    SNABBFAKTA
+	</div>
+	<div class="content">
+	    <div class="box box-info-faq">
+	    	agegage
+		</div>
+	</div>
 </div>

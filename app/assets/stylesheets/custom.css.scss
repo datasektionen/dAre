@@ -77,7 +77,6 @@ p {
 
 
 /* header */
-
 #logo {
   float: left;
   margin-right: 10px;
@@ -135,7 +134,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   margin-top: -160px;
-  padding-top: 105px;
+  padding-top: 130px;
   padding-bottom: 200px;
   padding-left: 10px;
   padding-right: 10px;
@@ -214,18 +213,24 @@ input, textarea, select, .uneditable-input {
   @extend .error;
  }
 
- /* users index */
-
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-top: 1px solid $grayLighter;
-    &:last-child {
-      border-bottom: 1px solid $grayLighter;
-    }
+/* headlines */
+.container {
+  .headline {
+    float: right;
+    color: #EEEEEE;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: -1px;
   }
 
+  .content {
+    float: left;
+    .box {
+      background: #EEEEEE;
+      padding: 10px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      float: left;
+    }
+  }
 }
