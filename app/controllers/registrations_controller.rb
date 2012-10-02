@@ -70,7 +70,7 @@ class RegistrationsController < ApplicationController
         @registration = @project.registrations.build(params[:registration])
         @registration.kth_id = session[:remember_token]
 
-        if @project.registrations.count > @project.spots
+        if @project.registrations.count >= @project.spots
             @registration.reserve = true
         end
 
