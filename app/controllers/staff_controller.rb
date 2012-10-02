@@ -1,6 +1,8 @@
 class StaffController < ApplicationController
 	include ApplicationHelper
 
+	before_filter :is_administrator, :except => :index 
+
 	def index
 		@project = get_project
 
