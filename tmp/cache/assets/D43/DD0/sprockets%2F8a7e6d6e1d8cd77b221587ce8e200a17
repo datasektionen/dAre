@@ -1,98 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349140130.6095667:@value{I"
-class:EFI"BundledAsset;
-FI"id;
-F"%5622f4ccd148559bd32b25246422396bI"logical_path;
-FI"jquery.ui.autocomplete.css;
-FI"pathname;
-FI"~/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.autocomplete.css.erb;
-FI"content_type;
-FI"text/css;
-FI"
-mtime;
-FI"2012-10-02T00:03:42+02:00;
-FI"	body;
-FI"]/*!
- * jQuery UI Autocomplete 1.8.24
- *
- * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
- *
- * http://docs.jquery.com/UI/Autocomplete#theming
- */
-/*
- */
-
-.ui-autocomplete { position: absolute; cursor: default; }	
-
-/* workarounds */
-* html .ui-autocomplete { width:1px; } /* without this, the menu expands to 100% in IE6 */
-
-/*
- * jQuery UI Menu 1.8.24
- *
- * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
- *
- * http://docs.jquery.com/UI/Menu#theming
- */
-.ui-menu {
-	list-style:none;
-	padding: 2px;
-	margin: 0;
-	display:block;
-	float: left;
-}
-.ui-menu .ui-menu {
-	margin-top: -3px;
-}
-.ui-menu .ui-menu-item {
-	margin:0;
-	padding: 0;
-	zoom: 1;
-	float: left;
-	clear: left;
-	width: 100%;
-}
-.ui-menu .ui-menu-item a {
-	text-decoration:none;
-	display:block;
-	padding:.2em .4em;
-	line-height:1.5;
-	zoom:1;
-}
-.ui-menu .ui-menu-item a.ui-state-hover,
-.ui-menu .ui-menu-item a.ui-state-active {
-	font-weight: normal;
-	margin: -1px;
-}
-;
-FI"asset_paths;
-F[I"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.core.css.erb;
-FI"w/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.theme.css.erb;
-FI"~/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.autocomplete.css.erb;
-FI"dependency_paths;
-F[{I"	path;
-FI"~/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.autocomplete.css.erb;
-FI"
-mtime;
-FIu:	Time6$Ä”§
-:@_zoneI"	CEST;
-T:nano_numi]:nano_deni:submicro"4ê:offseti I"hexdigest;
-F"%9539fbfefb04b4caa3c4dc65bcee0b52{I"	path;
-FI"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.core.css.erb;
-FI"
-mtime;
-FIu;6$Ä”§
-;I"	CEST;
-T;i];i;"4ê;i I"hexdigest;
-F"%4ce5b3acd4d28c6ce68f6bd3b8f91303{I"	path;
-FI"w/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.theme.css.erb;
-FI"
-mtime;
-FIu;6$Ä”§
-;I"	CEST;
-T;i];i;"4ê;i I"hexdigest;
-F"%9c1e9d8bd928d28003b03e846ea4a563I"_version;
-F"%0868aba5d4b750d3a9421721ea3d9b9c

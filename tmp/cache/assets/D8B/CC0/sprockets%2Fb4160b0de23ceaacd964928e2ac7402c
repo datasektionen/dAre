@@ -1,31 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1343135252.919594:@value{I"
-class:EFI"BundledAsset;
-FI"id;
-F"%c7e601d83c483af06edcf56ec087dfe2I"logical_path;
-FI"registrations.js;
-FI"pathname;
-FI"9$root/app/assets/javascripts/registrations.js.coffee;
-FI"content_type;
-FI"application/javascript;
-FI"
-mtime;
-FI"2012-07-24T14:56:41+02:00;
-FI"	body;
-FI"%(function() {
-
-
-
-}).call(this);
-;
-TI"asset_paths;
-F[I"9$root/app/assets/javascripts/registrations.js.coffee;
-FI"dependency_paths;
-F[{I"	path;
-FI"9$root/app/assets/javascripts/registrations.js.coffee;
-FI"
-mtime;
-FIu:	TimeÄÇèì‚
-:@_zoneI"	CEST;
-T:nano_numiÖ:nano_deni:submicro"ê:offseti I"hexdigest;
-F"%f50e3d51579225e3370988d160060f33I"_version;
-F"%0868aba5d4b750d3a9421721ea3d9b9c

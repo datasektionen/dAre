@@ -1,18 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349119408.489231:@value{I"
-class:EFI"StaticAsset;
-FI"id;
-F"%42c854d6aafc722307c38a486efbc533I"logical_path;
-FI"Button-3.png;
-TI"pathname;
-FI")$root/app/assets/images/Button-3.png;
-FI"content_type;
-FI"image/png;
-FI"
-mtime;
-FI"2012-10-01T21:23:20+02:00;
-FI"length;
-FI"
-29360;
-FI"digest;
-F"%865c1e85bb6a555641b3113fc7897b61I"_version;
-F"%0868aba5d4b750d3a9421721ea3d9b9c

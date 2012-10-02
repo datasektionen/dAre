@@ -1,93 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349140131.2992644:@value{I"
-class:EFI"BundledAsset;
-FI"id;
-F"%9c91b9a0c5d16a01b48a8743c926231aI"logical_path;
-FI"jquery.effects.shake.js;
-FI"pathname;
-FI"w/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.shake.js;
-FI"content_type;
-FI"application/javascript;
-FI"
-mtime;
-FI"2012-10-02T00:03:42+02:00;
-FI"	body;
-FI"–
-/*!
- * jQuery UI Effects Shake 1.8.24
- *
- * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
- *
- * http://docs.jquery.com/UI/Effects/Shake
- *
- * Depends:
- *	jquery.effects.core.js
- */
-
-(function( $, undefined ) {
-
-$.effects.shake = function(o) {
-
-	return this.queue(function() {
-
-		// Create element
-		var el = $(this), props = ['position','top','bottom','left','right'];
-
-		// Set options
-		var mode = $.effects.setMode(el, o.options.mode || 'effect'); // Set Mode
-		var direction = o.options.direction || 'left'; // Default direction
-		var distance = o.options.distance || 20; // Default distance
-		var times = o.options.times || 3; // Default # of times
-		var speed = o.duration || o.options.duration || 140; // Default speed per shake
-
-		// Adjust
-		$.effects.save(el, props); el.show(); // Save & Show
-		$.effects.createWrapper(el); // Create Wrapper
-		var ref = (direction == 'up' || direction == 'down') ? 'top' : 'left';
-		var motion = (direction == 'up' || direction == 'left') ? 'pos' : 'neg';
-
-		// Animation
-		var animation = {}, animation1 = {}, animation2 = {};
-		animation[ref] = (motion == 'pos' ? '-=' : '+=')  + distance;
-		animation1[ref] = (motion == 'pos' ? '+=' : '-=')  + distance * 2;
-		animation2[ref] = (motion == 'pos' ? '-=' : '+=')  + distance * 2;
-
-		// Animate
-		el.animate(animation, speed, o.options.easing);
-		for (var i = 1; i < times; i++) { // Shakes
-			el.animate(animation1, speed, o.options.easing).animate(animation2, speed, o.options.easing);
-		};
-		el.animate(animation1, speed, o.options.easing).
-		animate(animation, speed / 2, o.options.easing, function(){ // Last shake
-			$.effects.restore(el, props); $.effects.removeWrapper(el); // Restore
-			if(o.callback) o.callback.apply(this, arguments); // Callback
-		});
-		el.queue('fx', function() { el.dequeue(); });
-		el.dequeue();
-	});
-
-};
-
-})(jQuery);
-;
-FI"asset_paths;
-F[I"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.core.js;
-FI"w/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.shake.js;
-FI"dependency_paths;
-F[{I"	path;
-FI"w/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.shake.js;
-FI"
-mtime;
-FIu:	Time6$€¥e¤
-:@_zoneI"	CEST;
-T:nano_numiÂ:nano_deni:submicro"@:offseti I"hexdigest;
-F"%2554130662b6fe46ec5bd86f47d7f2ad{I"	path;
-FI"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.core.js;
-FI"
-mtime;
-FIu;6$€¥e¤
-;I"	CEST;
-T;iÂ;i;"@;i I"hexdigest;
-F"%2f4ad2844d3203fb90de97c22a9cc276I"_version;
-F"%0868aba5d4b750d3a9421721ea3d9b9c

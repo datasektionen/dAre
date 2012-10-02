@@ -1,63 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349140130.7686055:@value{I"
-class:EFI"BundledAsset;
-FI"id;
-F"%70af7af0b4f96636d0bc827f1fc6efc0I"logical_path;
-FI"jquery.ui.tabs.css;
-FI"pathname;
-FI"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.tabs.css.erb;
-FI"content_type;
-FI"text/css;
-FI"
-mtime;
-FI"2012-10-02T00:03:42+02:00;
-FI"	body;
-FI"p/*!
- * jQuery UI Tabs 1.8.24
- *
- * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
- *
- * http://docs.jquery.com/UI/Tabs#theming
- */
-/*
- */
-
-.ui-tabs { position: relative; padding: .2em; zoom: 1; } /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-.ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0; }
-.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }
-.ui-tabs .ui-tabs-nav li a { float: left; padding: .5em 1em; text-decoration: none; }
-.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }
-.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
-.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
-.ui-tabs .ui-tabs-panel { display: block; border-width: 0; padding: 1em 1.4em; background: none; }
-.ui-tabs .ui-tabs-hide { display: none !important; }
-;
-FI"asset_paths;
-F[I"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.core.css.erb;
-FI"w/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.theme.css.erb;
-FI"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.tabs.css.erb;
-FI"dependency_paths;
-F[{I"	path;
-FI"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.tabs.css.erb;
-FI"
-mtime;
-FIu:	Time6$Ä”§
-:@_zoneI"	CEST;
-T:nano_numi]:nano_deni:submicro"4ê:offseti I"hexdigest;
-F"%906da588a752fbb6c92b932782c14472{I"	path;
-FI"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.core.css.erb;
-FI"
-mtime;
-FIu;6$Ä”§
-;I"	CEST;
-T;i];i;"4ê;i I"hexdigest;
-F"%4ce5b3acd4d28c6ce68f6bd3b8f91303{I"	path;
-FI"w/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.theme.css.erb;
-FI"
-mtime;
-FIu;6$Ä”§
-;I"	CEST;
-T;i];i;"4ê;i I"hexdigest;
-F"%9c1e9d8bd928d28003b03e846ea4a563I"_version;
-F"%0868aba5d4b750d3a9421721ea3d9b9c

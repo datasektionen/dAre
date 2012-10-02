@@ -1,86 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349140131.2469099:@value{I"
-class:EFI"BundledAsset;
-FI"id;
-F"%4367c1e9b808326a4953211151020005I"logical_path;
-FI"jquery.effects.drop.js;
-FI"pathname;
-FI"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.drop.js;
-FI"content_type;
-FI"application/javascript;
-FI"
-mtime;
-FI"2012-10-02T00:03:42+02:00;
-FI"	body;
-FI"s
-/*!
- * jQuery UI Effects Drop 1.8.24
- *
- * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
- *
- * http://docs.jquery.com/UI/Effects/Drop
- *
- * Depends:
- *	jquery.effects.core.js
- */
-
-(function( $, undefined ) {
-
-$.effects.drop = function(o) {
-
-	return this.queue(function() {
-
-		// Create element
-		var el = $(this), props = ['position','top','bottom','left','right','opacity'];
-
-		// Set options
-		var mode = $.effects.setMode(el, o.options.mode || 'hide'); // Set Mode
-		var direction = o.options.direction || 'left'; // Default Direction
-
-		// Adjust
-		$.effects.save(el, props); el.show(); // Save & Show
-		$.effects.createWrapper(el); // Create Wrapper
-		var ref = (direction == 'up' || direction == 'down') ? 'top' : 'left';
-		var motion = (direction == 'up' || direction == 'left') ? 'pos' : 'neg';
-		var distance = o.options.distance || (ref == 'top' ? el.outerHeight( true ) / 2 : el.outerWidth( true ) / 2);
-		if (mode == 'show') el.css('opacity', 0).css(ref, motion == 'pos' ? -distance : distance); // Shift
-
-		// Animation
-		var animation = {opacity: mode == 'show' ? 1 : 0};
-		animation[ref] = (mode == 'show' ? (motion == 'pos' ? '+=' : '-=') : (motion == 'pos' ? '-=' : '+=')) + distance;
-
-		// Animate
-		el.animate(animation, { queue: false, duration: o.duration, easing: o.options.easing, complete: function() {
-			if(mode == 'hide') el.hide(); // Hide
-			$.effects.restore(el, props); $.effects.removeWrapper(el); // Restore
-			if(o.callback) o.callback.apply(this, arguments); // Callback
-			el.dequeue();
-		}});
-
-	});
-
-};
-
-})(jQuery);
-;
-FI"asset_paths;
-F[I"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.core.js;
-FI"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.drop.js;
-FI"dependency_paths;
-F[{I"	path;
-FI"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.drop.js;
-FI"
-mtime;
-FIu:	Time6$€¥e¤
-:@_zoneI"	CEST;
-T:nano_numiÂ:nano_deni:submicro"@:offseti I"hexdigest;
-F"%e99d02e36beaa496641174d3cb43457e{I"	path;
-FI"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.core.js;
-FI"
-mtime;
-FIu;6$€¥e¤
-;I"	CEST;
-T;iÂ;i;"@;i I"hexdigest;
-F"%2f4ad2844d3203fb90de97c22a9cc276I"_version;
-F"%0868aba5d4b750d3a9421721ea3d9b9c

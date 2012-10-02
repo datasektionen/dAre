@@ -1,65 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349140130.565347:@value{I"
-class:EFI"BundledAsset;
-FI"id;
-F"%b2e38d4d09da7f683406a7b6588d96dcI"logical_path;
-FI"jquery.ui.core.css;
-FI"pathname;
-FI"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.core.css.erb;
-FI"content_type;
-FI"text/css;
-FI"
-mtime;
-FI"2012-10-02T00:03:42+02:00;
-FI"	body;
-FI"'/*!
- * jQuery UI CSS Framework 1.8.24
- *
- * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
- * Dual licensed under the MIT or GPL Version 2 licenses.
- * http://jquery.org/license
- *
- * http://docs.jquery.com/UI/Theming/API
- */
-
-/* Layout helpers
-----------------------------------*/
-
-.ui-helper-hidden { display: none; }
-.ui-helper-hidden-accessible { position: absolute !important; clip: rect(1px 1px 1px 1px); clip: rect(1px,1px,1px,1px); }
-.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
-.ui-helper-clearfix:before, .ui-helper-clearfix:after { content: ""; display: table; }
-.ui-helper-clearfix:after { clear: both; }
-.ui-helper-clearfix { zoom: 1; }
-.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
-
-
-/* Interaction Cues
-----------------------------------*/
-.ui-state-disabled { cursor: default !important; }
-
-
-/* Icons
-----------------------------------*/
-
-/* states and images */
-.ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
-
-
-/* Misc visuals
-----------------------------------*/
-
-/* Overlays */
-.ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-;
-FI"asset_paths;
-F[I"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.core.css.erb;
-FI"dependency_paths;
-F[{I"	path;
-FI"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/stylesheets/jquery.ui.core.css.erb;
-FI"
-mtime;
-FIu:	Time6$Ä”§
-:@_zoneI"	CEST;
-T:nano_numi]:nano_deni:submicro"4ê:offseti I"hexdigest;
-F"%4ce5b3acd4d28c6ce68f6bd3b8f91303I"_version;
-F"%0868aba5d4b750d3a9421721ea3d9b9c
