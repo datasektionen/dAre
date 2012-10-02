@@ -10,7 +10,15 @@ class AttendeeMailer < ActionMailer::Base
 		@project = get_project
 
 		recipent = "#{@attendee.firstname + " " + @attendee.surname} <#{@attendee.email}>"
-		mail(:to => recipent, :subject => "Anmälan till dÅre")
+		mail(:to => recipent, :subject => "Anmälan till dÅre " + @project.year.to_s)
+	end
+
+	def reserve_email(attendee)
+		@attendee = attendee
+		@project = get_project
+
+		recipent = "#{@attendee.firstname + " " + @attendee.surname} <#{@attendee.email}>"
+		mail(:to => recipent, :subject => "Anmälan till dÅre " + @project.year.to_s)
 	end
 
 end

@@ -1,85 +1,49 @@
-<p id="notice"><%= notice %></p>
+<div class="container container-my-registration">
+  <div class="headline" style="margin-right: 10px;">
+      MIN ANMÄLAN
+  </div>
+  <div class="content">
+    <% if @registration.reserve %>
+      <p>
+        Du står för närvarande i reservlistan.
+      </p>
+    <% end %>
+    <div class="box some-box">
+      <b><%= @registration.firstname %> <%= @registration.surname %></b>
+    </div>
+<div class="box some-box">
+      <b>Address:</b>
+      <%= @registration.address %>
+    </div>
 
-<p>
-  <b>Kth:</b>
-  <%= @registration.kth_id %>
-</p>
+    <div class="box some-box">
+      <b>E-mail:</b>
+      <%= @registration.email %>
+    </div>
+    <div class="box some-box">
+      <b>Postnummer:</b>
+      <%= @registration.postalCode %>
+    </div>
 
-<p>
-  <b>Project:</b>
-  <%= @registration.project_id %>
-</p>
+    <div class="box some-box">
+      <b>Mobiltelefon:</b>
+      <%= @registration.mobilephone %>
+    </div>
 
-<p>
-  <b>Firstname:</b>
-  <%= @registration.firstname %>
-</p>
+    <div class="box some-box">
+      <b>Ort:</b>
+      <%= @registration.postArea %>
+    </div>
+    <div class="box some-box">
+      <b>Årskurs:</b>
+      <%= @registration.grade %>
+    </div>
+  </div>
 
-<p>
-  <b>Surname:</b>
-  <%= @registration.surname %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @registration.email %>
-</p>
-
-<p>
-  <b>Mobilephone:</b>
-  <%= @registration.mobilephone %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @registration.address %>
-</p>
-
-<p>
-  <b>Postalcode:</b>
-  <%= @registration.postalCode %>
-</p>
-
-<p>
-  <b>Postarea:</b>
-  <%= @registration.postArea %>
-</p>
-
-<p>
-  <b>Grade:</b>
-  <%= @registration.grade %>
-</p>
-
-<p>
-  <b>Allergies:</b>
-  <%= @registration.allergies %>
-</p>
-
-<p>
-  <b>Comment:</b>
-  <%= @registration.comment %>
-</p>
-
-<p>
-  <b>Haspayedregistration:</b>
-  <%= @registration.hasPayedRegistration %>
-</p>
-
-<p>
-  <b>Haspayedtotal:</b>
-  <%= @registration.hasPayedTotal %>
-</p>
-
-<p>
-  <b>Partey:</b>
-  <%= @registration.partey %>
-</p>
-
-<p>
-  <b>Reserve:</b>
-  <%= @registration.reserve %>
-</p>
-
-
-<%= link_to 'Edit', edit_project_registration_path(@project, @registration) %> |
-<%= link_to 'Back', project_registrations_path(@project) %>
+  <div class="content">
+  <div class="box comment-box">
+      <b>Kommentar:</b>
+      <%= @registration.comment %>
+    </div>
+  </div>
+</div>
