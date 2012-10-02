@@ -14,6 +14,7 @@ class Registration < ActiveRecord::Base
 	validates :mobilephone, presence: true, numericality: { only_integer: true }
 	validates :address, 	presence: true
 	validates :postalCode, 	presence: true, numericality: { only_integer: true }
+	validates :postArea,	presence: true
 	validates :grade, 		presence: true
 
 end
