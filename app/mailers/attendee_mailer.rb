@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class AttendeeMailer < ActionMailer::Base
 	include ApplicationHelper
 
@@ -8,7 +9,7 @@ class AttendeeMailer < ActionMailer::Base
 		@attendee = attendee
 		@project = get_project
 
-		recipent = "#{@attendee.name} <#{@attendee.email}>"
+		recipent = "#{@attendee.firstname + " " + @attendee.surname} <#{@attendee.email}>"
 		mail(:to => recipent, :subject => "Anmälan till dÅre")
 	end
 

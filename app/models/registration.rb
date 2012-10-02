@@ -4,7 +4,7 @@ class Registration < ActiveRecord::Base
 
 	before_save { |registration| registration.email = email.downcase }
 
-	validates :kth_id,		presence: true, uniqueness: { case_sensative: false }
+	validates :kth_id,		presence: true#, uniqueness: { case_sensative: false }
 	validates :firstname, 	presence: true
 	validates :surname, 	presence: true
 
@@ -14,6 +14,7 @@ class Registration < ActiveRecord::Base
 	validates :mobilephone, presence: true, numericality: { only_integer: true }
 	validates :address, 	presence: true
 	validates :postalCode, 	presence: true, numericality: { only_integer: true }
+	validates :postArea,	presence: true
 	validates :grade, 		presence: true
 
 end
