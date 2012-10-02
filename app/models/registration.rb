@@ -4,7 +4,7 @@ class Registration < ActiveRecord::Base
 
 	before_save { |registration| registration.email = email.downcase }
 
-	validates :kth_id,		presence: true, uniqueness: { case_sensative: false }
+	validates :kth_id,		presence: true#, uniqueness: { case_sensative: false }
 	validates :firstname, 	presence: true
 	validates :surname, 	presence: true
 
