@@ -3,16 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 
-.news_container {
-  float: left;
-  padding: 10px;
-  width: 600px;
+.container-posts {
+  width: 590px !important;
+  float:left;
+}
 
-  .post {
-  background: #EEEEEE;
+.container-info {
+  width: 200px !important;
+  float: right;
+}
+
+.container-faq {
+  width: 200px !important;
+  float: right;
+  margin-top: 20px;
+}
+
+.box-post {
   margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 3px;
+  width: 570px;
 
     .headline {
       float: left;
@@ -33,7 +42,6 @@
       font-weight: bold;
     }
   }
-}
 
 .gravatar {
   float: left;
@@ -46,14 +54,9 @@ aside {
   } 
 }
 
-.info_box {
-  float: left;
-  width: 200px;
+.box-info-faq {
+  width: 180px;
   height: 300px;
-  padding: 10px;
-  background: #EEEEEE;
-  margin-top: 10px;
-  border-radius: 3px;
 }
 
 .faq_box {

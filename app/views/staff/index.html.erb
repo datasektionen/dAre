@@ -1,40 +1,29 @@
 <% provide(:title, 'Staff') %>
-<div style="float: left; width: 500px; height: 500px;">
-	<div style="float: right; margin-top: -17px; color: #FFF; font-size: 18pt; font-weight: bold;">
+<div class="container container-staff">
+	<div class="headline" style="margin-right: 10px;">
 	    DÅRE-STABEN 2013
 	</div>
-	<ul class="users" style="margin-bottom: 60px;">
-
+	<div class="content">
 	    <%= render :partial => 'staff/staff', :collection => @staff_current %>
-
-	</ul>
-
-	<div style="float: right; margin-top: -17px; color: #FFF; font-size: 18pt; font-weight: bold;">
-	    DÅRE-STABARE EMERITI
 	</div>
-	<ul class="users">
-
-	    <%= render :partial => 'staff/staff', :collection => @staff_emeriti %>
-
-	</ul>
-	<% if signed_in_administrator? %>
-		<b><%= link_to 'Add staff member', new_staff_path, :data => { :remote => true, 'controls-modal' => 'modal-window', :backdrop => true } %></b>
-	<% end %>
 </div>
 
-<div style="float: right; width: 300px; padding: 10px; background: #FFF; border-radius: 3px;">
-	<div style="float: right; margin-top: -27px; color: #FFF; font-size: 18pt; font-weight: bold;">
+<div class="container container-contact">
+	<div class="headline">
 	    KONTAKT
 	</div>
-
-	Om du behöver komma i kontakt med oss som arrangerar dÅre, är du välkommen att maila eller ringa någon i staben, alternativt maila till dare@d.kth.se.
+	<div class="content">
+		<div class="box">
+			Om du behöver komma i kontakt med oss som arrangerar dÅre, är du välkommen att maila eller ringa någon i staben, alternativt maila till dare@d.kth.se.
+		</div>
+	</div>
 </div>
 
-<br />
-
-<div id="myModal" class="modal hide fade" >
-    <button type="button" class="close" data-dismiss="modal">×</button></h1>
-    <div class="page-header">
-        <h1>New staff member</h1>
-    </div>
+<div class="container container-emeriti">
+	<div class="headline" style="margin-right: 10px;">
+	    DÅRE-STABARE EMERITI
+	</div>
+	<div class="content">
+	    <%= render :partial => 'staff/staff', :collection => @staff_emeriti %>
+	</div>
 </div>
