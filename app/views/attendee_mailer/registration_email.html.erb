@@ -6,7 +6,7 @@
     <body>
         <h1>Tack för din anmälan till dÅre <%= @project.year %>!</h1>
         <p>
-            För att slutföra anmälan måste du inom 7 dagar betala in anmälningsavgiften på 1000 kr. Gör du inte detta kommer din plats att överlåtas till nästa person i reservlistan. Se därför till att betala så fort som möjligt för att behålla din plats. Resterande belopp ska betalas in senast <%= @project lastPaymentDate %>. 
+            För att slutföra anmälan måste du inom 7 dagar betala in anmälningsavgiften på 1000 kr. Gör du inte detta kommer din plats att överlåtas till nästa person i reservlistan. Se därför till att betala så fort som möjligt för att behålla din plats. Resterande belopp ska betalas in senast <%= @project.lastPaymentDate %>. 
         </p>
         <p>
             Observera att vid avhopp återbetalas anmälningsavgiften ej. Resterande summa återbetalas om platsen kan ersättas med en annan resenär.
