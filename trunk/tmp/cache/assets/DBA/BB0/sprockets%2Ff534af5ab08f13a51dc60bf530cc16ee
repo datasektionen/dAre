@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349140262.813455:@value{	I"length:EFi�I"digest;
 F"%54bb575bbb377bb13435c63b3f6d0da6I"source;
 FI"�/*
+=======
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349165330.952835:@value{	I"length:EFi{�I"digest;
+F"%8f1880277e2c82bf05b44fb76bd335d4I"source;
+FI"{�/*
+>>>>>>> Design, länkar
  * Bootstrap 2.0.0
  *
  * Copyright 2012 Twitter, Inc
@@ -4418,43 +4424,47 @@ body a:link {
 body a:visited {
   color: #FFF;
 }
+/* line 28, ../../app/assets/stylesheets/custom.css.scss */
+body a:hover {
+  color: #000;
+}
 
-/* line 29, ../../app/assets/stylesheets/custom.css.scss */
+/* line 30, ../../app/assets/stylesheets/custom.css.scss */
 .tableclass a:link {
   color: #000;
 }
 
-/* line 32, ../../app/assets/stylesheets/custom.css.scss */
+/* line 33, ../../app/assets/stylesheets/custom.css.scss */
 .tableclass a:visited {
   color: #000;
 }
 
-/* line 35, ../../app/assets/stylesheets/custom.css.scss */
+/* line 36, ../../app/assets/stylesheets/custom.css.scss */
 section {
   overflow: auto;
 }
 
-/* line 39, ../../app/assets/stylesheets/custom.css.scss */
+/* line 40, ../../app/assets/stylesheets/custom.css.scss */
 textarea {
   resize: vertical;
 }
 
-/* line 43, ../../app/assets/stylesheets/custom.css.scss */
+/* line 44, ../../app/assets/stylesheets/custom.css.scss */
 .center {
   text-align: center;
 }
-/* line 45, ../../app/assets/stylesheets/custom.css.scss */
+/* line 46, ../../app/assets/stylesheets/custom.css.scss */
 .center h1 {
   margin-bottom: 10px;
 }
 
 /* typography */
-/* line 52, ../../app/assets/stylesheets/custom.css.scss */
+/* line 53, ../../app/assets/stylesheets/custom.css.scss */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-/* line 56, ../../app/assets/stylesheets/custom.css.scss */
+/* line 57, ../../app/assets/stylesheets/custom.css.scss */
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -4462,7 +4472,7 @@ h1 {
   text-align: center;
 }
 
-/* line 63, ../../app/assets/stylesheets/custom.css.scss */
+/* line 64, ../../app/assets/stylesheets/custom.css.scss */
 h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
@@ -4472,14 +4482,14 @@ h2 {
   color: #999999;
 }
 
-/* line 72, ../../app/assets/stylesheets/custom.css.scss */
+/* line 73, ../../app/assets/stylesheets/custom.css.scss */
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
 
 /* header */
-/* line 80, ../../app/assets/stylesheets/custom.css.scss */
+/* line 81, ../../app/assets/stylesheets/custom.css.scss */
 #logo {
   float: left;
   margin-right: 10px;
@@ -4490,13 +4500,21 @@ p {
   font-weight: bold;
   line-height: 1;
 }
+<<<<<<< HEAD
 /* line 89, ../../app/assets/stylesheets/custom.css.scss */
+=======
+/* line 91, ../../app/assets/stylesheets/custom.css.scss */
+>>>>>>> Design, länkar
 #logo:hover {
   color: white;
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 /* line 95, ../../app/assets/stylesheets/custom.css.scss */
+=======
+/* line 97, ../../app/assets/stylesheets/custom.css.scss */
+>>>>>>> Design, länkar
 .content-top {
   background: url(header.png) no-repeat;
   width: 938px;
@@ -4506,14 +4524,22 @@ p {
   position: relative;
   z-index: 1;
 }
+<<<<<<< HEAD
 /* line 105, ../../app/assets/stylesheets/custom.css.scss */
+=======
+/* line 107, ../../app/assets/stylesheets/custom.css.scss */
+>>>>>>> Design, länkar
 .content-top .buttons .menu-btn {
   margin-top: 130px;
   margin-left: -30px;
 }
 
 /* container */
+<<<<<<< HEAD
 /* line 115, ../../app/assets/stylesheets/custom.css.scss */
+=======
+/* line 117, ../../app/assets/stylesheets/custom.css.scss */
+>>>>>>> Design, länkar
 #container {
   background-image: url(bg.png);
   width: 360px;
@@ -4541,7 +4567,11 @@ p {
 }
 
 /* footer */
+<<<<<<< HEAD
 /* line 147, ../../app/assets/stylesheets/custom.css.scss */
+=======
+/* line 149, ../../app/assets/stylesheets/custom.css.scss */
+>>>>>>> Design, länkar
 footer {
   align: center;
   background: url(footer.png) no-repeat;
@@ -4555,6 +4585,7 @@ footer {
   position: relative;
   z-index: 1;
 }
+<<<<<<< HEAD
 /* line 159, ../../app/assets/stylesheets/custom.css.scss */
 footer a {
   color: #555555;
@@ -4568,18 +4599,41 @@ footer small {
   float: left;
 }
 /* line 168, ../../app/assets/stylesheets/custom.css.scss */
+=======
+/* line 161, ../../app/assets/stylesheets/custom.css.scss */
+footer a {
+  color: #555555;
+}
+/* line 163, ../../app/assets/stylesheets/custom.css.scss */
+footer a:hover {
+  color: #222222;
+}
+/* line 167, ../../app/assets/stylesheets/custom.css.scss */
+footer small {
+  float: left;
+}
+/* line 170, ../../app/assets/stylesheets/custom.css.scss */
+>>>>>>> Design, länkar
 footer ul {
   float: right;
   list-style: none;
 }
+<<<<<<< HEAD
 /* line 171, ../../app/assets/stylesheets/custom.css.scss */
+=======
+/* line 173, ../../app/assets/stylesheets/custom.css.scss */
+>>>>>>> Design, länkar
 footer ul li {
   float: left;
   margin-left: 10px;
 }
 
 /* miscellaneous */
+<<<<<<< HEAD
 /* line 180, ../../app/assets/stylesheets/custom.css.scss */
+=======
+/* line 182, ../../app/assets/stylesheets/custom.css.scss */
+>>>>>>> Design, länkar
 .debug_dump {
   clear: both;
   float: left;
@@ -4591,7 +4645,11 @@ footer ul li {
 }
 
 /* forms */
+<<<<<<< HEAD
 /* line 190, ../../app/assets/stylesheets/custom.css.scss */
+=======
+/* line 192, ../../app/assets/stylesheets/custom.css.scss */
+>>>>>>> Design, länkar
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -4603,32 +4661,56 @@ input, textarea, select, .uneditable-input {
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 /* line 199, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation {
   color: #f00;
 }
 /* line 201, ../../app/assets/stylesheets/custom.css.scss */
+=======
+/* line 201, ../../app/assets/stylesheets/custom.css.scss */
+#error_explanation {
+  color: #f00;
+}
+/* line 203, ../../app/assets/stylesheets/custom.css.scss */
+>>>>>>> Design, länkar
 #error_explanation ul {
   list-style: none;
   margin: 0 0 18px 0;
 }
 
 /* users index */
+<<<<<<< HEAD
 /* line 214, ../../app/assets/stylesheets/custom.css.scss */
+=======
+/* line 216, ../../app/assets/stylesheets/custom.css.scss */
+>>>>>>> Design, länkar
 .users {
   list-style: none;
   margin: 0;
 }
+<<<<<<< HEAD
 /* line 217, ../../app/assets/stylesheets/custom.css.scss */
+=======
+/* line 219, ../../app/assets/stylesheets/custom.css.scss */
+>>>>>>> Design, länkar
 .users li {
   overflow: auto;
   padding: 10px 0;
   border-top: 1px solid #eeeeee;
 }
+<<<<<<< HEAD
 /* line 221, ../../app/assets/stylesheets/custom.css.scss */
+=======
+/* line 223, ../../app/assets/stylesheets/custom.css.scss */
+>>>>>>> Design, länkar
 .users li:last-child {
   border-bottom: 1px solid #eeeeee;
 }
 ;
 FI"_version;
+<<<<<<< HEAD
 F"%081d87586225f9507409a96f15348f47
+=======
+F"%ae6491af133cec8c276fd842f37e3795
+>>>>>>> Design, länkar
