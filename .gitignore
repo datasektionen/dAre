@@ -1,5 +1,5 @@
 # Ignore the tmp directory
-tmp
-log
+tmp/*
+log/*
 config/database.yml
 db/*.sqlite3
