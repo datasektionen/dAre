@@ -55,14 +55,14 @@ module SessionsHelper
 	def signed_in
 	 	unless signed_in_attendee? || signed_in_administrator?
         	store_location
-        	redirect_to signin_path, notice: "Please sign in to continue."
+        	redirect_to '/auth/cas', notice: "Please sign in to continue."
     	end
     end
 
 	def is_administrator
 	 	unless signed_in_administrator?
         	store_location
-        	redirect_to signin_path, notice: "Please sign in to continue."
+        	redirect_to '/auth/cas', notice: "Please sign in to continue."
     	end
     end
 
