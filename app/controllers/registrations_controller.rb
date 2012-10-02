@@ -56,6 +56,12 @@ class RegistrationsController < ApplicationController
     # GET /registrations/1/edit
     def edit
         @registration = Registration.find(params[:id])
+
+        if !signed_in_administrator?
+            if current_attendee.kth_id != @registration.kth_id
+                redirect_to root_path, :flash => { :error => 'Sa dar far man icke gora!.' } and return
+            end
+        end
     end
 
     # POST /registrations
@@ -91,6 +97,12 @@ class RegistrationsController < ApplicationController
     # PUT /registrations/1.json
     def update
         @registration = Registration.find(params[:id])
+
+        if !signed_in_administrator?
+            if current_attendee.kth_id != @registration.kth_id
+                redirect_to root_path, :flash => { :error => 'Sa dar far man icke gora!.' } and return
+            end
+        end
 
         respond_to do |format|
             if @registration.update_attributes(params[:registration])
