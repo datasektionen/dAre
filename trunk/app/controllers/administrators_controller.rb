@@ -1,8 +1,11 @@
 class AdministratorsController < ApplicationController
+  include ApplicationHelper
+  
   before_filter :is_administrator
   before_filter :correct_administrator,   only: [:edit, :update]
 
   def index
+    @project = get_project
     @administrators = Administrator.paginate(page: params[:page])
   end
 

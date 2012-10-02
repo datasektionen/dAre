@@ -35,7 +35,7 @@ class RegistrationsController < ApplicationController
         end
 
         if !@project.openRegistration
-            redirect_to root_path, :flash => { :error => 'Anmalan ar inte oppen.' } and return;
+            redirect_to root_path, :flash => { :error => 'Anmalan ar inte oppen.' } and return
         end
 
         @registration = Registration.new
@@ -57,7 +57,7 @@ class RegistrationsController < ApplicationController
         @registration = @project.registrations.build(params[:registration])
         @registration.kth_id = session[:remember_token]
 
-        if @project.registrations.count == @project.spots
+        if @project.registrations.count >= @project.spots
             @registration.reserve = true
         end
 
