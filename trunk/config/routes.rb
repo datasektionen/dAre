@@ -18,6 +18,8 @@ DAre::Application.routes.draw  do
     match 'projects/:project_id/lodges/:id/add_attendee',    to: 'lodges#add_attendee',    via: :put
     match 'projects/:project_id/lodges/:id/remove_attendee', to: 'lodges#remove_attendee', via: :put
 
+    match 'projects/:project_id/reserves', :to => 'registrations#reserves'
+
     # The priority is based upon order of creation:
     # first created -> highest priority.
 

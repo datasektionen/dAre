@@ -8,6 +8,7 @@ table {
 	table-layout: fixed;
 	overflow: auto;
 	background: #EEEEEE;
+	
 	thead {
 		tr {
 			th {
@@ -19,6 +20,9 @@ table {
 			td {
 				overflow: hidden;
 				white-space: nowrap;
+				a:link{color: #000000}
+				a:visited{color: #000}
+				a:hover{color: #000;}
 			}
 	}
 }
