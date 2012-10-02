@@ -19,9 +19,15 @@
             <td><%= registration.surname %></td>
             <td><%= registration.email %></td>
             <td><%= registration.grade %></td>
-            <td><a href="#" rel="tooltip" data-placement: "right" title="<%= registration.comment %>"><%= truncate(registration.comment, :length => 19, :omission => "...") %></a></td>
+            <td><a href="#" rel="tooltip" data-placement: "right" title="<%= registration.comment %>"><%= truncate(registration.comment, :length => 19, :omission => "...", :style=>"a:link{color: #000") %></a></td>
         </tr>
         <% end %>
 
     </tbody>
 </table>
+<div class="pagebreak"><%= will_paginate @reserves %></div>
+
+
+<script type="text/javascript">
+    $("[rel=tooltip]").tooltip({placement: 'right'});
+</script>

@@ -95,7 +95,7 @@ p {
 
 .content-top {
   background: url(header.png) no-repeat;
-  width: 938px;
+  width: 935px;
   height: 350px;
   margin-right: auto;
   margin-left: auto;
@@ -115,7 +115,6 @@ p {
 
 #container {
   background-image: url(bg.png);
-  width:360px;
   height:650px;
   border-color:rgba(255,255,255,0.5);
   border-width:1px;
@@ -141,12 +140,17 @@ p {
   padding-left: 10px;
   padding-right: 10px;
   position: relative;
+    .pagebreak{
+      position: relative;
+      width: inherit;
+      text-align: center;
+      z-index: 2;
+    }
 }
 
 /* footer */
 
 footer {
-  align: center;
   background: url(footer.png) no-repeat;
   width: 1260px;
   height: 129px;
