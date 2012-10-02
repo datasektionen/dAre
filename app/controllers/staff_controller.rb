@@ -25,11 +25,11 @@ class StaffController < ApplicationController
 
 		respond_to do |format|
 			if @staff.save
-	  			format.html {  }
+	  			format.html { redirect_to staff_index_path, notice: 'Stabare sparad.' }
 	  			format.json { render json: @staff, status: :created, location: @staff }
 	  			format.js { }
 			else
-				format.html { }
+				format.html { render action: 'new' }
       			format.json { render json: @staff.errors, status: :unprocessable_entity }
 	            format.js { }
 			end
