@@ -12,23 +12,22 @@
             Observera att vid avhopp återbetalas anmälningsavgiften ej. Resterande summa återbetalas om platsen kan ersättas med en annan resenär.
         </p>
         <p>
-            Betalningsinformation <%= @attendee.firstname %> <%= @attendee.surname %>
-            Bankgironummer: 380-7559
-            Meddelande: dare_<%= @attendee.id %>
-            Belopp: 2900
+            Betalningsinformation <%= @attendee.firstname %> <%= @attendee.surname %><br>
+            Bankgironummer: 380-7559<br>
+            Meddelande: dare_<%= @attendee.id %><br>
+            Belopp: 2900<br>
             Sista betalningsdag: <%= @project.lastPaymentDate %>
         </p>
         <p>
-            Om du istället vill dela upp betalningen använder du istället följande meddelanden:
-            <b>Anmälningsavgiften</b>
-            Meddelande: dare1_<%= @attendee.id %>
-            Belopp: 1000
-            Sista betalningsdag: inom 7 dagar
-            ---
-            <b>Resterande summa</b>
-            Meddelande: dare2_<%= @attendee.id %>
-            Belopp: 1900
-            Sista betalningsdag: <%= @project.lastPaymentDate %>
+            Om du istället vill dela upp betalningen använder du istället följande meddelanden:<br>
+            <b>Anmälningsavgiften</b><br>
+            Meddelande: dare1_<%= @attendee.id %><br>
+            Belopp: 1000<br>
+            Sista betalningsdag: inom 7 dagar<br>
+            <b>Resterande summa</b><br>
+            Meddelande: dare2_<%= @attendee.id %><br>
+            Belopp: 1900<br>
+            Sista betalningsdag: <%= @project.lastPaymentDate %><br>
 
         </p>
         <p>

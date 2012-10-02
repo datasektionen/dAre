@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    </head>
+    <body>
+        <h1>Tack för din anmälan till dÅre <%= @project.year %>!</h1>
+        <p>
+            För närvarande är anmälningslistan full, du har därför placerats i reservlistan. Om det är din tur när en plats blir ledig får du ett nytt mail med mer information.
+        </p>
+        <p>
+            Titta gärna på vår hemsida www.dåre.se för att få den senaste informationen.
+            <br><br>
+            Frågor? Hör av dig till dare@d.kth.se!
+        </p>
+        <p>
+            Med vänliga hälsningar<br>
+            dÅrestaben <%= @project.year %>
+        </p>
+    </body>
+</html>
