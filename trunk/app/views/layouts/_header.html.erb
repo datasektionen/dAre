@@ -1,23 +1,23 @@
 <header>
     <div class="navbar navbar-fixed-top navbar-inner">
         <div class="container">
-            <%= link_to "dÅre", root_path, id: "logo" %>
+            <%= link_to "dÅre 2013", root_path, id: "logo" %>
             <nav>
                 <ul class="nav pull-right">
                     <% if signed_in_attendee? || signed_in_administrator? %>
-                    <% if signed_in_administrator? %><li><%= link_to "Administrators", administrators_path %></li><% end %>
+                    <% if signed_in_administrator? %><li><%= link_to 'Administrators', administrators_path %></li><% end %>
                     <li id="fat-menu" class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inloggad <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <%if signed_in_administrator? %><li><%= link_to "My Account", current_administrator %></li><% end %>
-                        <%= link_to_if(current_attendee.nil?, "Register", '#') do
-                            link_to 'My registration', project_registration_path(get_project, current_attendee) end %>
+                        <%if signed_in_administrator? %><li><%= link_to 'Min anmälan', current_administrator %></li><% end %>
+                        <%= link_to_if(current_attendee.nil?, 'Till anmälan', '#') do
+                            link_to 'Min anmälan', project_registration_path(get_project, current_attendee) end %>
                         <li class="divider"></li>
                         <li><%= link_to "Logga ut", signout_path, method: "delete" %></li>
                         </ul>
                     </li>
                     <% else %>
-                        <li><%= link_to "Logga in", signin_path %></li>
+                        <li><%= link_to "Logga in", 'auth/cas' %></li>
                     <% end %>
                 </ul>
             </nav>
@@ -27,8 +27,8 @@
     <div class="content-top">
         <div class="buttons">
             <%= link_to image_tag('Button-1.png', :class => 'menu-btn'), root_path %>
-            <%= link_to image_tag("Button-2.png", :class => "menu-btn"), new_project_registration_path(@project) %>
-            <%= link_to image_tag("Button-3.png", :class => "menu-btn"), project_registrations_path(@project) %>
+            <%= link_to image_tag("Button-2.png", :class => "menu-btn"), new_project_registration_path(get_project) %>
+            <%= link_to image_tag("Button-3.png", :class => "menu-btn"), project_registrations_path(get_project) %>
             <%= link_to image_tag("Button-4.png", :class => "menu-btn"), staff_index_path %>
         </div>
     </div>

@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-	attr_accessible :year, :spots, :email, :totalCost, :registrationCost, :lastPaymentDate, :staff
+	attr_accessible :year, :spots, :email, :totalCost, :registrationCost, :lastPaymentDate, :staff, :openRegistration
 
 	has_many :registrations
 	has_many :lodges

@@ -2,9 +2,9 @@ class StaffController < ApplicationController
 	include ApplicationHelper
 
 	def index
-		current_project = get_project
+		@project = get_project
 
-		@staff_current = current_project.staff
+		@staff_current = @project.staff
 		@staff_emeriti = Staff.where('id NOT IN (?)', @staff_current.select('id'))
 	end
 
