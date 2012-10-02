@@ -4,8 +4,6 @@
             <%= link_to "dÅre", root_path, id: "logo" %>
             <nav>
                 <ul class="nav pull-right">
-                    <li><%= link_to "Home",    root_path %></li>
-                    <li><%= link_to "Attendees", project_registrations_path(get_project) %></li>
                     <% if signed_in_attendee? || signed_in_administrator? %>
                     <% if signed_in_administrator? %><li><%= link_to "Administrators", administrators_path %></li><% end %>
                     <li id="fat-menu" class="dropdown">
@@ -15,11 +13,11 @@
                         <%= link_to_if(current_attendee.nil?, "Register", '#') do
                             link_to 'My registration', project_registration_path(get_project, current_attendee) end %>
                         <li class="divider"></li>
-                        <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+                        <li><%= link_to "Logga ut", signout_path, method: "delete" %></li>
                         </ul>
                     </li>
                     <% else %>
-                        <li><%= link_to "Sign in", signin_path %></li>
+                        <li><%= link_to "Logga in", signin_path %></li>
                     <% end %>
                 </ul>
             </nav>

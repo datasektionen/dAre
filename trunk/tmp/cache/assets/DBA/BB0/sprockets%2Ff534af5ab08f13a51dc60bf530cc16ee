@@ -1,6 +1,6 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349133026.7054772:@value{	I"length:EFi»I"digest;
-F"%8b3d8f47a7387f5495ca9fb1d7aae615I"source;
-FI"»/*
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349140262.813455:@value{	I"length:EFi»I"digest;
+F"%54bb575bbb377bb13435c63b3f6d0da6I"source;
+FI"»/*
  * Bootstrap 2.0.0
  *
  * Copyright 2012 Twitter, Inc
@@ -4485,19 +4485,18 @@ p {
   margin-right: 10px;
   font-size: 1.7em;
   color: white;
-  text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
 }
-/* line 90, ../../app/assets/stylesheets/custom.css.scss */
+/* line 89, ../../app/assets/stylesheets/custom.css.scss */
 #logo:hover {
   color: white;
   text-decoration: none;
 }
 
-/* line 96, ../../app/assets/stylesheets/custom.css.scss */
+/* line 95, ../../app/assets/stylesheets/custom.css.scss */
 .content-top {
   background: url(header.png) no-repeat;
   width: 938px;
@@ -4507,14 +4506,14 @@ p {
   position: relative;
   z-index: 1;
 }
-/* line 106, ../../app/assets/stylesheets/custom.css.scss */
+/* line 105, ../../app/assets/stylesheets/custom.css.scss */
 .content-top .buttons .menu-btn {
   margin-top: 130px;
   margin-left: -30px;
 }
 
 /* container */
-/* line 116, ../../app/assets/stylesheets/custom.css.scss */
+/* line 115, ../../app/assets/stylesheets/custom.css.scss */
 #container {
   background-image: url(bg.png);
   width: 360px;
@@ -4542,7 +4541,7 @@ p {
 }
 
 /* footer */
-/* line 148, ../../app/assets/stylesheets/custom.css.scss */
+/* line 147, ../../app/assets/stylesheets/custom.css.scss */
 footer {
   align: center;
   background: url(footer.png) no-repeat;
@@ -4556,31 +4555,31 @@ footer {
   position: relative;
   z-index: 1;
 }
-/* line 160, ../../app/assets/stylesheets/custom.css.scss */
+/* line 159, ../../app/assets/stylesheets/custom.css.scss */
 footer a {
   color: #555555;
 }
-/* line 162, ../../app/assets/stylesheets/custom.css.scss */
+/* line 161, ../../app/assets/stylesheets/custom.css.scss */
 footer a:hover {
   color: #222222;
 }
-/* line 166, ../../app/assets/stylesheets/custom.css.scss */
+/* line 165, ../../app/assets/stylesheets/custom.css.scss */
 footer small {
   float: left;
 }
-/* line 169, ../../app/assets/stylesheets/custom.css.scss */
+/* line 168, ../../app/assets/stylesheets/custom.css.scss */
 footer ul {
   float: right;
   list-style: none;
 }
-/* line 172, ../../app/assets/stylesheets/custom.css.scss */
+/* line 171, ../../app/assets/stylesheets/custom.css.scss */
 footer ul li {
   float: left;
   margin-left: 10px;
 }
 
 /* miscellaneous */
-/* line 181, ../../app/assets/stylesheets/custom.css.scss */
+/* line 180, ../../app/assets/stylesheets/custom.css.scss */
 .debug_dump {
   clear: both;
   float: left;
@@ -4592,7 +4591,7 @@ footer ul li {
 }
 
 /* forms */
-/* line 191, ../../app/assets/stylesheets/custom.css.scss */
+/* line 190, ../../app/assets/stylesheets/custom.css.scss */
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -4604,32 +4603,32 @@ input, textarea, select, .uneditable-input {
   box-sizing: border-box;
 }
 
-/* line 200, ../../app/assets/stylesheets/custom.css.scss */
+/* line 199, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation {
   color: #f00;
 }
-/* line 202, ../../app/assets/stylesheets/custom.css.scss */
+/* line 201, ../../app/assets/stylesheets/custom.css.scss */
 #error_explanation ul {
   list-style: none;
   margin: 0 0 18px 0;
 }
 
 /* users index */
-/* line 215, ../../app/assets/stylesheets/custom.css.scss */
+/* line 214, ../../app/assets/stylesheets/custom.css.scss */
 .users {
   list-style: none;
   margin: 0;
 }
-/* line 218, ../../app/assets/stylesheets/custom.css.scss */
+/* line 217, ../../app/assets/stylesheets/custom.css.scss */
 .users li {
   overflow: auto;
   padding: 10px 0;
   border-top: 1px solid #eeeeee;
 }
-/* line 222, ../../app/assets/stylesheets/custom.css.scss */
+/* line 221, ../../app/assets/stylesheets/custom.css.scss */
 .users li:last-child {
   border-bottom: 1px solid #eeeeee;
 }
 ;
 FI"_version;
-F"%9d007799a296c4e413b8af9fbd33f1e2
+F"%081d87586225f9507409a96f15348f47

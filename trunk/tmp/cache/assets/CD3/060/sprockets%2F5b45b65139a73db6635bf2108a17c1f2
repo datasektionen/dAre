@@ -1,0 +1,115 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349140131.253333:@value{I"
+class:EFI"BundledAsset;
+FI"id;
+F"%23dea5df7e1b1bf633b6ff23a3ddaf9cI"logical_path;
+FI"jquery.effects.explode.js;
+FI"pathname;
+FI"y/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.explode.js;
+FI"content_type;
+FI"application/javascript;
+FI"
+mtime;
+FI"2012-10-02T00:03:42+02:00;
+FI"	body;
+FI"G	
+/*!
+ * jQuery UI Effects Explode 1.8.24
+ *
+ * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Effects/Explode
+ *
+ * Depends:
+ *	jquery.effects.core.js
+ */
+
+(function( $, undefined ) {
+
+$.effects.explode = function(o) {
+
+	return this.queue(function() {
+
+	var rows = o.options.pieces ? Math.round(Math.sqrt(o.options.pieces)) : 3;
+	var cells = o.options.pieces ? Math.round(Math.sqrt(o.options.pieces)) : 3;
+
+	o.options.mode = o.options.mode == 'toggle' ? ($(this).is(':visible') ? 'hide' : 'show') : o.options.mode;
+	var el = $(this).show().css('visibility', 'hidden');
+	var offset = el.offset();
+
+	//Substract the margins - not fixing the problem yet.
+	offset.top -= parseInt(el.css("marginTop"),10) || 0;
+	offset.left -= parseInt(el.css("marginLeft"),10) || 0;
+
+	var width = el.outerWidth(true);
+	var height = el.outerHeight(true);
+
+	for(var i=0;i<rows;i++) { // =
+		for(var j=0;j<cells;j++) { // ||
+			el
+				.clone()
+				.appendTo('body')
+				.wrap('<div></div>')
+				.css({
+					position: 'absolute',
+					visibility: 'visible',
+					left: -j*(width/cells),
+					top: -i*(height/rows)
+				})
+				.parent()
+				.addClass('ui-effects-explode')
+				.css({
+					position: 'absolute',
+					overflow: 'hidden',
+					width: width/cells,
+					height: height/rows,
+					left: offset.left + j*(width/cells) + (o.options.mode == 'show' ? (j-Math.floor(cells/2))*(width/cells) : 0),
+					top: offset.top + i*(height/rows) + (o.options.mode == 'show' ? (i-Math.floor(rows/2))*(height/rows) : 0),
+					opacity: o.options.mode == 'show' ? 0 : 1
+				}).animate({
+					left: offset.left + j*(width/cells) + (o.options.mode == 'show' ? 0 : (j-Math.floor(cells/2))*(width/cells)),
+					top: offset.top + i*(height/rows) + (o.options.mode == 'show' ? 0 : (i-Math.floor(rows/2))*(height/rows)),
+					opacity: o.options.mode == 'show' ? 1 : 0
+				}, o.duration || 500);
+		}
+	}
+
+	// Set a timeout, to call the callback approx. when the other animations have finished
+	setTimeout(function() {
+
+		o.options.mode == 'show' ? el.css({ visibility: 'visible' }) : el.css({ visibility: 'visible' }).hide();
+				if(o.callback) o.callback.apply(el[0]); // Callback
+				el.dequeue();
+
+				$('div.ui-effects-explode').remove();
+
+	}, o.duration || 500);
+
+
+	});
+
+};
+
+})(jQuery);
+;
+FI"asset_paths;
+F[I"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.core.js;
+FI"y/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.explode.js;
+FI"dependency_paths;
+F[{I"	path;
+FI"y/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.explode.js;
+FI"
+mtime;
+FIu:	Time6$€¥e¤
+:@_zoneI"	CEST;
+T:nano_numiÂ:nano_deni:submicro"@:offseti I"hexdigest;
+F"%643474e52e4b73869d34d898ed7402d0{I"	path;
+FI"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.core.js;
+FI"
+mtime;
+FIu;6$€¥e¤
+;I"	CEST;
+T;iÂ;i;"@;i I"hexdigest;
+F"%2f4ad2844d3203fb90de97c22a9cc276I"_version;
+F"%0868aba5d4b750d3a9421721ea3d9b9c

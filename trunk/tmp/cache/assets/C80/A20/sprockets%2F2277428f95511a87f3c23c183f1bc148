@@ -1,0 +1,86 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1349140131.2728786:@value{I"
+class:EFI"BundledAsset;
+FI"id;
+F"%bd69556c4072f3783ab810226cd0568bI"logical_path;
+FI" jquery.effects.highlight.js;
+FI"pathname;
+FI"{/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.highlight.js;
+FI"content_type;
+FI"application/javascript;
+FI"
+mtime;
+FI"2012-10-02T00:03:42+02:00;
+FI"	body;
+FI"¯
+/*!
+ * jQuery UI Effects Highlight 1.8.24
+ *
+ * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Effects/Highlight
+ *
+ * Depends:
+ *	jquery.effects.core.js
+ */
+
+(function( $, undefined ) {
+
+$.effects.highlight = function(o) {
+	return this.queue(function() {
+		var elem = $(this),
+			props = ['backgroundImage', 'backgroundColor', 'opacity'],
+			mode = $.effects.setMode(elem, o.options.mode || 'show'),
+			animation = {
+				backgroundColor: elem.css('backgroundColor')
+			};
+
+		if (mode == 'hide') {
+			animation.opacity = 0;
+		}
+
+		$.effects.save(elem, props);
+		elem
+			.show()
+			.css({
+				backgroundImage: 'none',
+				backgroundColor: o.options.color || '#ffff99'
+			})
+			.animate(animation, {
+				queue: false,
+				duration: o.duration,
+				easing: o.options.easing,
+				complete: function() {
+					(mode == 'hide' && elem.hide());
+					$.effects.restore(elem, props);
+					(mode == 'show' && !$.support.opacity && this.style.removeAttribute('filter'));
+					(o.callback && o.callback.apply(this, arguments));
+					elem.dequeue();
+				}
+			});
+	});
+};
+
+})(jQuery);
+;
+FI"asset_paths;
+F[I"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.core.js;
+FI"{/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.highlight.js;
+FI"dependency_paths;
+F[{I"	path;
+FI"{/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.highlight.js;
+FI"
+mtime;
+FIu:	Time6$€¥e¤
+:@_zoneI"	CEST;
+T:nano_numiÂ:nano_deni:submicro"@:offseti I"hexdigest;
+F"%8c94dd185f1c10025da85a8d1e9b019a{I"	path;
+FI"v/home/lujon/.rvm/gems/ruby-1.9.3-p194/gems/jquery-ui-rails-2.0.2/vendor/assets/javascripts/jquery.effects.core.js;
+FI"
+mtime;
+FIu;6$€¥e¤
+;I"	CEST;
+T;iÂ;i;"@;i I"hexdigest;
+F"%2f4ad2844d3203fb90de97c22a9cc276I"_version;
+F"%0868aba5d4b750d3a9421721ea3d9b9c
