@@ -1,3 +1,4 @@
+# encoding: UTF-8
 class AttendeeMailer < ActionMailer::Base
 	include ApplicationHelper
 
