@@ -3,37 +3,40 @@
   <%= render 'shared/error_messages', object: f.object %>
 
   <div class="field" style="margin-top: 20px;">
-    <%= f.text_field :firstname, :class => "input-large", :placeholder => "Förnamn" %>
+    <%= f.label "Förnamn" %>
+    <%= f.text_field :firstname, :class => "input-large" %>
   </div>
   <div class="field">
-    <%= f.text_field :surname, :class => "input-large", :placeholder => "Efternamn" %>
+    <%= f.label "Efternamn" %>
+    <%= f.text_field :surname, :class => "input-large" %>
   </div>
   <div class="field">
-    <%= f.text_field :email, :class => "input-large", :placeholder => "E-mail" %>
+    <%= f.label "E-mail" %>
+    <%= f.text_field :email, :class => "input-large" %>
   </div>
   <div class="field">
-    <%= f.text_field :mobilephone, :class => "input-large", :placeholder => "Mobiltelefon" %>
+    <%= f.label "Mobilnummer" %>
+    <%= f.text_field :mobilephone, :class => "input-large" %>
   </div>
   <div class="field">
-    <%= f.text_field :grade, :class => "input-mini", :placeholder => "Årskurs" %>
+    <%= f.label "Årskurs" %>
+    <%= f.text_field :grade, :class => "input-mini", :placeholder => "Ex D09" %>
   </div>
   <div class="field">
-    <%= f.text_field :address, :class => "input-large", :placeholder => "Adress" %>
+    <%= f.label "Adress" %>
+    <%= f.text_field :address, :class => "input-large" %>
   </div>
   <div class="field">
-    <%= f.text_field :postalCode, :class => "input-small", :placeholder => "Postnummer" %>
+    <%= f.label "Postnummer" %>
+    <%= f.text_field :postalCode, :class => "input-small" %>
   </div>
   <div class="field">
-    <%= f.text_field :postArea, :class => "input-large", :placeholder => "Ort" %>
+    <%= f.label "Ort" %>
+    <%= f.text_field :postArea, :class => "input-large" %>
   </div>
   <div class="field">
-    <%= f.text_field :allergies , :class => "input-large", :placeholder => "Allergier" %>
-  </div>
-  <div class="field">
-    <%= f.text_field :comment, :class => "input-large", :placeholder => "Kommentar" %>
-  </div>
-  <div class="field">
-    <%= f.check_box :partey %> Afterskii?
+    <%= f.label "Kommentar" %>
+    <%= f.text_field :comment, :class => "input-large", :placeholder => "Skriv något kul!" %>
   </div>
   <div class="actions">
     <%= f.submit "Anmäl!", :class => "btn" %>
