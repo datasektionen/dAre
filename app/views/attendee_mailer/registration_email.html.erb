@@ -14,31 +14,31 @@
         <p>
             Betalningsinformation <%= @attendee.name %>
             Bankgironummer: 380-7559
-            Meddelande: dare_2012_<%= @attendee.id %>
+            Meddelande: dare_<%= @project.year %>_<%= @attendee.id %>
             Belopp: 2900
             Sista betalningsdag: <%= @project.lastPaymentDate %>
         </p>
         <p>
             Om du istället vill dela upp betalningen använder du istället följande meddelanden:
             <b>Anmälningsavgiften</b>
-            Meddelande: 1dare_2012_<%= @attendee.id %>
+            Meddelande: 1dare_<%= @project.year %>_<%= @attendee.id %>
             Belopp: 1000
             Sista betalningsdag: Om 7 dagar
             ---
             <b>Resterande summa</b>
-            Meddelande: dare2_2012_<%= @attendee.id %>
+            Meddelande: dare2_<%= @project.year %>_<%= @attendee.id %>
             Belopp: 1900
             Sista betalningsdag: <%= @project.lastPaymentDate %>
 
         </p>
         <p>
             Mer information om själva resan kommer att publiceras på hemsidan och mailas till dig när resan närmar sig. Titta gärna på vår hemsida www.dåre.se för att få den senaste informationen.
-            <br />
+            <br><br>
             Frågor? Hör av dig till dare@d.kth.se!
         </p>
         <p>
             Med vänliga hälsningar<br>
-            dÅrestaben 2013
+            dÅrestaben <%= @project.year %>
         </p>
     </body>
 </html>

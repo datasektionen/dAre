@@ -82,7 +82,7 @@ class RegistrationsController < ApplicationController
             if @registration.save
                 current_attendee = @registration
 
-                AttendeeMailer.registration_mail(@registration).deliver
+                AttendeeMailer.registration_email(@registration).deliver
 
                 format.html { redirect_to project_registration_path(@project, @registration), notice: 'Din anmalan har sparats.' }
                 format.json { render json: @registration, status: :created, location: @registration }

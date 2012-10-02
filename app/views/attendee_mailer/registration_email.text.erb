@@ -6,18 +6,18 @@ Observera att vid avhopp återbetalas anmälningsavgiften ej. Resterande summa �
 
 Betalningsinformation <%= @attendee.name %>
 Bankgironummer: 380-7559
-Meddelande: dare_2012_<%= @attendee.id %>
+Meddelande: dare_<%= @project.year %>_<%= @attendee.id %>
 Belopp: 2900
 Sista betalningsdag: <%= @project.lastPaymentDate %>
 
 Om du istället vill dela upp betalningen använder du istället följande meddelanden:
 Anmälningsavgiften
-Meddelande: 1dare_2012_<%= @attendee.id %>
+Meddelande: 1dare_<%= @project.year %>_<%= @attendee.id %>
 Belopp: 1000
 Sista betalningsdag: Om 7 dagar
 ---
 Resterande summa
-Meddelande: dare2_2012_<%= @attendee.id %>
+Meddelande: dare2_<%= @project.year %>_<%= @attendee.id %>
 Belopp: 1900
 Sista betalningsdag: <%= @project.lastPaymentDate %>
 
@@ -26,4 +26,4 @@ Mer information om själva resan kommer att publiceras på hemsidan och mailas t
 Frågor? Hör av dig till dare@d.kth.se!
 
 Med vänliga hälsningar
-dÅrestaben 2013
+dÅrestaben <%= @project.year %>
