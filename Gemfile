@@ -21,6 +21,10 @@ group :assets do
   gem 'jquery-ui-rails'
 end
 
+group :production do
+  gem 'mysql'
+end
+
 gem 'jquery-rails'
 gem 'therubyracer'
 
