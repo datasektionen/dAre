@@ -70,12 +70,12 @@ class RegistrationsController < ApplicationController
         @registration = @project.registrations.build(params[:registration])
         @registration.kth_id = session[:remember_token]
 
-        if @project.registrations.count >= @project.spots
+        if @project.registrations.count > @project.spots
             @registration.reserve = true
         end
 
         if current_attendee != nil && current_administrator != nil
-            @registration.kth_id = 'outsider'
+            @registration.kth_id = rand(36**8).to_s(36)
         end
 
         respond_to do |format|
