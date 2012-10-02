@@ -4,20 +4,20 @@ För att slutföra anmälan måste du inom 7 dagar betala in anmälningsavgiften
 
 Observera att vid avhopp återbetalas anmälningsavgiften ej. Resterande summa återbetalas om platsen kan ersättas med en annan resenär.
 
-Betalningsinformation <%= @attendee.name %>
+Betalningsinformation <%= @attendee.firstname %> <%= @attendee.surname %>
 Bankgironummer: 380-7559
-Meddelande: dare_<%= @project.year %>_<%= @attendee.id %>
+Meddelande: dare_<%= @attendee.id %>
 Belopp: 2900
 Sista betalningsdag: <%= @project.lastPaymentDate %>
 
 Om du istället vill dela upp betalningen använder du istället följande meddelanden:
 Anmälningsavgiften
-Meddelande: 1dare_<%= @project.year %>_<%= @attendee.id %>
+Meddelande: dare1_<%= @attendee.id %>
 Belopp: 1000
-Sista betalningsdag: Om 7 dagar
+Sista betalningsdag: inom 7 dagar
 ---
 Resterande summa
-Meddelande: dare2_<%= @project.year %>_<%= @attendee.id %>
+Meddelande: dare2_<%= @attendee.id %>
 Belopp: 1900
 Sista betalningsdag: <%= @project.lastPaymentDate %>
 

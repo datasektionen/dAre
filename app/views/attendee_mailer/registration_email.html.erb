@@ -6,27 +6,27 @@
     <body>
         <h1>Tack för din anmälan till dÅre <%= @project.year %>!</h1>
         <p>
-            För att slutföra anmälan måste du inom 7 dagar betala in anmälningsavgiften på 1000 kr. Gör du inte detta kommer din plats att överlåtas till nästa person i reservlistan. Se därför till att betala så fort som möjligt för att behålla din plats. Resterande belopp ska betalas in senast <%= @project.lastPaymentDate %>. 
+            För att slutföra anmälan måste anmälningsavgiften på 1000 kr ha inkommit till dÅre inom 7 dagar. Gör du inte detta kommer din plats att överlåtas till nästa person i reservlistan. Se därför till att betala så fort som möjligt för att behålla din plats. Resterande belopp ska betalas in senast <%= @project.lastPaymentDate %>. 
         </p>
         <p>
             Observera att vid avhopp återbetalas anmälningsavgiften ej. Resterande summa återbetalas om platsen kan ersättas med en annan resenär.
         </p>
         <p>
-            Betalningsinformation <%= @attendee.name %>
+            Betalningsinformation <%= @attendee.firstname %> <%= @attendee.surname %>
             Bankgironummer: 380-7559
-            Meddelande: dare_<%= @project.year %>_<%= @attendee.id %>
+            Meddelande: dare_<%= @attendee.id %>
             Belopp: 2900
             Sista betalningsdag: <%= @project.lastPaymentDate %>
         </p>
         <p>
             Om du istället vill dela upp betalningen använder du istället följande meddelanden:
             <b>Anmälningsavgiften</b>
-            Meddelande: 1dare_<%= @project.year %>_<%= @attendee.id %>
+            Meddelande: dare1_<%= @attendee.id %>
             Belopp: 1000
-            Sista betalningsdag: Om 7 dagar
+            Sista betalningsdag: inom 7 dagar
             ---
             <b>Resterande summa</b>
-            Meddelande: dare2_<%= @project.year %>_<%= @attendee.id %>
+            Meddelande: dare2_<%= @attendee.id %>
             Belopp: 1900
             Sista betalningsdag: <%= @project.lastPaymentDate %>
 
