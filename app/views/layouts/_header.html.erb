@@ -5,7 +5,7 @@
             <nav>
                 <ul class="nav pull-right">
                     <% if signed_in_attendee? || signed_in_administrator? %>
-                    <% if signed_in_administrator? %><li><%= link_to 'Administrators', administrators_path %></li><% end %>
+                    <% if signed_in_administrator? %><li><%= link_to 'Admin', administrators_path %></li><% end %>
                     <li id="fat-menu" class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inloggad <b class="caret"></b></a>
                     <ul class="dropdown-menu">
