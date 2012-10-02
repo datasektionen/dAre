@@ -23,9 +23,9 @@ body {
   a:hover { 
     background-color:transparent
   }
-  a:link{color: #FFF}
-  a:visited{color: #FFF}
-  a:hover{color: #000;}
+  a:link{color: #000; text-decoration: none}
+  a:visited{color: #000}
+  a:hover{color: #666666; text-decoration: underline}
 }
 .tableclass a:link{
   color:#000;
@@ -86,9 +86,10 @@ p {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
+  text-decoration: none;
   &:hover {
-    color: white;
-    text-decoration: none;
+    color: #66666;
+    text-decoration: underline;
   }
 }
 

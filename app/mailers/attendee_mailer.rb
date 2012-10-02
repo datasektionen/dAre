@@ -3,7 +3,7 @@ class AttendeeMailer < ActionMailer::Base
 	include ApplicationHelper
 
 	default :from => "dare@d.kth.se"
-	default_url_options[:host] = ""
+	default_url_options[:host] = "dare.datasektionen.se"
 
 	def registration_mail(attendee)
 		@attendee = attendee
