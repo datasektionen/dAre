@@ -118,6 +118,10 @@ class RegistrationsController < ApplicationController
     # DELETE /registrations/1
     # DELETE /registrations/1.json
     def destroy
+        if !signed_in_administrator?
+            redirect_to root_path, :flash => { :error => 'Sa dar far man icke gora!.' } and return
+        end
+
         @registration = Registration.find(params[:id])
         @registration.destroy
 
