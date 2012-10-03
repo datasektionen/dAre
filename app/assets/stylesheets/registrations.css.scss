@@ -17,12 +17,13 @@ table {
 		}
 	}
 	tbody {
+			tr:hover {
+				cursor: pointer;
+				background: #DDDDDD;
+			}
 			td {
 				overflow: hidden;
 				white-space: nowrap;
-				a:link{color: #000000}
-				a:visited{color: #000}
-				a:hover{color: #000;}
 			}
 	}
 }

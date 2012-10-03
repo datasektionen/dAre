@@ -1,5 +1,5 @@
-<div class="box box-staff">
-	<h3><%= staff.name %></h3>
+<div class="box <%= staff.projects.any? { |p| p.year == @project.year } ? 'box-staff' : 'box-staff-emeriti' %>">
+	<h3><%= signed_in_administrator? ? link_to(staff.name, edit_staff_path(staff), :rel => 'staffModal', :data => { :toggle => 'modal', :target => '#staffModal' }) : staff.name %></h3>
 	<% if staff.mobilephone != nil %>
 		<%= staff.mobilephone %>
 		<br>

@@ -41,9 +41,12 @@
   </div>
 
   <div class="content">
-  <div class="box comment-box">
+    <div class="box comment-box">
       <b>Kommentar:</b>
       <%= @registration.comment %>
     </div>
+  <div>
+    <%= button_to "Ändra anmälan", edit_project_registration_path(@project, @registration), :method => :get %>
+  </div>
   </div>
 </div>

@@ -12,7 +12,7 @@ module ApplicationHelper
     end
 
     def get_project
-        project = Project.last
+        project = Project.find(:first, :order => 'year DESC')
     end
 
 end

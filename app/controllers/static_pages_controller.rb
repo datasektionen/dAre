@@ -1,7 +1,8 @@
 class StaticPagesController < ApplicationController
-	
+	include ApplicationHelper
+
 	def home
-		@project = Project.last
+		@project = get_project
 
 		@post  = Post.new
 		@posts = Post.paginate(page: params[:page])

@@ -16,7 +16,7 @@ class StaffController < ApplicationController
 	end
 
 	def edit
-
+		@staff = Staff.new.find(params[:id])
 	end
 
 	def create
