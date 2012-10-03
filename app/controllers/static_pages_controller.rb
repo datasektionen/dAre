@@ -1,7 +1,7 @@
 class StaticPagesController < ApplicationController
 	
 	def home
-		@project = Project.limit(1).find_by_openRegistration(true)
+		@project = Project.last
 
 		@post  = Post.new
 		@posts = Post.paginate(page: params[:page])

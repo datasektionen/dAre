@@ -1,6 +1,6 @@
 class RegistrationsController < ApplicationController
     before_filter :get_project
-    before_filter :signed_in, except: :index
+    before_filter :signed_in, :except => [:index, :reserves]
 
     # GET /registrations
     # GET /registrations.json
@@ -41,7 +41,7 @@ class RegistrationsController < ApplicationController
             redirect_to project_registration_path(@project, current_attendee) and return
         end
 
-        if !@project.openRegistration
+        if !@project.openRegistration && !signed_in_administrator?
             redirect_to root_path, :flash => { :error => 'Anmalan ar inte oppen.' } and return
         end
 
@@ -69,6 +69,10 @@ class RegistrationsController < ApplicationController
     def create
         @registration = @project.registrations.build(params[:registration])
         @registration.kth_id = session[:remember_token]
+
+        if !@project.openRegistration && !signed_in_administrator?
+            redirect_to root_path, :flash => { :error => 'Anmalan ar inte oppen.' } and return
+        end
 
         if @project.registrations.count >= @project.spots
             @registration.reserve = true
