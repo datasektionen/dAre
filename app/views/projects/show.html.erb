@@ -31,8 +31,13 @@
 </p>
 
 <p>
-    <b>Obetalda resenärer</b>
-    <%= link_to '#' do %> 56 st<% end %>
+    <b>Obetald anmälningsavgift:</b>
+    <%= @project.registrations.find(:all, :conditions => { :hasPayedRegistration => false, :reserve => false }).count %> st
+</p>  
+
+<p>
+    <b>Obetald resterande avgift:</b>
+    <%= @project.registrations.find(:all, :conditions => { :hasPayedTotal => false, :reserve => false }).count %> st
 </p>  
 
 <p>
