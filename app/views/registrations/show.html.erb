@@ -11,7 +11,7 @@
     <div class="box some-box">
       <b><%= @registration.firstname %> <%= @registration.surname %></b>
     </div>
-<div class="box some-box">
+  <div class="box some-box">
       <b>Address:</b>
       <%= @registration.address %>
     </div>
@@ -45,8 +45,14 @@
       <b>Kommentar:</b>
       <%= @registration.comment %>
     </div>
-  <div>
-    <%= button_to "Ändra anmälan", edit_project_registration_path(@project, @registration), :method => :get %>
-  </div>
+    <div>
+      <%= button_to 'Ändra anmälan', edit_project_registration_path(@project, @registration), :method => :get %>
+    </div>
+    <div class="box some-box">
+      <b>Betalningsinformation</b><br>
+      Betalat anmälningsavgift? <b><%= @registration.hasPayedRegistration ? 'Ja' : 'Nej' %></b><br>
+      Betalat resterande avgift? <b><%= @registration.hasPayedTotal ? 'Ja' : 'Nej' %></b>
+    </div>
+    <%= button_to 'Skicka betalningsmail', project_registration_payment_mail_path(@project, @registration), :method => :get if signed_in_administrator? %>
   </div>
 </div>

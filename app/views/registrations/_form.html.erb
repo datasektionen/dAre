@@ -38,7 +38,9 @@
     <%= f.label "Kommentar" %>
     <%= f.text_field :comment, :class => "input-large", :placeholder => "Skriv något kul!" %>
   </div>
-  <div class="actions">
-    <%= f.submit "Anmäl!", :class => "btn", :style => "Position:relative; z-index: 2;" %>
+  <div class="actions" style="Position:relative; z-index: 2;">
+    <%= f.label "Anmälningsavgift?" %><%= f.check_box :hasPayedRegistration, {}, true, false if signed_in_administrator? %>
+    <%= f.label "Hela avgiften?" %><%= f.check_box :hasPayedTotal, {}, true, false if signed_in_administrator? %>
+    <%= f.submit 'Anmäl!', :class => 'btn' %>
   </div>
 <% end %>

@@ -1,6 +1,9 @@
 class RegistrationsController < ApplicationController
-    before_filter :get_project
+    include ApplicationHelper
+
+    before_filter :fetch_project
     before_filter :signed_in, :except => [:index, :reserves]
+    before_filter :is_administrator, :only => [:destroy, :payment_mail]
 
     # GET /registrations
     # GET /registrations.json
@@ -82,6 +85,11 @@ class RegistrationsController < ApplicationController
             @registration.kth_id = rand(36**8).to_s(36)
         end
 
+        if current_administrator.nil?
+            registration.hasPayedRegistration = false
+            registration.hasPayedTotal = false
+        end
+
         respond_to do |format|
             if @registration.save
                 current_attendee = @registration
@@ -110,6 +118,9 @@ class RegistrationsController < ApplicationController
             if current_attendee.kth_id != @registration.kth_id
                 redirect_to root_path, :flash => { :error => 'Sa dar far man icke gora!.' } and return
             end
+
+            registration.hasPayedRegistration = !registration.hasPayedRegistration if registration.hasPayedRegistration_changed? 
+            registration.hasPayedTotal = !registration.hasPayedTotal if registration.hasPayedTotal_changed?
         end
 
         respond_to do |format|
@@ -139,10 +150,19 @@ class RegistrationsController < ApplicationController
         end
     end
 
+    def payment_mail
+        registration = Registration.find(params[:registration_id])
+        if !registration.reserve
+            AttendeeMailer.registration_email(registration).deliver
+        end
+
+        redirect_to project_registration_path(@project, registration), notice: 'Betalningsmail skickat.'  
+    end
+
     private
 
-    def get_project
-        @project = Project.find(params[:project_id])
+    def fetch_project
+        @project = get_project
     end
 
 end 
