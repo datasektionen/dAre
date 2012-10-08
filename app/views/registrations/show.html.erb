@@ -47,6 +47,7 @@
     </div>
     <div>
       <%= button_to 'Ändra anmälan', edit_project_registration_path(@project, @registration), :method => :get %>
+      <%= button_to 'Ta bort anmälan', destroy_project_registration_path(@project, @registration), :method => :delete, :confirm => 'Vill du verligen ta bort anmälan?' %>
     </div>
     <div class="box some-box">
       <b>Betalningsinformation</b><br>

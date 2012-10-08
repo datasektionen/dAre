@@ -141,7 +141,7 @@ class RegistrationsController < ApplicationController
             redirect_to root_path, :flash => { :error => 'Sa dar far man icke gora!.' } and return
         end
 
-        @registration = Registration.find(params[:id])
+        @registration = Registration.find(params[:registration_id])
         @registration.destroy
 
         respond_to do |format|
