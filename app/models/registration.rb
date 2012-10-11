@@ -25,4 +25,11 @@ class Registration < ActiveRecord::Base
 			self.partey = true
 		end
 	end
+
+	scope :by_registrations, lambda { where('reserve != ?', true) }
+	scope :by_reserve, lambda { where(:reserve => true) }
+	scope :by_payed_registration, lambda { where(:hasPayedRegistration => true) }
+	scope :by_not_payed_registration, lambda { where('hasPayedRegistration != ?', true) }
+	scope :by_payed_total, lambda { where(:hasPayedTotal => true) }
+	scope :by_not_payed_total, lambda { where('hasPayedTotal != ?', true) }
 end

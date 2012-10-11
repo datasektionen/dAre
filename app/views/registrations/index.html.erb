@@ -1,3 +1,6 @@
+<div style="float: left; color: #000000; margin-bottom: -3px; font-size: 8pt; font-weight: bold; position: relative; z-index: 2;">
+    <!--Obetald registreringsavgift <%= check_box_tag :filter_payed_registration, 'payed_registration', false %>-->
+</div>
 <div style="float: right; color: #EEEEEE; margin-bottom: -1px; font-size: 18pt; font-weight: bold;">
     ANMÄLDA DELTAGARE
 </div>
@@ -10,16 +13,9 @@
             <th>Kommentar</th>
         </tr>
     </thead>
-    <tbody class="registrations">
+    <tbody id="registrations" class="registrations">
 
-        <% @registrations.each do |registration| %>
-        <tr class="<%= registration.hasPayedRegistration ? (registration.hasPayedTotal ? 'success' : 'info') : 'error'  %>" id="<%= registration.id %>">
-            <td><%= registration.firstname %></td>
-            <td><%= registration.surname %></td>
-            <td><%= registration.grade %></td>
-            <td><a href="#" rel="tooltip" data-placement: "right" title="<%= registration.comment %>"><%= truncate(registration.comment, :length => 19, :omission => '...', :style => 'a:link{color: #000') %></a></td>
-        </tr>
-        <% end %>
+        <%= render :partial => 'table_row', :collection => @registrations %>
 
     </tbody>
 </table>

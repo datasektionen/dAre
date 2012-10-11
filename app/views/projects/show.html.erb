@@ -32,12 +32,12 @@
 
 <p>
     <b>Obetald anmälningsavgift:</b>
-    <%= @project.registrations.find(:all, :conditions => { :hasPayedRegistration => false, :reserve => false }).count %> st
+    <%= @registrations.by_registrations.by_not_payed_registration.count %>
 </p>  
 
 <p>
     <b>Obetald resterande avgift:</b>
-    <%= @project.registrations.find(:all, :conditions => { :hasPayedTotal => false, :reserve => false }).count %> st
+    <%= @registrations.by_registrations.by_not_payed_total.count %>
 </p>  
 
 <p>

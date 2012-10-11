@@ -18,4 +18,5 @@ class Project < ActiveRecord::Base
 	validates :registrationCost, 	presence: true, numericality: { only_integer: true }
 
 	validates :lastPaymentDate, 	presence: true
+
 end

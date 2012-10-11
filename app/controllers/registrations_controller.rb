@@ -8,11 +8,19 @@ class RegistrationsController < ApplicationController
     # GET /registrations
     # GET /registrations.json
     def index
-        @registrations = @project.registrations.paginate(page: params[:page], :conditions => { :reserve => false }, :order => :firstname, :per_page => 20)
+        @registrations = @project.registrations.by_registrations
         
+        if !params[:filter_fee].nil? && params[:filter_fee] == 'registration'
+            @registrations = @registrations.by_payed_registration
+        elsif !params[:filter_fee].nil? && params[:filter_fee] == 'total'
+            @registrations = @registrations.by_payed_total
+        end
+
+        @registrations = @registrations.paginate(page: params[:page], :order => :firstname, :per_page => 20)
+
         respond_to do |format|
             format.html # index.html.erb
-            format.json { render json: @registrations }
+            format.json { render :json => @registrations }
         end
     end
 
@@ -121,6 +129,7 @@ class RegistrationsController < ApplicationController
 
             registration.hasPayedRegistration = !registration.hasPayedRegistration if registration.hasPayedRegistration_changed? 
             registration.hasPayedTotal = !registration.hasPayedTotal if registration.hasPayedTotal_changed?
+            registration.reserve = !registration.reserve if registration.reserve_changed?
         end
 
         respond_to do |format|
