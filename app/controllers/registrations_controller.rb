@@ -11,9 +11,9 @@ class RegistrationsController < ApplicationController
         @registrations = @project.registrations.by_registrations
         
         if !params[:filter_fee].nil? && params[:filter_fee] == 'registration'
-            @registrations = @registrations.by_payed_registration
+            @registrations = @registrations.by_not_payed_registration
         elsif !params[:filter_fee].nil? && params[:filter_fee] == 'total'
-            @registrations = @registrations.by_payed_total
+            @registrations = @registrations.by_not_payed_total
         end
 
         @registrations = @registrations.paginate(page: params[:page], :order => :firstname, :per_page => 20)
