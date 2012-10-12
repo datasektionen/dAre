@@ -10,9 +10,9 @@ class RegistrationsController < ApplicationController
     def index
         @registrations = @project.registrations.by_registrations
         
-        if !params[:filter_fee].nil? && params[:filter_fee] == 'registration'
+        if !params[:filter_not_payed].nil? && params[:filter_not_payed] == 'registration'
             @registrations = @registrations.by_not_payed_registration
-        elsif !params[:filter_fee].nil? && params[:filter_fee] == 'total'
+        elsif !params[:filter_not_payed].nil? && params[:filter_not_payed] == 'total'
             @registrations = @registrations.by_not_payed_total
         end
 
@@ -25,7 +25,7 @@ class RegistrationsController < ApplicationController
     end
 
     def reserves
-        @reserves = @project.registrations.paginate(page: params[:page], :conditions => { :reserve => true }, :order => :created_at, :per_page => 20)
+        @reserves = @project.registrations.by_reserve.paginate(page: params[:page], :order => :created_at, :per_page => 20)
 
         respond_to do |format|
             format.html # index.html.erb
