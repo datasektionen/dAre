@@ -8,12 +8,13 @@
         Du står för närvarande i reservlistan.
       </p>
     <% end %>
+
     <div class="box some-box">
       <b><%= @registration.firstname %> <%= @registration.surname %></b>
     </div>
-  <div class="box some-box">
-      <b>Address:</b>
-      <%= @registration.address %>
+    <div class="box some-box">
+      <b>Anmäld </b>
+      <%= @registration.created_at %>
     </div>
 
     <div class="box some-box">
@@ -21,22 +22,26 @@
       <%= @registration.email %>
     </div>
     <div class="box some-box">
-      <b>Postnummer:</b>
-      <%= @registration.postalCode %>
+      <b>Address:</b>
+      <%= @registration.address %>
     </div>
 
     <div class="box some-box">
       <b>Mobiltelefon:</b>
       <%= @registration.mobilephone %>
     </div>
-
     <div class="box some-box">
-      <b>Ort:</b>
-      <%= @registration.postArea %>
+      <b>Postnummer:</b>
+      <%= @registration.postalCode %>
     </div>
+
     <div class="box some-box">
       <b>Årskurs:</b>
       <%= @registration.grade %>
+    </div>
+    <div class="box some-box">
+      <b>Ort:</b>
+      <%= @registration.postArea %>
     </div>
   </div>
 

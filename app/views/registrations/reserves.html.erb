@@ -1,7 +1,7 @@
 <div style="float: right; color: #EEEEEE; margin-bottom: -1px; font-size: 18pt; font-weight: bold;">
     RESERVER
 </div>
-<table class="table table-bordered">
+<table class="table table-striped">
     <thead class="head">
         <tr>
             <th>Förnamn</th>
@@ -12,14 +12,7 @@
     </thead>
     <tbody class="registrations">
 
-        <% @reserves.each do |registration| %>
-        <tr class="<%= registration.hasPayedRegistration ? (registration.hasPayedTotal ? 'success' : 'info') : 'error'  %>">
-            <td><%= registration.firstname %></td>
-            <td><%= registration.surname %></td>
-            <td><%= registration.grade %></td>
-            <td><a href="#" rel="tooltip" data-placement: "right" title="<%= registration.comment %>"><%= truncate(registration.comment, :length => 19, :omission => "...", :style=>"a:link{color: #000") %></a></td>
-        </tr>
-        <% end %>
+        <%= render :partial => 'table_row', :collection => @reserves %>
 
     </tbody>
 </table>
@@ -28,4 +21,8 @@
 
 <script type="text/javascript">
     $("[rel=tooltip]").tooltip({placement: 'right'});
+
+    $('tr').click(function () {
+        window.location.href = '<%= project_registrations_path(@project) %>/' + $(this).attr('id')
+    });   
 </script>

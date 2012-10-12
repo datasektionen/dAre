@@ -25,7 +25,7 @@ class RegistrationsController < ApplicationController
     end
 
     def reserves
-        @reserves = @project.registrations.paginate(page: params[:page], :conditions => { :reserve => true }, :order => :firstname, :per_page => 20)
+        @reserves = @project.registrations.paginate(page: params[:page], :conditions => { :reserve => true }, :order => :created_at, :per_page => 20)
 
         respond_to do |format|
             format.html # index.html.erb
