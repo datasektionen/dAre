@@ -94,8 +94,8 @@ class RegistrationsController < ApplicationController
         end
 
         if current_administrator.nil?
-            registration.hasPayedRegistration = false
-            registration.hasPayedTotal = false
+            @registration.hasPayedRegistration = false
+            @registration.hasPayedTotal = false
         end
 
         respond_to do |format|
