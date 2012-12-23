@@ -7,3 +7,8 @@
 </ul>
 
 <%= will_paginate %>
+
+<%= form_tag('/administrators/mail_all', :method => 'post') do %>
+	<%= text_area_tag 'message', nil, :rows => 15, :style => 'width: 400px;' %>
+	<%= submit_tag 'Send' %>
+<% end %>

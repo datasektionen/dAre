@@ -21,4 +21,11 @@ class AttendeeMailer < ActionMailer::Base
 		mail(:to => recipent, :subject => "Anmälan till dÅre " + @project.year.to_s)
 	end
 
+	def mail_all(message)
+		@project = get_project
+		@message = message
+		bcc = @project.registrations.where(:reserve => false).map(&:email)
+		mail(:to => 'dare@d.kth.se', :bcc => bcc, :subject => "dÅre " + @project.year.to_s)
+	end
+
 end

@@ -15,6 +15,8 @@ DAre::Application.routes.draw  do
     match '/auth/:provider/callback', to: 'sessions#create'
     match '/signout',                 to: 'sessions#destroy', via: :delete
 
+    match '/administrators/mail_all', to: 'administrators#send_mail', via: :post
+
     match 'projects/:project_id/registrations/:registration_id/destroy', to: 'registrations#destroy', via: :delete, :as => 'destroy_project_registration'
     match 'projects/:project_id/registrations/:registration_id/payment_mail', to: 'registrations#payment_mail', :as => 'project_registration_payment_mail'
 

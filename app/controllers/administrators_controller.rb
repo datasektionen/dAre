@@ -51,6 +51,13 @@ class AdministratorsController < ApplicationController
     redirect_to administrators_path
   end
 
+  def send_mail
+    AttendeeMailer.mail_all(params[:message]).deliver
+
+    flash[:success] = 'Mail sent.'
+    redirect_to administrators_path
+  end
+
   private
 
     def correct_administrator

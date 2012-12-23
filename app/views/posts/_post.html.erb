@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="content">
-        <%= post.content %>
+        <%= simple_format post.content %>
     </div> 
     <% if signed_in_administrator? %>
     <%#= link_to 'edit', edit_post_path(post), class: 'btn btn-warning' %>                          
