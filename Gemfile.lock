@@ -35,7 +35,8 @@ GEM
     annotate (2.4.1.beta1)
     ansi (1.4.3)
     arel (3.0.2)
-    bootstrap-sass (2.0.0)
+    bootstrap-sass (2.3.0.1)
+      sass (~> 3.2)
     bootstrap-will_paginate (0.0.6)
       will_paginate
     builder (3.0.4)
@@ -158,7 +159,7 @@ PLATFORMS
 DEPENDENCIES
   airbrake
   annotate (~> 2.4.1.beta)
-  bootstrap-sass (= 2.0.0)
+  bootstrap-sass (= 2.3.0.1)
   bootstrap-will_paginate (= 0.0.6)
   capistrano
   capistrano-ext

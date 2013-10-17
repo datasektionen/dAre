@@ -9,7 +9,7 @@ module SessionsHelper
     		self.current_administrator = administrator
     	end
     	
-    	self.current_attendee = Registration.find_by_kth_id(kth_id)
+    	self.current_attendee = Project.find(:first, :order => 'year DESC').registrations.where(:kth_id => kth_id).first
 	end
 
 	def current_attendee=(attendee)
@@ -17,7 +17,7 @@ module SessionsHelper
 	end
 
 	def current_attendee
-		@current_attendee ||= Registration.find_by_kth_id(session[:remember_token])
+		@current_attendee ||= Project.find(:first, :order => 'year DESC').registrations.where(:kth_id => session[:remember_token]).first
 	end
 
 	def current_administrator=(administrator)
@@ -73,6 +73,7 @@ module SessionsHelper
 	end
 
 	def redirect_back_or(default)
+		puts default
 		redirect_to(session[:return_to] || default)
 	end
 

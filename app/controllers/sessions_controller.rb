@@ -14,7 +14,8 @@ class SessionsController < ApplicationController
 			if current_administrator
 				redirect_back_or current_administrator
 			elsif current_attendee
-				redirect_back_or current_attendee
+				@project = get_project
+				redirect_back_or project_registration_path(@project, current_attendee)
 			else
 				@project = get_project
 				redirect_to new_project_registration_path(@project)

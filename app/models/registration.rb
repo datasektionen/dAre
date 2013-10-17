@@ -4,7 +4,8 @@ class Registration < ActiveRecord::Base
 
 	before_save :check_values
 
-	validates :kth_id,		presence: true, uniqueness: { case_sensative: false }
+	validates :kth_id,		presence: true
+	validates_uniqueness_of :kth_id, :scope => :project_id
 	validates :firstname, 	presence: true
 	validates :surname, 	presence: true
 
