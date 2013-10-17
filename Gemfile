@@ -45,7 +45,7 @@ group :test do
 end
 
 group :deploy do
-  gem 'capistrano'
+  gem 'capistrano', '2.9.0'
   gem 'capistrano-ext'
   gem 'capistrano_colors'
 end
