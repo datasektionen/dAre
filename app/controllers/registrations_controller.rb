@@ -120,25 +120,27 @@ class RegistrationsController < ApplicationController
     # PUT /registrations/1
     # PUT /registrations/1.json
     def update
-        @registration = Registration.find(params[:id])
+        registration = Registration.find(params[:id])
 
         if !signed_in_administrator?
-            if current_attendee.kth_id != @registration.kth_id
+            if current_attendee.kth_id != registration.kth_id
                 redirect_to root_path, :flash => { :error => 'Sa dar far man icke gora!.' } and return
             end
-
-            registration.hasPayedRegistration = !registration.hasPayedRegistration if registration.hasPayedRegistration_changed? 
-            registration.hasPayedTotal = !registration.hasPayedTotal if registration.hasPayedTotal_changed?
-            registration.reserve = !registration.reserve if registration.reserve_changed?
+        else
+            #fix for reserve and payment fields
+            registration.reserve = params[:registration][:reserve]
+            registration.hasPayedRegistration = params[:registration][:hasPayedRegistration]
+            registration.hasPayedTotal = params[:registration][:hasPayedTotal]
         end
-
+        
+        puts params[:registration]
         respond_to do |format|
-            if @registration.update_attributes(params[:registration])
-                format.html { redirect_to project_registration_path(@project, @registration), notice: 'Din anmalan har sparats.' }
+            if registration.update_attributes(params[:registration])
+                format.html { redirect_to project_registration_path(@project, registration), notice: 'Din anmalan har sparats.' }
                 format.json { head :ok }
             else
                 format.html { render action: 'edit' }
-                format.json { render json: @registration.errors, status: :unprocessable_entity }
+                format.json { render json: registration.errors, status: :unprocessable_entity }
             end
         end
     end
