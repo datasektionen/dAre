@@ -11,9 +11,6 @@ gem 'airbrake'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-gem 'annotate', '~> 2.4.1.beta', group: :development
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -36,8 +33,12 @@ gem 'libv8', '~> 3.11.8.3'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+group :development do
+  # To use debugger
+  # gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'sqlite3'
+  gem 'annotate', '~> 2.4.1.beta', group: :development
+end
 
 group :test do
   # Pretty printed test output
