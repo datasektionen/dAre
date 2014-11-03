@@ -11,6 +11,9 @@ DAre::Application.routes.draw  do
 
     root to: 'static_pages#home'
 
+    #TA BORT MATCHEN!
+    #match '/auth/test',               to: 'sessions#create'
+
     match '/signin',                  to: 'sessions#new'
     match '/auth/:provider/callback', to: 'sessions#create'
     match '/signout',                 to: 'sessions#destroy', via: :delete
