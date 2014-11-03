@@ -3,40 +3,44 @@
   <%= render 'shared/error_messages', object: f.object %>
 
   <div class="field" style="margin-top: 20px;">
-    <%= f.label "Förnamn" %>
+    <%= f.label "Förnamn / First name" %>
     <%= f.text_field :firstname, :class => "input-large" %>
   </div>
   <div class="field">
-    <%= f.label "Efternamn" %>
+    <%= f.label "Efternamn / Last name" %>
     <%= f.text_field :surname, :class => "input-large" %>
+  </div>
+  <div class="field">
+    <%= f.label "Personnummer / Personal Registration Number" %>
+    <%= f.text_field :personnummer, :class => "input-large" %>
   </div>
   <div class="field">
     <%= f.label "E-mail" %>
     <%= f.text_field :email, :class => "input-large" %>
   </div>
   <div class="field">
-    <%= f.label "Mobilnummer" %>
+    <%= f.label "Mobilnummer / Cell phone number" %>
     <%= f.text_field :mobilephone, :class => "input-large" %>
   </div>
   <div class="field">
-    <%= f.label "Årskurs" %>
+    <%= f.label "Årskurs / Grade" %>
     <%= f.text_field :grade, :class => "input-mini", :placeholder => "Ex D09" %>
   </div>
   <div class="field">
-    <%= f.label "Adress" %>
+    <%= f.label "Adress / Address" %>
     <%= f.text_field :address, :class => "input-large" %>
   </div>
   <div class="field">
-    <%= f.label "Postnummer" %>
+    <%= f.label "Postnummer / Postal code" %>
     <%= f.text_field :postalCode, :class => "input-small" %>
   </div>
   <div class="field">
-    <%= f.label "Ort" %>
+    <%= f.label "Ort / City" %>
     <%= f.text_field :postArea, :class => "input-large" %>
   </div>
   <div class="field">
-    <%= f.label "Kommentar" %>
-    <%= f.text_field :comment, :class => "input-large", :placeholder => "Skriv något kul!" %>
+    <%= f.label "Kommentar / Comment" %>
+    <%= f.text_field :comment, :class => "input-large", :placeholder => "\#dÅre \#swag \#Jäger" %>
   </div>
   <div class="actions" style="Position:relative; z-index: 2;">
     <%= f.label "Reserv?" %><%= f.check_box :reserve, {}, true, false if signed_in_administrator? %>

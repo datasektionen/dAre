@@ -11,12 +11,15 @@ $grayMediumLight: #eaeaea;
 }
 
 /* universal */
+/*body > #container { height: 100%; min-height: 100%; }*/
 
 html {
+  height: 100%;
   overflow-y: scroll;
 }
 
 body {
+  height: 100%;
   padding-top: 60px;
   background: url(BG.jpg);
   margin-bottom: 0px;
@@ -115,10 +118,15 @@ p {
 
 #container {
   background-image: url(bg.png);
-  height:650px;
+  background-repeat: no-repeat;
+  /*height:100%;*/
   border-color:rgba(255,255,255,0.5);
   border-width:1px;
   border-style:solid;
+
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-radial-gradient(center, 90% 90%, #ee5fae, #e11a78);
+  background-size: 100%;
   
   /* Firefox v3.5+ */
   -moz-box-shadow:inset 0px 0px 30px rgba(216,10,62,0.7);
@@ -216,6 +224,7 @@ input, textarea, select, .uneditable-input {
 
 /* headlines */
 .container {
+  height:100%;
   .headline {
     float: right;
     color: #EEEEEE;

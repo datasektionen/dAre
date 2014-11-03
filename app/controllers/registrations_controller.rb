@@ -48,12 +48,12 @@ class RegistrationsController < ApplicationController
     # GET /registrations/new.json
     def new
         if current_attendee != nil && current_administrator == nil
-            flash[:error] = 'Du ar redan registrerad.'
+            flash[:error] = 'Du ar redan registrerad / You are already registered.'
             redirect_to project_registration_path(@project, current_attendee) and return
         end
 
         if !@project.openRegistration && !signed_in_administrator?
-            redirect_to root_path, :flash => { :error => 'Anmalan ar inte oppen.' } and return
+            redirect_to root_path, :flash => { :error => 'Anmalan ar inte oppen / Registration is not open.' } and return
         end
 
         @registration = Registration.new
@@ -70,7 +70,7 @@ class RegistrationsController < ApplicationController
 
         if !signed_in_administrator?
             if current_attendee.kth_id != @registration.kth_id
-                redirect_to root_path, :flash => { :error => 'Sa dar far man icke gora!.' } and return
+                redirect_to root_path, :flash => { :error => 'Sa dar for man inte gora! No access!' } and return
             end
         end
     end
@@ -82,7 +82,7 @@ class RegistrationsController < ApplicationController
         @registration.kth_id = session[:remember_token]
 
         if !@project.openRegistration && !signed_in_administrator?
-            redirect_to root_path, :flash => { :error => 'Anmalan ar inte oppen.' } and return
+            redirect_to root_path, :flash => { :error => 'Anmalan ar inte oppen / Registration is not open' } and return
         end
 
         if @project.registrations.count >= @project.spots
@@ -124,7 +124,7 @@ class RegistrationsController < ApplicationController
 
         if !signed_in_administrator?
             if current_attendee.kth_id != registration.kth_id
-                redirect_to root_path, :flash => { :error => 'Sa dar far man icke gora!.' } and return
+                redirect_to root_path, :flash => { :error => 'Sa dar far man icke gora! No access!' } and return
             end
         else
             #fix for reserve and payment fields
@@ -136,7 +136,7 @@ class RegistrationsController < ApplicationController
         puts params[:registration]
         respond_to do |format|
             if registration.update_attributes(params[:registration])
-                format.html { redirect_to project_registration_path(@project, registration), notice: 'Din anmalan har sparats.' }
+                format.html { redirect_to project_registration_path(@project, registration), notice: 'Din anmalan har sparats. / Your registration has been saved.' }
                 format.json { head :ok }
             else
                 format.html { render action: 'edit' }
@@ -149,14 +149,14 @@ class RegistrationsController < ApplicationController
     # DELETE /registrations/1.json
     def destroy
         if !signed_in_administrator?
-            redirect_to root_path, :flash => { :error => 'Sa dar far man icke gora!.' } and return
+            redirect_to root_path, :flash => { :error => 'Sa dar far man icke gora! / No access!' } and return
         end
 
         @registration = Registration.find(params[:registration_id])
         @registration.destroy
 
         respond_to do |format|
-            format.html { redirect_to project_registrations_path(@project), notice: 'Anmalan har tagits bort.' }
+            format.html { redirect_to project_registrations_path(@project), notice: 'Anmalan har tagits bort / Registration removed' }
             format.json { head :ok }
         end
     end
@@ -167,7 +167,7 @@ class RegistrationsController < ApplicationController
             AttendeeMailer.registration_email(registration).deliver
         end
 
-        redirect_to project_registration_path(@project, registration), notice: 'Betalningsmail skickat.'  
+        redirect_to project_registration_path(@project, registration), notice: 'Betalningsmail skickat / Payment mail sent'  
     end
 
     private

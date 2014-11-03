@@ -1,4 +1,5 @@
 Tack för din anmälan till dÅre <%= @project.year %>!
+A message in English will follow
 
 För att slutföra anmälan måste du inom 7 dagar betala in anmälningsavgiften på 1000 kr. Gör du inte detta kommer din plats att överlåtas till nästa person i reservlistan. Se därför till att betala så fort som möjligt för att behålla din plats. Resterande belopp ska betalas in senast <%= @project.lastPaymentDate %>. 
 
@@ -23,7 +24,34 @@ Sista betalningsdag: <%= @project.lastPaymentDate %>
 
 Mer information om själva resan kommer att publiceras på hemsidan och mailas till dig när resan närmar sig. Titta gärna på vår hemsida www.dåre.se för att få den senaste informationen.
 
-Frågor? Hör av dig till dare@d.kth.se!
+---------------------
+Thank you for registering to dÅre <%= @project.year %>!
 
-Med vänliga hälsningar
+To finalize your registration, the registration fee of 1000 Swedish kronor must have been paid within 7 days. If this is not followed, your spot will go to the next person on the reserves list. Make sure to pay as soon as possible to keep your spot. The remaining 1625 needs to be paid by <%= @project.lastPaymentDate %>.  
+
+The registration fee will not be refunded if you choose to forfeit your spot. The remaining 1625 is only refunded if your spot can be filled with another person.
+
+Payment information <%= @attendee.firstname %> <%= @attendee.surname %>
+If you do not have a Swedish bank account and Internet bank, this can be paid at any bank office.
+Bankgiro number: 380-7559
+Message: dare_<%= @attendee.id %>
+Amount: 2625
+Last day to pay: <%= @project.lastPaymentDate %>
+
+If you choose to divide the payment:
+Registration fee
+Message: dare1_<%= @attendee.id %>
+Amount: 1000
+Last day to pay: inom 7 dagar
+Remaining amount
+Message: dare2_<%= @attendee.id %>
+Amount: 1900
+Last day to pay: <%= @project.lastPaymentDate %>
+
+More information about the trip will be published at the website and sent via email as the trip is getting closer. Make sure you visit www.dåre.se (or dare.datasektionen.se) to take part in the latest information.
+
+Frågor? Hör av dig till dare@d.kth.se!
+Questions? Email us at dare@d.kth.se!
+
+Med vänliga hälsningar / Kind regards
 dÅrestaben <%= @project.year %>

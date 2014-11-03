@@ -5,14 +5,16 @@
     </head>
     <body>
         <h1>Hej, du som ska följa med på dÅre <%= @project.year %>!</h1>
+        <h2>A message in English will follow. If it doesn't, email us at dare@d.kth.se</h2>
         
         <%= simple_format @message %>
 
         <p>
-            Frågor? Hör av dig till dare@d.kth.se!
+            Frågor? Hör av dig till dare@d.kth.se!<br>
+            Questions? Email us at dare@d.kth.se!
         </p>
         <p>
-            Med vänliga hälsningar<br>
+            Med vänliga hälsningar/Kind regards<br>
             dÅrestaben <%= @project.year %>
         </p>
     </body>

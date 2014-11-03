@@ -43,13 +43,18 @@
       <b>Ort:</b>
       <%= @registration.postArea %>
     </div>
-  </div>
-
-  <div class="content">
-    <div class="box comment-box">
+    <div class="box some-box">
       <b>Kommentar:</b>
       <%= @registration.comment %>
     </div>
+    <div class="box some-box">
+      <b>Personnummer:</b>
+      <%= @registration.personnummer %>
+    </div>
+  </div>
+
+  <div class="content">
+    
     <div>
       <%= button_to 'Ändra anmälan', edit_project_registration_path(@project, @registration), :method => :get %>
       <%= button_to 'Ta bort anmälan', destroy_project_registration_path(@project, @registration), :method => :delete, :confirm => 'Vill du verligen ta bort anmälan?' %>

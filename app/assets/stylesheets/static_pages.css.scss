@@ -4,6 +4,8 @@
 @import "bootstrap";
 
 .container-posts {
+  height: auto;
+  min-height: 100%;
   width: 590px !important;
   float:left;
 }
@@ -58,4 +60,5 @@ aside {
   float: right;
   width: 180px;
   height: 300px;
+  overflow: auto;
 }

@@ -11,11 +11,14 @@
 .container-emeriti {
 	width: 850px !important;
 	float:left;
+	height: 50%;
 	margin-top: 40px;
 }
 
 .container-contact {
+	height: 60%;
 	width: 200px !important;
+	overflow:auto;
 	float: right;
 }
 

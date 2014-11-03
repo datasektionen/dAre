@@ -5,16 +5,29 @@
     </head>
     <body>
         <h1>Tack för din anmälan till dÅre <%= @project.year %>!</h1>
+        <h2>A message in English will follow.</h2>
         <p>
             För närvarande är anmälningslistan full, du har därför placerats i reservlistan. Om det är din tur när en plats blir ledig får du ett nytt mail med mer information.
         </p>
         <p>
             Titta gärna på vår hemsida www.dåre.se för att få den senaste informationen.
             <br><br>
-            Frågor? Hör av dig till dare@d.kth.se!
+        </p>
+        <hr>
+        <h1>Thank you for registering to <%= @project.year %>!</h1>
+        <p>
+            The registration list is currently full and you have been put in the list over reserves. you will receive further information if a spot becomes free and you are the first in line.
         </p>
         <p>
-            Med vänliga hälsningar<br>
+            Make sure you check the website for the newest information.
+            <br><br>
+        </p>
+        <p>
+            Frågor? Hör av dig till dare@d.kth.se! <br>
+            Questions? Email us at dare@d.kth.se!
+        </p>
+        <p>
+            Med vänliga hälsningar / Kind regards<br>
             dÅrestaben <%= @project.year %>
         </p>
     </body>
