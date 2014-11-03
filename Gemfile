@@ -1,12 +1,13 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.17'
 gem 'bootstrap-sass', '2.3.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'omniauth-cas'
 gem 'nokogiri'
 gem 'airbrake'
+gem 'sprockets', '~>2.2.3'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -14,7 +15,7 @@ gem 'airbrake'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails'#,   '3.1.5'
+  gem 'sass-rails'#,   '~> 3.2.6'
   gem 'coffee-rails'#, '~> 3.1.1'
   gem 'uglifier'#, '>= 1.0.3'
   gem 'jquery-ui-rails'
@@ -53,6 +54,6 @@ end
 
 gem 'unicorn'
 
+gem 'mysql2'
 group :production do
-  gem 'mysql2'
 end
