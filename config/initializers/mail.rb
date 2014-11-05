@@ -5,6 +5,7 @@ ActionMailer::Base.smtp_settings = {
  :domain                => EmailConfig['domain'],
  :port                  => 25,
  :authentication        => 'plain',
+ :openssl_verify_mode  => 'none',
  :enable_starttls_auto  => false,
  :user_name             => EmailConfig['user_name'],
  :password              => EmailConfig['password']
