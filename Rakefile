@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-DAre::Application.load_tasks
+#DAre::Application.load_tasks
