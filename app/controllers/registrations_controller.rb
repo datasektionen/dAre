@@ -102,11 +102,11 @@ class RegistrationsController < ApplicationController
             if @registration.save
                 current_attendee = @registration
 
-                if !@registration.reserve
-                    AttendeeMailer.registration_email(@registration).deliver
-                else
-                    AttendeeMailer.reserve_email(@registration).deliver
-                end
+                #if !@registration.reserve
+                #    AttendeeMailer.registration_email(@registration).deliver
+                #else
+                #    AttendeeMailer.reserve_email(@registration).deliver
+                #end
 
                 format.html { redirect_to project_registration_path(@project, @registration), notice: 'Din anmalan har sparats.' }
                 format.json { render json: @registration, status: :created, location: @registration }
@@ -164,7 +164,7 @@ class RegistrationsController < ApplicationController
     def payment_mail
         registration = Registration.find(params[:registration_id])
         if !registration.reserve
-            AttendeeMailer.registration_email(registration).deliver
+            #AttendeeMailer.registration_email(registration).deliver
         end
 
         redirect_to project_registration_path(@project, registration), notice: 'Betalningsmail skickat / Payment mail sent'  
