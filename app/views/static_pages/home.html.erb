@@ -15,13 +15,13 @@
 	</div>
 	<div class="content">
 	    <div class="box box-info-faq">
-	    	Anmälan för dÅre 2015 öppnar onsdagen den 5 november här på hemsidan!
+	    	Anmälan för dÅre <%= @project.year %> öppnar onsdagen den 4 november här på hemsidan!
 	    	<br><br>
 	    	Just nu finns det <b><%= (@project.spots - @project.registrations.find(:all, :conditions => { :reserve => false }).count) %> platser kvar</b>, <%= @project.registrations.find(:all, :conditions => { :reserve => true }).count %> resenärer står på <a href="/projects/<%= @project.id %>/reserves">reservlistan</a>.
 	    	<br><br>
 	    	Observera att vi ställer anmälan i kön som reserv vid försenad inbetalning av anmälningsavgiften.
 	    	<hr>
-	    	The registration for dÅre 2015 will open Wednesday November 5th at 17:17 at this website! You register by pressing the "Anmäl Dig" button above.
+	    	The registration for <%= @project.year %> will open Wednesday November 4th at 19:00 at this website! You register by pressing the "Anmäl Dig" button above.
 	    	<br><br>
 	    	Right now there are <b><%= (@project.spots - @project.registrations.find(:all, :conditions => { :reserve => false }).count) %> spots left</b>, <%= @project.registrations.find(:all, :conditions => { :reserve => true }).count %> are <a href="/projects/<%= @project.id %>/reserves">reserves</a>.
 	    	<br><br>
@@ -36,15 +36,15 @@
 	</div>
 	<div class="content">
 	    <div class="box box-info-faq">
-	    	dÅre 2015 kostar 2625kr. I priset ingår resa till och från Åre, lifkort, boende samt en episk After Ski-fest.
+	    	<%= @project.year %> kostar 2700kr. I priset ingår resa till och från Åre, lifkort, boende samt en episk After Ski-fest.
 	    	<br><br>
-	    	Avresa är på kvällen lördagen den 17e januari från KTH. Vi är tillbaka i Stockholm sent på torsdagskvällen. Mer info om detta kommer senare.
+	    	Avresa är på kvällen lördagen den 16e januari från KTH. Vi är tillbaka i Stockholm sent på torsdagskvällen. Mer info om detta kommer senare.
 	    	<br><br>
 	    	Boendeuppdelning sker senare under hösten. Alla resenärer kommer att få önska boende, och även mer info om detta kommer senare.
 	    	<hr>
-	    	dÅre 2015 costs 2625 Swedish kronor. Included in this is travel, lodge, ski pass and an epic After Ski Party.
+	    	<%= @project.year %> costs 2700 Swedish kronor. Included in this is travel, lodge, ski pass and an epic After Ski Party.
 	    	<br><br>
-	    	We leave Stockholm the night between January 17th and 18th, and we will be back in Stockholm late the same Thursday.
+	    	We leave Stockholm the night between January 16th and 17th, and we will be back in Stockholm late the same Thursday.
 	    	<br><br>
 	    	You will be divided into your respective lodges later this fall or winter. Everyone will be given the chance to request people to stay with. More info will be released at a later date.
 		</div>
