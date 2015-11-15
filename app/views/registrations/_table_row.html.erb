@@ -3,4 +3,7 @@
     <td><%= table_row.surname %></td>
     <td><%= table_row.grade %></td>
     <td><a href="#" rel="tooltip" data-placement: "right" title="<%= table_row.comment %>"><%= truncate(table_row.comment, :length => 19, :omission => '...', :style => 'a:link{color: #000') %></a></td>
+    <% if signed_in_administrator? %>
+      <td><%= table_row.email %>
+    <% end %>
 </tr>

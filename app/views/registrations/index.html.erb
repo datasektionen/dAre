@@ -11,6 +11,9 @@
             <th>Efternamn</th>
             <th>Årskurs</th>
             <th>Kommentar</th>
+            <% if signed_in_administrator? %>
+              <th>E-post</th>
+            <% end %>
         </tr>
     </thead>
     <tbody id="registrations" class="registrations">
@@ -27,5 +30,5 @@
 
     $('tr').click(function () {
         window.location.href = '<%= project_registrations_path(@project) %>/' + $(this).attr('id')
-    });   
+    });
 </script>

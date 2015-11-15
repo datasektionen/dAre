@@ -9,14 +9,16 @@ class RegistrationsController < ApplicationController
     # GET /registrations.json
     def index
         @registrations = @project.registrations.by_registrations
-        
+
         if !params[:filter_not_payed].nil? && params[:filter_not_payed] == 'registration'
             @registrations = @registrations.by_not_payed_registration
         elsif !params[:filter_not_payed].nil? && params[:filter_not_payed] == 'total'
             @registrations = @registrations.by_not_payed_total
         end
 
-        @registrations = @registrations.paginate(page: params[:page], :order => :firstname, :per_page => 20)
+        ppage = 20
+        ppage = params[:limit] if params[:limit].present?
+        @registrations = @registrations.paginate(page: params[:page], :order => :firstname, :per_page => ppage)
 
         respond_to do |format|
             format.html # index.html.erb
@@ -102,11 +104,11 @@ class RegistrationsController < ApplicationController
             if @registration.save
                 current_attendee = @registration
 
-                #if !@registration.reserve
-                #    AttendeeMailer.registration_email(@registration).deliver
-                #else
-                #    AttendeeMailer.reserve_email(@registration).deliver
-                #end
+                if !@registration.reserve
+                    AttendeeMailer.registration_email(@registration).deliver
+                else
+                    AttendeeMailer.reserve_email(@registration).deliver
+                end
 
                 format.html { redirect_to project_registration_path(@project, @registration), notice: 'Din anmalan har sparats.' }
                 format.json { render json: @registration, status: :created, location: @registration }
@@ -132,7 +134,7 @@ class RegistrationsController < ApplicationController
             registration.hasPayedRegistration = params[:registration][:hasPayedRegistration]
             registration.hasPayedTotal = params[:registration][:hasPayedTotal]
         end
-        
+
         puts params[:registration]
         respond_to do |format|
             if registration.update_attributes(params[:registration])
@@ -164,10 +166,10 @@ class RegistrationsController < ApplicationController
     def payment_mail
         registration = Registration.find(params[:registration_id])
         if !registration.reserve
-            #AttendeeMailer.registration_email(registration).deliver
+            AttendeeMailer.registration_email(registration).deliver
         end
 
-        redirect_to project_registration_path(@project, registration), notice: 'Betalningsmail skickat / Payment mail sent'  
+        redirect_to project_registration_path(@project, registration), notice: 'Betalningsmail skickat / Payment mail sent'
     end
 
     private
@@ -176,4 +178,4 @@ class RegistrationsController < ApplicationController
         @project = get_project
     end
 
-end 
+end
