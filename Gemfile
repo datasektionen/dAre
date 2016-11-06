@@ -23,13 +23,13 @@ end
 
 gem 'jquery-rails'
 gem 'therubyracer'
-gem 'libv8', '~> 3.11.8.3'
+gem 'libv8'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the web server
-# gem 'unicorn'
+gem 'puma'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -52,7 +52,6 @@ group :deploy do
   gem 'capistrano_colors'
 end
 
-gem 'unicorn'
 
 gem 'mysql2'
 group :production do

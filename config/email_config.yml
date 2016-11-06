@@ -1,0 +1,11 @@
+development:
+  address:
+  domain:
+  user_name:
+  password:
+
+production:
+  address:
+  domain:
+  user_name:
+  password:
